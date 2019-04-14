@@ -1,0 +1,24 @@
+# macOs general
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOs thumbnails
+._*
+
+# dotenv environment variables file
+.env
+.env.test
+
+# dev tools
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# python
+*.pyc
+venv
+
+# artifacts
+output

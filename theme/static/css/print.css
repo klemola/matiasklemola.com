@@ -1,0 +1,95 @@
+* {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+}
+
+@page {
+    margin: 0.5cm;
+}
+
+pre,
+blockquote {
+    border: 2px solid #000;
+}
+
+table {
+    display: table;
+    font-size: 12px;
+}
+
+img {
+    max-width: 100% !important;
+}
+
+a,
+a:visited {
+    text-decoration: underline;
+}
+
+a[href]:after {
+    content: " (" attr(href) ")";
+}
+
+header a {
+    text-decoration: none !important;
+}
+
+abbr[title]:after {
+    content: " (" attr(title) ")";
+}
+
+a[href^="javascript:"]:after,
+a[href^="#"]:after,
+a[href^="../"]:after,
+a[href*="/tags"]:after {
+    content: "";
+}
+
+pre,
+blockquote,
+figure,
+hr,
+img,
+tr,
+p,
+ul {
+    page-break-inside: avoid;
+}
+
+p,
+h2,
+h3 {
+    orphans: 3;
+    widows: 3;
+}
+
+h1 {
+    page-break-before: always;
+}
+
+h2,
+h3,
+h4 {
+    page-break-after: avoid;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: capitalize;
+}
+
+hr {
+    border: 1px solid #000;
+}
+
+.author {
+    display: block;
+}
+
+.header__content {
+    display: none;
+}

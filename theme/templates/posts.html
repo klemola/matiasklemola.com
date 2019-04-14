@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block title %}{{ SITENAME }} - All posts{% endblock %} {% block
+content %}
+<h1>Posts on {{ SITENAME }}</h1>
+
+<ul class="category-list list--unstyled">
+  {% for category, articles in categories|sort %}
+  <li class="category-list__entry">
+    <a href="{{ SITEURL }}/{{ category.url }}"><h2>{{ category }}</h2></a>
+    <ol class="article-list list--unstyled">
+      {% for article in articles %}
+      <li class="article-list__entry">
+        <div class="article-list__entry__header">
+          <a
+            href="{{ SITEURL }}/{{ article.slug }}"
+            rel="bookmark"
+            title="Permalink to {{ article.title | striptags }}"
+            class="article-list__entry__header__title"
+            >{{ article.title }}</a
+          >
+          -
+          <div class="article-list__entry__header__meta">
+            <span class="date-published">
+            {{ article.locale_date }}
+            </span>
+            {% if article.modified %}
+            <span class="date-modified">
+              ({{ article.locale_modified }})
+            </span>
+            {% endif %}
+          </div>
+        </div>
+        {% if article.summary %}
+        <p class="article-list__entry__summary">{{ article.summary }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

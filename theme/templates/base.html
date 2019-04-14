@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+<head>
+  {% block head %}
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Matias Klemola personal website" />
+  <meta name="theme-color" content="#FFEE00" />
+  <meta name="apple-mobile-web-app-title" content="Matias Klemola" />
+
+  <meta property="og:title" content="Matias Klemola" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.matiasklemola.com/" />
+  <meta
+      property="og:image"
+      content="https://matiasklemola.com/og_image.jpg"
+  />
+  <meta
+      property="og:description"
+      content="Matias Klemola personal website"
+  />
+  <meta property="og:site_name" content="Matias Klemola" />
+
+  <link rel="canonical" href="https://matiasklemola.com" />
+  <link rel="preload" href="/css/main.css" as="style">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/print.css" media="print" />
+
+  {% if FEED_ALL_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+  {% endif %}
+  {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+  {% endif %}
+  {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_ATOM and category %}
+  <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM|format(category.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_RSS and category %}
+  <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL|format(category.slug) }}{% else %}{{ CATEGORY_FEED_RSS|format(category.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+  {% endif %}
+  {% if TAG_FEED_ATOM and tag %}
+  <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_ATOM|format(tag.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+  {% endif %}
+  {% if TAG_FEED_RSS and tag %}
+  <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_RSS|format(tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+  {% endif %}
+  {% endblock head %}
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="site-header">
+      <div class="site-header__content">
+        <a href="{{ SITEURL }}/" title="Navigate to home">
+          <img
+              class="logo"
+              src="/graphics/monogram.svg"
+              alt="Matias Klemola monogram"
+          />
+        </a>
+        <nav class="site-header__nav">
+          <ul class="list--unstyled">
+          {% for title, link, p_name in MENUITEMS %}
+              <li><a href="{{ link }}" {% if p_name == page_name %} class="active"{% endif %}>{{ title }}</a></li>
+          {% endfor %}
+          {% if DISPLAY_PAGES_ON_MENU %}
+            {% for p in pages %}
+              <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p == page %} class="active"{% endif %}>{{ p.title }}</a></li>
+            {% endfor %}
+          {% endif %}
+          {% if DISPLAY_CATEGORIES_ON_MENU %}
+            {% for cat, null in categories %}
+              <li><a href="{{ SITEURL }}/{{ cat.url }}" {% if cat == category %} class="active"{% endif %}>{{ cat }}</a></li>
+            {% endfor %}
+          {% endif %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="content">
+    {% block content %}
+    {% endblock %}
+    </section>
+    <footer class="site-footer">
+      <ul class="site-footer__links list--unstyled">
+      {% for name, link in LINKS %}
+        <li><a href="{{ link }}">{{ name }}</a></li>
+      {% endfor %}
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

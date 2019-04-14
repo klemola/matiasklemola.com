@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block title %}{{ SITENAME }} - {{ category }} category{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+{% block content_title %}
+<h2>Content in the "{{ category }}"" category</h2>
+{% endblock %}
+<ol class="article-list list--unstyled">
+  {% for article in articles %}
+  <li>
+    <header>
+      <h3 class="article-title">
+        <a
+          href="{{ SITEURL }}/{{ article.slug }}"
+          rel="bookmark"
+          title="Permalink to {{ article.title | striptags }}"
+          >{{ article.title }}</a
+        >
+      </h3>
+    </header>
+    <div class="article-summary">
+      <time class="published" datetime="{{ article.date.isoformat() }}">
+        {{ article.locale_date }}
+      </time>
+      {% if article.modified %}
+      <time class="modified" datetime="{{ article.modified.isoformat() }}">
+        {{ article.locale_modified }}
+      </time>
+      {% endif %}
+      {% if article.summary %}
+      <p class="article-summary">{{ article.summary }}</p>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>
+{% endblock %}

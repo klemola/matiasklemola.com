@@ -1,0 +1,166 @@
+@import "./normalize.css";
+@import "./pygments.css";
+@import "./base.css";
+
+/*
+  Layout
+*/
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.site-header {
+  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
+  color: #222;
+  width: 100vw;
+}
+
+.site-header a {
+  color: #222;
+}
+
+.site-header__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+.site-header__nav {
+  letter-spacing: 0.1rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.site-header__nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-header__nav ul li a.active {
+  text-decoration: underline;
+}
+
+.site-header__nav ul li::after {
+  content: "•";
+  margin: 0 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.site-header__nav ul li:last-child::after {
+  content: "";
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 48em;
+  padding: 1rem;
+  width: 100%;
+}
+
+.logo {
+  width: 6.353rem;
+  height: 6.353rem;
+  transition: linear 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.85;
+  transform: scale(1.1);
+}
+
+.site-footer__links {
+  display: flex;
+  justify-content: center;
+}
+
+.site-footer__links li::after {
+  content: "•";
+  margin: 0 0.5rem;
+  padding-bottom: 0.2rem;
+}
+
+.site-footer__links li:last-child::after {
+  content: "";
+}
+
+/*
+  Generic styles
+*/
+
+.list--unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Page spefici styles
+*/
+
+.category-list__entry h2 {
+  margin-top: 1rem;
+}
+
+.category-list__entry:first-child h2 {
+  margin-top: 0;
+}
+
+.article-list .article-title {
+  margin-top: 0;
+}
+
+.article-list__entry__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.article-list__entry__header__title {
+  margin: 0 0.5rem 0 0;
+}
+
+.article-list__entry__header__meta {
+  margin: 0 0 0 0.5rem;
+}
+
+@media (max-width: 720px) {
+  footer,
+  .header__content,
+  .content {
+    flex-direction: column;
+  }
+
+  .nav {
+    font-style: normal;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    text-align: left;
+  }
+}
