@@ -33,6 +33,8 @@ _Note: the fourth item uses the Unicode character for [Roman numeral four][2]._
 
 ## Tables
 
+Here's a table:
+
 | Tables   |              Are               |     Cool | Extra column | Another extra |
 | -------- | :----------------------------: | -------: | ------------ | ------------- |
 | col 1 is |          left-aligned          |   \$1600 | Some         | Foo           |
@@ -44,11 +46,17 @@ _Note: the fourth item uses the Unicode character for [Roman numeral four][2]._
 
 ### Code block
 
+Some code:
+
 ```python
 from pelicanconf import *
 
 SITEURL = 'https://matiasklemola.com'
 RELATIVE_URLS = False
+
+LINKS = (('GitHub', 'http://github.com/klemola'),
+         ('Soundcloud', 'https://soundcloud.com/butsku'),
+         ('Twitter', 'https://twitter.com/MatiasKlemola'),)
 ```
 
 You can also make `inline code` to add code into other things.
@@ -89,7 +97,7 @@ It's sometimes handy for breaking things up.
 
 Markdown can also contain images.
 
-![Example image](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Skeletons_dancing._Etching_by_R._Stamper_after_C._Sharp._Wellcome_V0042216.jpg/1280px-Skeletons_dancing._Etching_by_R._Stamper_after_C._Sharp._Wellcome_V0042216.jpg)
+<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Skeletons_dancing._Etching_by_R._Stamper_after_C._Sharp._Wellcome_V0042216.jpg/1280px-Skeletons_dancing._Etching_by_R._Stamper_after_C._Sharp._Wellcome_V0042216.jpg" alt="Example image"/></div>
 
 ## Finally
 

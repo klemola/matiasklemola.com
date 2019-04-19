@@ -1,0 +1,59 @@
+:root {
+  /* Colors */
+  --color-dark: #222;
+  --color-light: #f9f9f9;
+  --color-primary: #ffd800;
+  --color-primary-active: #e6ca2e;
+  --color-secondary: #009dff;
+  --color-secondary-active: #2e9fe6;
+  --color-highlight: #ff9900;
+  --color-higlight-active: #e6712e;
+
+  --color-text: var(--color-light);
+  --color-text-placeholder: var(--color-text);
+  --color-text-inverse: var(--color-dark);
+  --color-text-tooltip: var(--color-dark);
+
+  --color-bg-content: var(--color-dark);
+  --color-bg-box: var(--color-light);
+  --color-bg-box-inverse: var(--color-dark);
+  --color-border: var(--color-bg-dark);
+
+  /* Text */
+  --font-family-heading: "NumansRegular", sans-serif;
+  --font-family-body: "NumansRegular", sans-serif;
+  --font-family-monospace: "Courier", "Courier New", monospace;
+  --font-size-text-small: 0.8em;
+  --line-height-text-small: 1em;
+  --font-size-text: 1em;
+  --line-height-text: 1.3;
+  --font-size-h4: 1em;
+  --line-height-h4: 1;
+  --font-size-h3: 1.306em;
+  --line-height-h3: 1;
+  --font-size-h2: 1.618em;
+  --line-height-h2: 1;
+  --font-size-h1: 2.118em;
+  --line-height-h1: 1;
+  --font-size-code: var(--font-size-text);
+  --line-height-code: 1.3;
+  --font-weight-bold: 800;
+  --font-weight-semibold: 600;
+  --font-weight-book: 500;
+  --font-weight-regular: 400;
+
+  /* Sizing */
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-s: 1rem;
+  --spacing-m: 2rem;
+  --spacing-l: 3rem;
+  --border-radius: 4px;
+  --logo-size: 6.353rem;
+  --content-max-width: 48em;
+  --content-padding: var(--spacing-s);
+
+  /* Media query breakpoints */
+  --mq-breakpoint-mobile-portrait: 480px;
+  --mq-breakpoint-mobile-landscape: 720px;
+}
