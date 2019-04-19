@@ -11,7 +11,7 @@ DEFAULT_LANG = 'English'
 DEFAULT_PAGINATION = False
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}/index.html'
-TYPOGRIFY = True
+TYPOGRIFY = False
 PATH = 'content'
 
 DIRECT_TEMPLATES = ['index', 'posts']

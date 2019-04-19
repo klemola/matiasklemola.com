@@ -81,6 +81,7 @@
   margin: auto;
   max-width: var(--content-max-width);
   padding: var(--content-padding);
+  width: 100%;
 }
 
 .content img,
