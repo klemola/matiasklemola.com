@@ -52,8 +52,4 @@
   --logo-size: 6.353rem;
   --content-max-width: 48em;
   --content-padding: var(--spacing-s);
-
-  /* Media query breakpoints */
-  --mq-breakpoint-mobile-portrait: 480px;
-  --mq-breakpoint-mobile-landscape: 720px;
 }

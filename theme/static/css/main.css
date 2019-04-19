@@ -81,7 +81,6 @@
   margin: auto;
   max-width: var(--content-max-width);
   padding: var(--content-padding);
-  width: 100%;
 }
 
 .content img,
@@ -156,15 +155,22 @@
   margin: 0 0 0 var(--spacing-xs);
 }
 
+@media (max-width: 960px) {
+  .content img,
+  .content table,
+  .highlight {
+    width: 100%;
+    margin: var(--spacing-s) 0;
+  }
+}
+
 @media (max-width: 720px) {
   .content img,
   .content table,
   .highlight {
-    position: relative;
     width: 100vw;
     border-radius: 0;
-    margin-left: calc(0px - var(--content-padding));
-    margin-right: calc(0px - var(--content-padding));
+    margin: var(--spacing-s) calc(0px - var(--content-padding));
     border-left: none;
     border-right: none;
   }
