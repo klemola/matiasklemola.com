@@ -1,0 +1,17 @@
+<div class="article-summary">
+  <time class="article-summary__date-published" datetime="{{ article.date.isoformat() }}">
+    {{ article.locale_date }}
+  </time>
+  •
+  {% if article.readtime %}
+  <span class="article-summary__readtime">{{article.readtime.minutes}} min read</span>
+  {% endif %}
+  {% if article.modified %}
+  <div class="article-summary__date-modified"><time datetime="{{ article.modified.isoformat() }}">
+  Article was updated on {{ article.locale_modified }}
+  </time></div>
+  {% endif %}
+  {% if article.summary %}
+  <p class="article-summary__text">{{ article.summary }}</p>
+  {% endif %}
+</div>

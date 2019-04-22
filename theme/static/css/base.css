@@ -81,19 +81,15 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: 0.2rem;
+  letter-spacing: 2px;
   word-wrap: break-word;
 }
 
-h1 + h2,
 h2 + h3 {
   margin-top: 0;
 }
 
-h1,
-h2,
-thead,
-header a {
+thead {
   text-transform: uppercase;
 }
 
@@ -111,10 +107,6 @@ hr {
   border: 1px solid var(--color-bg-box);
   border-radius: var(--border-radius);
   width: 100%;
-}
-
-iframe {
-  margin-bottom: var(--spacing-s);
 }
 
 figure,
