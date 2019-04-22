@@ -24,8 +24,8 @@
   <h1 class="article-title">{{ article.title }}</h1>
   {% import 'translations.html' as translations with context %}
   {{ translations.translations_for(article) }}
+  {% include 'article-summary.html' %}
 </header>
-{% include 'article-summary.html' %}
 <div class="article-content">
   {{ article.content }}
 </div>

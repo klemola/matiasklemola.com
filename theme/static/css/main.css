@@ -153,6 +153,10 @@
   margin: 0 0 var(--spacing-xs);
 }
 
+.article-header {
+  margin-bottom: var(--spacing-s);
+}
+
 .article-summary__date-published,
 .article-summary__readtime {
   font-style: italic;
