@@ -1,6 +1,8 @@
 {
   "hosting": {
     "public": "output",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "**/venv/**", "**/__pycache__/**"]
   }
 }

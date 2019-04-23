@@ -16,7 +16,12 @@
 *.sublime-project
 *.sublime-workspace
 
+# misc
+
+.firebase
+
 # python
+__pycache__
 *.pyc
 venv
 
