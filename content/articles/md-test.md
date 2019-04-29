@@ -50,14 +50,111 @@ Here's a table:
 Some code:
 
 ```python
-from pelicanconf import *
+def calculate_readtime(content_object):
+    if content_object._content is not None:
+        content = content_object._content  # get the content html from Pelican
 
-SITEURL = 'https://matiasklemola.com'
-RELATIVE_URLS = False
+        text = strip_tags(content)  # strip tags and get long sentence
+        # split the long sentence into list of words
+        words = re.split(r'[^0-9A-Za-z]+', text)
 
-LINKS = (('GitHub', 'http://github.com/klemola'),
-         ('Soundcloud', 'https://soundcloud.com/butsku'),
-         ('Twitter', 'https://twitter.com/MatiasKlemola'),)
+        num_words = len(words)  	# count the words
+        minutes = int(math.ceil(num_words / WPM))  # calculate the minutes
+
+        # set minimum read time to 1 minutes.
+        if minutes == 0:
+            minutes = 1
+
+        content_object.readtime = {
+            "minutes": minutes,
+        }
+```
+
+```typescript
+type Config = {
+  onSuccess?: (registration: ServiceWorkerRegistration) => void;
+  onUpdate?: (registration: ServiceWorkerRegistration) => void;
+};
+
+export function register(config?: Config) {
+  if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
+    // The URL constructor is available in all browsers that support SW.
+    const publicUrl = new URL(
+      (process as { env: { [key: string]: string } }).env.PUBLIC_URL,
+      window.location.href
+    );
+    if (publicUrl.origin !== window.location.origin) {
+      // Our service worker won't work if PUBLIC_URL is on a different origin
+      // from what our page is served on. This might happen if a CDN is used to
+      // serve assets; see https://github.com/facebook/create-react-app/issues/2374
+      return;
+    }
+
+    window.addEventListener("load", () => {
+      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+
+      if (isLocalhost) {
+        // This is running on localhost. Let's check if a service worker still exists or not.
+        checkValidServiceWorker(swUrl, config);
+
+        // Add some additional logging to localhost, pointing developers to the
+        // service worker/PWA documentation.
+        navigator.serviceWorker.ready.then(() => {
+          console.log(
+            "This web app is being served cache-first by a service " +
+              "worker. To learn more, visit http://bit.ly/CRA-PWA"
+          );
+        });
+      } else {
+        // Is not localhost. Just register service worker
+        registerValidSW(swUrl, config);
+      }
+    });
+  }
+}
+```
+
+```rust
+#[macro_use]
+extern crate prettytable;
+
+mod cli;
+mod machine_status;
+mod models;
+mod watch;
+
+use clap::ArgMatches;
+use cli::get_matches;
+use machine_status::{get_client, list_and_handle_result, save_and_handle_result};
+use std::error::Error;
+
+fn main() -> Result<(), Box<Error>> {
+    let table_name = String::from("machine-status");
+    let client = get_client();
+    let matches = get_matches();
+
+    let status_command = |sub_matches: &ArgMatches| match sub_matches.subcommand_name() {
+        Some("list") => list_and_handle_result(&client, &table_name),
+
+        Some("save") => save_and_handle_result(&client, &table_name),
+
+        _ => println!("{:}", sub_matches.usage()),
+    };
+
+    match matches.subcommand() {
+        ("watch", _) => watch::start(&client, &table_name),
+
+        ("status", Some(sub_matches)) => {
+            status_command(&sub_matches);
+            Ok(())
+        }
+
+        _ => {
+            println!("{:}", matches.usage());
+            Ok(())
+        }
+    }
+}
 ```
 
 You can also make `inline code` to add code into other things.
@@ -98,7 +195,9 @@ It's sometimes handy for breaking things up.
 
 Markdown can also contain images.
 
-<div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Skeletons_dancing._Etching_by_R._Stamper_after_C._Sharp._Wellcome_V0042216.jpg/1280px-Skeletons_dancing._Etching_by_R._Stamper_after_C._Sharp._Wellcome_V0042216.jpg" alt="Example image"/></div>
+<div class="article-content__image">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Skeletons_dancing._Etching_by_R._Stamper_after_C._Sharp._Wellcome_V0042216.jpg/ 1280px-Skeletons_dancing._Etching_by_R._Stamper_after_C._Sharp._Wellcome_V0042216.jpg" alt="Example image"/>
+</div>
 
 ## Finally
 
