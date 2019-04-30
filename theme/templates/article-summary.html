@@ -14,4 +14,10 @@
   {% if article.summary %}
   <p class="article-summary__text">{{ article.summary }}</p>
   {% endif %}
+  {% if page_name is not defined %}
+  {% if article.audience %}
+  <h4>Target audience</h4>
+  <p class="article-summary__text">{{ article.audience }}</p>
+  {% endif %}
+  {% endif %}
 </div>

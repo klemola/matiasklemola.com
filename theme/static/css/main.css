@@ -169,12 +169,26 @@ figure.code figcaption>a {
 }
 
 .article-header {
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-m);
+}
+
+.article-header h4 {
+  margin-bottom: 0;
+}
+
+.article-header hr {
+  margin-top: var(--spacing-m);
+  border-color: var(--color-light-alternative);
 }
 
 .article-summary__date-published,
 .article-summary__readtime {
   font-style: italic;
+  color: var(--color-light-alternative);
+}
+
+.article-summary__text {
+  margin-top: var(--spacing-xs);
 }
 
 .article-summary__date-modified {
