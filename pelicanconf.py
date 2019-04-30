@@ -18,7 +18,7 @@ PATH = 'content'
 
 STATIC_PATHS = ['code']
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['readtime',  'liquid_tags.include_code']
+PLUGINS = ['readtime', 'liquid_tags.include_code']
 
 DIRECT_TEMPLATES = ['index', 'posts']
 THEME = './theme'
@@ -34,7 +34,6 @@ LINKS = (('GitHub', 'http://github.com/klemola'),
 
 
 RELATIVE_URLS = True
-WITH_FUTURE_DATES = True
 
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

@@ -3,6 +3,7 @@ Title: Markdown test
 Date: 2019-04-12 00:00
 Modified: 2019-04-22 00:00
 Category: Articles
+Status: draft
 Tags: test, pelican
 Slug: markdown-test
 Summary: This article demonstrates some of what Markdown is capable of doing.
