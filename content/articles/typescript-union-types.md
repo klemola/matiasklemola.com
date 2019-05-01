@@ -1,9 +1,10 @@
 ---
-Title: Union types in Typescript: get rid of complex boolean logic
+Title: Union types in Typescript: get rid of complex and buggy boolean logic
 Date: 2019-05-01 00:00
 Category: Articles
 Tags: typescript, advanced-types
 Slug: typescript-union-types
+Sourcecode: https://github.com/klemola/matiasklemola.com/tree/master/content/code/typescript-union-types
 Summary: Get familiar with union types in Typescript with practical examples. Your colleagues will thank you later.
 Audience: Folks who are somewhat familiar with Typescript, and willing to learn about advanced types. I use some patterns analogous to React, so it helps if you've seen React code before.
 ---
@@ -27,7 +28,7 @@ You might have noticed that we are dealing with multiple possible combinations o
 - User data (once it's present)
 - An error message
 
-Ignoring the first option for now, let's model these possible outcomes in an union type.
+Ignoring the first option for now, let's model these possible outcomes in a union type.
 
 {% include_code typescript-union-types/fetch_with_union_types.ts lang:typescript lines:6-17 %}
 
@@ -39,19 +40,19 @@ How does this help? See another example below:
 
 {% include_code typescript-union-types/fetch_with_union_types.ts lang:typescript lines:19-42 %}
 
-Nice, right? Creating `Data` values is not terribly ergonomic, but look at `render`! It's super clean compared to the first example. Furthermore, Typescript knows exactly what type we are dealing with once we have determined the current value of `Data` using a `switch` statement. That's why we don't have to test for presence of the data anymore. This only gets better and better if there's more than one piece of data that we want to retrieve. `render` now always returns something meaningful.
+Nice, right? Creating `Data` values is not terribly ergonomic, but look at `render`! It's super clean compared to the first example. `render` now always returns something meaningful. Furthermore, Typescript knows exactly what type we are dealing with once we have determined the current value of `Data` using a `switch` statement. That's why we don't have to test for the presence of the data anymore. With the `noFallthroughCasesInSwitch` option enabled in Typescript you can ensure that all possible variations are taken into account.
 
-But wait! There's still room for improvement...
+This only gets better and better if there's more than one piece of data that we want to retrieve. But wait! There's still room for improvement...
 
 ### RemoteData
 
 One of the nicest abstractions I've come across is `RemoteData`. I encountered it while working on a semi-large Elm project. Our `Data` type is already pretty close to how `RemoteData` [is defined](https://package.elm-lang.org/packages/krisajenkins/remotedata/latest/RemoteData) (hats off to Kris Jenkins!).
 
-`RemoteData` includes a `NotAsked` variant. It's realistic, since unless a fetch is started immediately upon application initialization, data is not loading. If data is fetched immediately when a component is mounted, one can safely start from `Loading`, like we did before. I've been including a Typescript version of the library in recent work projects, because I don't want to model fetching data in any other way anymore. Here it is:
+`RemoteData` includes a `NotAsked` variant. It's realistic, since unless a fetch is started immediately upon application initialization, data is not being loaded. If data is fetched immediately upon initialization, one can safely start from `Loading`, like we did before. I've included a Typescript version of the library in recent work projects, because I don't want to model data fetching in any other way (anymore). Here's `RemoteData` in Typescript:
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:1-19 %}
 
-The type is defined using [generics](https://www.typescriptlang.org/docs/handbook/generics.html), since who knows what kind of data someone is fetching, and what exactly can go wrong? Let's apply `RemoteData` to the example code.
+The type is defined using [generics](https://www.typescriptlang.org/docs/handbook/generics.html), since who knows what kind of data someone is fetching and exactly what can go wrong? Let's use `RemoteData` in the example.
 
 {% include_code typescript-union-types/fetch_with_remotedata.ts lang:typescript lines:1-34 %}
 
@@ -59,6 +60,10 @@ It's not very different to what we had before, but now all realistic outcomes ar
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:21-31 %}
 
-It's probable that you still need to test which variant of `RemoteData` is present (eg. you might only care if a value is `Success`), and that can be done easily using some helpers. Using `switch` is not mandatory!
+You probably occasionally still need to test which variant of `RemoteData` is present (eg. you might only care if a value is `Success`), and that can be done easily using some helpers. Using `switch` is not mandatory!
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:32-54 %}
+
+### Live example with React
+
+So far the `render` function has only served as an example and has not been used. [Here's a live example](https://codesandbox.io/s/j3wxq7q073?fontsize=14&view=preview) (with React) that actually renders something.

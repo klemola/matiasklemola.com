@@ -119,6 +119,10 @@ figure.code figcaption>a {
   margin: 0;
 }
 
+.article-footer {
+  margin-top: var(--spacing-m);
+}
+
 .logo {
   width: var(--logo-size);
   height: var(--logo-size);
@@ -193,6 +197,10 @@ figure.code figcaption>a {
 
 .article-summary__date-modified {
   margin-top: var(--spacing-xxs);
+}
+
+.article-summary__sourcecode-link {
+  font-style: italic;
 }
 
 @media (max-width: 960px) {

@@ -42,11 +42,9 @@ function render(userRequest: Data) {
 // ...simulated fetch (no change)
 function fetchData() {
   return new Promise<User>(resolve =>
-    setTimeout(() =>
-      resolve({
-        username: 'Tim Testuser',
-        email: 'tim@example.com',
-      })
-    )
+    resolve({
+      username: 'Tim Testuser',
+      email: 'tim@example.com',
+    })
   )
 }
