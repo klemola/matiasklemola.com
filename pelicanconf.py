@@ -19,6 +19,7 @@ PATH = 'content'
 STATIC_PATHS = ['code']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['readtime', 'liquid_tags.include_code']
+IGNORE_FILES = ['__pycache__', 'node_modules']
 
 DIRECT_TEMPLATES = ['index', 'posts']
 THEME = './theme'

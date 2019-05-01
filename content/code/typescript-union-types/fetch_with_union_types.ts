@@ -32,8 +32,10 @@ function render(userRequest: Data) {
   switch (userRequest.type) {
     case 'Loading':
       return 'Loading...'
+
     case 'Success':
       return `Hello, ${userRequest.data.username}`
+
     case 'Failure':
       return 'Could not fetch data!'
   }

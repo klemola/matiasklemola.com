@@ -44,10 +44,13 @@ class Example extends React.Component<{}, State> {
       case 'NotAsked':
         // Maybe we don't want to render anything until fetch has been triggered?
         return null
+
       case 'Loading':
         return 'Loading...'
+
       case 'Success':
         return `Hello, ${userRequest.data.username}`
+
       case 'Failure':
         return 'Could not fetch data!'
     }
