@@ -1,8 +1,16 @@
 {% extends "base.html" %} {% block content %}
-<h1>matiasklemola.com</h1>
-{% block content_title %}
-<h2>All articles</h2>
-{% endblock %}
+<h1>Matias Klemola</h1>
+
+<div class="intro">
+  <div class="intro__content">
+    <p>Greetings! I'm a software developer and a music nerd. I work at <a href="https://www.valuemotive.com" target="_blank">Valuemotive</a> as a software architect with management duties in HR. I also play bass in <a href="https://paimentolaiselama.bandcamp.com" target="_blank">Paimentolaiselämä</a> and <a href="https://en.wikipedia.org/wiki/Bouldering" target="_blank">boulder</a> with my friends. I have a bachelor's degree of business IT from <a href="https://www.haaga-helia.fi/en/frontpage" target="_blank">Haaga-Helia</a>.</p>
+
+    <p>You'll find articles about tech, music and other personal interests of my mine from this website (see <a href="/posts">all posts</a>). You'll find my contact information from Valuemotive <a href="https://www.valuemotive.com/contact" target="_blank">website</a>.</p>
+  </div>
+  <img class="intro__image" src="/images/matias.jpg" alt="Matias Klemola"/>
+</div>
+
+<h2>Recent posts</h2>
 <ol class="article-list list--unstyled">
   {% for article in articles_page.object_list %}
   {% include 'article-list-entry.html' %}

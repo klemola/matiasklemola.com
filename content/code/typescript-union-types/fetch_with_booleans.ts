@@ -15,7 +15,7 @@ export function main() {
     })
     .catch(error => {
       isLoading = false
-      fetchFailed = false
+      fetchFailed = true
     })
 }
 
