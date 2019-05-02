@@ -1,11 +1,11 @@
 ---
-Title: Union types in Typescript: get rid of complex and buggy boolean logic
+Title: Union types in Typescript: modeling state
 Date: 2019-05-02 00:00
 Category: Articles
 Tags: typescript, advanced-types
 Slug: typescript-union-types
 Sourcecode: https://github.com/klemola/matiasklemola.com/tree/master/content/code/typescript-union-types
-Summary: Get familiar with union types in Typescript with practical examples. Your colleagues will thank you later.
+Summary: Get familiar with union types in Typescript with practical examples. Using union types to model state will rid your application of complex and buggy boolean logic. Your colleagues will thank you later.
 Audience: Folks who are somewhat familiar with Typescript, and willing to learn about advanced types. I use some patterns analogous to React, so it helps if you've seen React code before.
 ---
 
