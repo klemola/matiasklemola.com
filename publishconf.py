@@ -12,6 +12,7 @@ sys.path.append(os.curdir)
 from pelicanconf import *  # isort:skip
 
 SITEURL = 'https://matiasklemola.com'
+IS_LIVE = True
 RELATIVE_URLS = False
 WITH_FUTURE_DATES = False
 
