@@ -89,9 +89,9 @@
 }
 
 .article-content__image,
-.article-content>table,
-.article-content>figure.code,
-.article-content>.highlight {
+.article-content > table,
+.article-content > figure.code,
+.article-content > .highlight {
   position: relative;
   background: #2b2b2b;
   color: var(--color-text);
@@ -111,7 +111,7 @@ figure.code .highlight {
   box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.3);
 }
 
-figure.code figcaption>a {
+figure.code figcaption > a {
   display: none;
 }
 
@@ -203,16 +203,38 @@ figure.code figcaption>a {
   font-style: italic;
 }
 
+.intro {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  background-color: var(--color-bg-box);
+  border-radius: var(--border-radius);
+}
+
+.intro__content {
+  padding: 0 var(--content-padding);
+  flex: 1;
+}
+
+.intro__image {
+  margin-left: var(--spacing-s);
+  width: 250px;
+  height: 250px;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
 @media (max-width: 960px) {
   .content {
     --figure-offset: var(--content-padding);
   }
+}
 
 @media (max-width: 720px) {
   .article-content__image,
-  .article-content>table,
-  .article-content>figure.code,
-  .article-content>.highlight {
+  .article-content > table,
+  .article-content > figure.code,
+  .article-content > .highlight {
     width: 100vw;
     border-radius: 0;
     border-left: none;
@@ -227,6 +249,22 @@ figure.code figcaption>a {
   .widget-container__widget {
     flex: none;
     margin: var(--spacing-s) 0;
+  }
+
+  .intro {
+    flex-direction: column-reverse;
+    border-radius: 0;
+    margin-left: calc(0px - var(--content-padding));
+    margin-right: calc(0px - var(--content-padding));
+  }
+
+  .intro__content p:first-child {
+    margin-top: 0;
+  }
+
+  .intro__image {
+    margin: var(--spacing-s) auto;
+    border-radius: var(--border-radius);
   }
 }
 
