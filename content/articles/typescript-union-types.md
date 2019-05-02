@@ -1,6 +1,7 @@
 ---
 Title: Union types in Typescript: modeling state
 Date: 2019-05-02 00:00
+Status: published
 Category: Articles
 Tags: typescript, advanced-types
 Slug: typescript-union-types
