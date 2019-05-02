@@ -2,6 +2,8 @@
   /* Colors */
   --color-dark: #222;
   --color-light: #f9f9f9;
+  --color-light-alternative: #a9b7c6;
+  --color-neutral: #666;
   --color-primary: #ffd800;
   --color-primary-active: #e6ca2e;
   --color-secondary: #009dff;
@@ -13,20 +15,22 @@
   --color-text-placeholder: var(--color-text);
   --color-text-inverse: var(--color-dark);
   --color-text-tooltip: var(--color-dark);
+  --color-text-muted: var(--color-neutral);
+  --color-text-code: var(--color-light-alternative);
 
   --color-bg-content: var(--color-dark);
-  --color-bg-box: var(--color-light);
+  --color-bg-box: #2b2b2b;
   --color-bg-box-inverse: var(--color-dark);
   --color-border: #0a0a0a;
 
   /* Text */
   --font-family-heading: Helvetica Neue, sans-serif;
   --font-family-body: Helvetica Neue, sans-serif;
-  --font-family-monospace: "Courier", "Courier New", monospace;
+  --font-family-monospace: "Lucida Console", Monaco, monospace;
   --font-size-text-small: 0.8em;
   --line-height-text-small: 1em;
   --font-size-text: 1em;
-  --line-height-text: 1.2;
+  --line-height-text: 1.4;
   --font-size-h4: 1em;
   --line-height-h4: 1;
   --font-size-h3: 1.306em;
@@ -35,7 +39,7 @@
   --line-height-h2: 1;
   --font-size-h1: 2.118em;
   --line-height-h1: 1;
-  --font-size-code: var(--font-size-text);
+  --font-size-code: var(--font-size-text-small);
   --line-height-code: 1.3;
   --font-weight-bold: 800;
   --font-weight-semibold: 600;

@@ -25,5 +25,8 @@ __pycache__
 *.pyc
 venv
 
+# js/ts
+node_modules
+
 # artifacts
 output

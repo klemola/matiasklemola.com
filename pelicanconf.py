@@ -16,8 +16,10 @@ AUTHOR_SAVE_AS = ''
 TYPOGRIFY = False
 PATH = 'content'
 
+STATIC_PATHS = ['code']
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['readtime']
+PLUGINS = ['readtime', 'liquid_tags.include_code']
+IGNORE_FILES = ['__pycache__', 'node_modules']
 
 DIRECT_TEMPLATES = ['index', 'posts']
 THEME = './theme'
@@ -31,10 +33,9 @@ LINKS = (('GitHub', 'http://github.com/klemola'),
          ('Soundcloud', 'https://soundcloud.com/butsku'),
          ('Twitter', 'https://twitter.com/MatiasKlemola'),)
 
-# Uncomment following line if you want document-relative URLs when developing
+
 RELATIVE_URLS = True
 
-# Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None

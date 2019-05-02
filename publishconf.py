@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
@@ -8,18 +9,16 @@ from __future__ import unicode_literals
 import os
 import sys
 sys.path.append(os.curdir)
-from pelicanconf import *
+from pelicanconf import *  # isort:skip
 
-# If your site is available via HTTPS, make sure SITEURL begins with https://
 SITEURL = 'https://matiasklemola.com'
 RELATIVE_URLS = False
+WITH_FUTURE_DATES = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
-CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-# Following items are often useful when publishing
-
-#DISQUS_SITENAME = ""
-#GOOGLE_ANALYTICS = ""
+DEFAULT_METADATA = {
+    'status': 'draft',
+}

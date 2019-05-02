@@ -1,0 +1,16 @@
+{
+  "name": "typescript-union-types-example-2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "16.x",
+    "react-dom": "16.x"
+  },
+  "devDependencies": {
+    "@types/react": "16.x",
+    "@types/react-dom": "16.x",
+    "typescript": "3.4.x"
+  },
+  "keywords": [],
+  "description": ""
+}
