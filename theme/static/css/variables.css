@@ -24,8 +24,10 @@
   --color-border: #0a0a0a;
 
   /* Text */
-  --font-family-heading: Helvetica Neue, sans-serif;
-  --font-family-body: Helvetica Neue, sans-serif;
+  --default-font: "HelveticaNeue", "Helvetica Neue", "Helvetica", "TeXGyreHerosRegular", "Tahoma",
+    "Geneva", "Arial", sans-serif;
+  --font-family-heading: var(--default-font);
+  --font-family-body: var(--default-font);
   --font-family-monospace: "Lucida Console", Monaco, monospace;
   --font-size-text-small: 0.8em;
   --line-height-text-small: 1em;

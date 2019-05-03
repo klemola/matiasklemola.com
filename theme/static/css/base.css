@@ -82,7 +82,8 @@ h1,
 h2,
 h3,
 h4 {
-  letter-spacing: 2px;
+  font-family: var(--font-family-heading);
+  letter-spacing: 1px;
   word-wrap: break-word;
 }
 

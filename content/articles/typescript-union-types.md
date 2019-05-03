@@ -10,11 +10,11 @@ Summary: Get familiar with union types in Typescript with practical examples. Us
 Audience: Folks who are somewhat familiar with Typescript, and willing to learn about advanced types. I use some patterns analogous to React, so it helps if you've seen React code before.
 ---
 
-In my time of being a professional software developer I've seen people tripping up on logic involving multiple boolean values. It has happened to me too! Dynamic languages (eg. JavaScript) offer limited choices for modeling multiple outcomes. One could use weak enums (bunch of possible string values in a list), but it's still possible to use invalid values via typos. If that wasn't bad enough, inline boolean values are not named and might not communicate intention clearly. Now that Typescript is gaining traction, I'd like to show you how I've modeled multiple logical outcomes using union types.
+In my time of being a professional software developer I've seen people tripping up on logic involving multiple boolean values. It has happened to me too! Dynamic languages (e.g. JavaScript) offer limited choices for modeling multiple outcomes. One could use weak enums (bunch of possible string values in a list), but it's still possible to use invalid values via typos. If that wasn't bad enough, inline boolean values are not named and might not communicate intention clearly. Now that Typescript is gaining traction, I'd like to show you how I've modeled multiple logical outcomes using union types.
 
 ## Example: Fetching data
 
-Most common example of multi-boolean logic that I have observed is related to fetching remote data, often inside a React component's lifecycle methods. It's ideal to show some kind of temporary view while data is on it's way (eg. a spinner), at least if it's likely that getting said data will take a while.
+Most common example of multi-boolean logic that I have observed is related to fetching remote data, often inside a React component's lifecycle methods. It's ideal to show some kind of temporary view while data is on it's way (e.g. a spinner), at least if it's likely that getting said data will take a while.
 
 In the example below you'll find a combination of an asynchronous operation in `main` and intermediate loading state in `render`. The example is written in a way that is typical for many front-end codebases. Take a moment to consider the logic. We'll improve on this example afterwards.
 
@@ -61,7 +61,7 @@ It's not very different to what we had before, but now all realistic outcomes ar
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:21-31 %}
 
-You probably occasionally still need to test which variant of `RemoteData` is present (eg. you might only care if a value is `Success`), and that can be done easily using some helpers. Using `switch` is not mandatory!
+You probably occasionally still need to test which variant of `RemoteData` is present (e.g. you might only care if a value is `Success`), and that can be done easily using some helpers. Using `switch` is not mandatory!
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:32-54 %}
 

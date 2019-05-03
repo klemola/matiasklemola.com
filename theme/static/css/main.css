@@ -217,11 +217,12 @@ figure.code figcaption > a {
 }
 
 .intro__image {
-  margin-left: var(--spacing-s);
   width: 250px;
-  height: 250px;
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
+  background-image: url("../images/matias.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 @media (max-width: 960px) {
@@ -263,6 +264,7 @@ figure.code figcaption > a {
   }
 
   .intro__image {
+    height: 250px;
     margin: var(--spacing-s) auto;
     border-radius: var(--border-radius);
   }
