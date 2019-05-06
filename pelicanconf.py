@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os
+import sys
 
 AUTHOR = 'Matias Klemola'
 SITENAME = 'matiasklemola.com'
@@ -25,14 +27,7 @@ DIRECT_TEMPLATES = ['index', 'posts']
 THEME = './theme'
 THEME_STATIC_DIR = '.'
 
-MENUITEMS = (('Home', '/', 'index'),
-             ('All posts', '/posts', 'posts'),
-             )
 DISPLAY_CATEGORIES_ON_MENU = False
-LINKS = (('GitHub', 'http://github.com/klemola'),
-         ('Soundcloud', 'https://soundcloud.com/butsku'),
-         ('Twitter', 'https://twitter.com/MatiasKlemola'),)
-
 
 RELATIVE_URLS = True
 
@@ -41,3 +36,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
+sys.path.append(os.curdir)
+sys.path.append(os.path.join(os.curdir, 'content', 'data'))
+
+from pelicandata import *

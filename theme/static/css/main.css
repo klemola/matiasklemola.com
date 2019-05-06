@@ -16,13 +16,6 @@
   min-height: 100vh;
 }
 
-.site-footer {
-  text-align: center;
-  padding: var(--spacing-s);
-  border-top: 1px solid var(--color-border);
-  background-color: #111111;
-}
-
 .site-header {
   box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.1);
   background: #f9f9f9;
@@ -64,17 +57,49 @@
   text-decoration: underline;
 }
 
-.site-header__nav__links li::after,
-.site-footer__links li::after {
+.site-header__nav__links li:last-child:after {
+  content: "";
+}
+
+.site-header__nav__links li::after {
   content: "•";
   font-style: normal;
   margin: 0 var(--spacing-xs);
   padding-bottom: 0.2rem;
 }
 
-.site-header__nav__links li:last-child:after,
-.site-footer__links li:last-child::after {
-  content: "";
+.site-footer {
+  border-top: 1px solid var(--color-border);
+  background-color: #111111;
+}
+
+.site-footer__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--content-max-width);
+  padding: var(--spacing-s);
+}
+
+.site-footer__content p,
+.site-footer__content li,
+.site-footer__content h4 {
+  margin: 0 0 var(--spacing-xxs);
+}
+
+.site-footer__content li {
+  padding: 0;
+}
+
+.site-footer__content__col {
+  display: flex;
+  flex-direction: column;
+  margin-right: var(--spacing-l);
+}
+
+.site-footer__content__col:last-child {
+  margin-right: 0;
 }
 
 .content {
@@ -132,11 +157,6 @@ figure.code figcaption > a {
 .logo:hover {
   opacity: 0.85;
   transform: scale(1.1);
-}
-
-.site-footer__links {
-  display: flex;
-  justify-content: center;
 }
 
 /*
@@ -271,9 +291,24 @@ figure.code figcaption > a {
 }
 
 @media (max-width: 420px) {
-  .site-footer ul,
-  .site-header__nav ul {
+  .site-header__nav ul,
+  .site-footer__content {
     flex-direction: column;
+  }
+
+  .site-footer__content {
+    flex-direction: column-reverse;
+    padding: var(--spacing-s) var(--spacing-s) var(--spacing-m);
+  }
+
+  .site-footer__content__col {
+    margin-bottom: var(--spacing-m);
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .site-footer__content__col:first-child {
+    margin-bottom: 0;
   }
 
   .site-header__nav__links li::after,
