@@ -148,6 +148,11 @@ figure.code figcaption > a {
   margin-top: var(--spacing-m);
 }
 
+.article-footer__date-modified {
+  margin-bottom: var(--spacing-s);
+  font-style: italic;
+}
+
 .logo {
   width: var(--logo-size);
   height: var(--logo-size);
@@ -213,10 +218,6 @@ figure.code figcaption > a {
 
 .article-summary__text {
   margin-top: var(--spacing-xs);
-}
-
-.article-summary__date-modified {
-  margin-top: var(--spacing-xxs);
 }
 
 .article-summary__sourcecode-link {

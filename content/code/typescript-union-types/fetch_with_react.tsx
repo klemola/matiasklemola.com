@@ -12,9 +12,13 @@ interface State {
   userRequest: RemoteData<User, Error>
 }
 
+const initialState: State = { userRequest: Loading }
+
 class Example extends React.Component<{}, State> {
-  componentWillMount() {
-    this.setState({ userRequest: Loading })
+  state = initialState
+
+  componentDidMount() {
+    this.setState(initialState)
 
     this.fetchData()
       .then(response => {

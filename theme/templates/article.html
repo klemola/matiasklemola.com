@@ -31,6 +31,11 @@
   {{ article.content }}
 </div>
 <footer class="article-footer">
+  {% if article.modified %}
+  <div class="article-footer__date-modified"><time datetime="{{ article.modified.isoformat() }}">
+  The article was updated on {{ article.locale_modified }}.
+  </time></div>
+  {% endif %}
   {% if article.category %}
   <div class="category">
   In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>

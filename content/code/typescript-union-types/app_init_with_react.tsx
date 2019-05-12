@@ -17,13 +17,17 @@ interface State {
   appState: AppState
 }
 
+const initialState: State = {
+  userRequest: Loading,
+  translationsRequest: Loading,
+  appState: Initializing,
+}
+
 class Example extends React.Component<{}, State> {
-  componentWillMount() {
-    this.setState({
-      userRequest: Loading,
-      translationsRequest: Loading,
-      appState: Initializing,
-    })
+  state = initialState
+
+  componentDidMount() {
+    this.setState(initialState)
 
     this.fetchUser()
       .then(response => {

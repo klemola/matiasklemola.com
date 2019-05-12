@@ -1,28 +1,31 @@
 ---
 Title: Union types in Typescript: modeling state
 Date: 2019-05-02 00:00
+Modified: 2019-05-10 00:00
 Status: published
 Category: Articles
-Tags: typescript, advanced-types
+Tags: typescript, advanced-types, refactoring
 Slug: typescript-union-types
 Sourcecode: https://github.com/klemola/matiasklemola.com/tree/master/content/code/typescript-union-types
-Summary: Get familiar with union types in Typescript with practical examples. Using union types to model state will rid your application of complex and buggy boolean logic. Your colleagues will thank you later.
+Summary: Get familiar with union types in Typescript with practical examples. You will get rid of of complex and buggy boolean logic by using union types to model the state of your application. Your colleagues will thank you later.
 Audience: Folks who are somewhat familiar with Typescript, and willing to learn about advanced types. I use some patterns analogous to React, so it helps if you've seen React code before.
 ---
 
-In my time of being a professional software developer I've seen people tripping up on logic involving multiple boolean values. It has happened to me too! Dynamic languages (e.g. JavaScript) offer limited choices for modeling multiple outcomes. One could use weak enums (bunch of possible string values in a list), but it's still possible to use invalid values via typos. If that wasn't bad enough, inline boolean values are not named and might not communicate intention clearly. Now that Typescript is gaining traction, I'd like to show you how I've modeled multiple logical outcomes using union types.
+People often trip up on logic involving boolean values. It has happened to me too! Dynamic languages (e.g. JavaScript) offer limited choices for modeling different outcomes. One could use weak enums (list of possible string values). It's still possible to use invalid values via typos. Inline boolean values are not named and might not communicate intention.
+
+Typescript provides a better alternative. I'd like to show you how I've modeled different logical outcomes using union types.
 
 ## Example: Fetching data
 
-Most common example of multi-boolean logic that I have observed is related to fetching remote data, often inside a React component's lifecycle methods. It's ideal to show some kind of temporary view while data is on it's way (e.g. a spinner), at least if it's likely that getting said data will take a while.
+One of the most common examples of multi-boolean logic is fetching remote data. It's ideal to show e.g. a spinner while data is on it's way (if it might take a while).
 
-In the example below you'll find a combination of an asynchronous operation in `main` and intermediate loading state in `render`. The example is written in a way that is typical for many front-end codebases. Take a moment to consider the logic. We'll improve on this example afterwards.
+In the example below you'll find a combination of an asynchronous operation in `main` and intermediate loading state in `render`. I wrote the example in a way that is typical for many front-end codebases. Take a moment to consider the logic. We'll improve on this example afterwards.
 
 {% include_code typescript-union-types/fetch_with_booleans.ts lang:typescript %}
 
 ### Introducing union types
 
-You might have noticed that we are dealing with multiple possible combinations of booleans and data that might be absent (`null`). Even with just two variables, `isLoading`and `data`, we have four possible combinations. Rendering logic is definitely missing some of the possible combinations. Logical outcome for output is to render
+You might have noticed that we are dealing with many possible combinations of booleans and data that might be absent (`null`). Even with as few as two variables, `isLoading`and `data`, we have four possible combinations. Rendering logic is definitely missing some of the possible combinations. Logical outcome for output is to render
 
 - Nothing (implicitly - there's no `else` condition)
 - A loading message
@@ -33,15 +36,15 @@ Ignoring the first option for now, let's model these possible outcomes in a unio
 
 {% include_code typescript-union-types/fetch_with_union_types.ts lang:typescript lines:6-17 %}
 
-Now we have solid names for different outcomes. They should explain what we _want_ to model. We also have extra information associated with `Success` and `Failure` types, and that will be useful later.
+Now we have solid names for different outcomes. They should explain what we _want_ to model. We also have extra information associated with `Success` and `Failure` types. That will be useful later.
 
-Notice that we have a `type` attribute in all of the type definitions. `Data` is a [tagged union](https://en.wikipedia.org/wiki/Tagged_union), also known as a discriminated union. We need some kind of way to tell different options apart (a tag or discriminator), and in Typescript that can be achieved by using literal string values as types. You might have seen this pattern already if you have written actions in `redux`.
+Notice that we have a `type` attribute in all the type definitions. `Data` is a [tagged union](https://en.wikipedia.org/wiki/Tagged_union), also known as a discriminated union. We need some kind of way to tell different options apart - a tag or a discriminator. It is possible in Typescript by using literal string values as types. You might have seen this pattern already if you have written actions in `redux`.
 
 How does this help? See another example below:
 
 {% include_code typescript-union-types/fetch_with_union_types.ts lang:typescript lines:19-42 %}
 
-Nice, right? Creating `Data` values is not terribly ergonomic, but look at `render`! It's super clean compared to the first example. `render` now always returns something meaningful. Furthermore, Typescript knows exactly what type we are dealing with once we have determined the current value of `Data` using a `switch` statement. That's why we don't have to test for the presence of the data anymore. With the `noFallthroughCasesInSwitch` option enabled in Typescript you can ensure that all possible variations are taken into account.
+Nice, right? Creating `Data` values is not very ergonomic, but look at `render`! It's super clean compared to the first example. `render` now always returns something meaningful. Typescript knows exactly what type we are dealing with once we have determined the current value of `Data` using a `switch` statement. That's why we don't have to test for the presence of the data anymore. Typescript can ensure that all possible variations are taken into account. You only have to enable the `noFallthroughCasesInSwitch` option in `tsconfig.json`.
 
 But wait! There's still room for improvement...
 
@@ -49,11 +52,11 @@ But wait! There's still room for improvement...
 
 One of the nicest abstractions I've come across is `RemoteData`. I encountered it while working on a semi-large Elm project. Our `Data` type is already pretty close to how `RemoteData` [is defined](https://package.elm-lang.org/packages/krisajenkins/remotedata/latest/RemoteData) (hats off to Kris Jenkins!).
 
-`RemoteData` includes a `NotAsked` variant. It's realistic, since unless a fetch is started immediately upon application initialization, data is not being loaded. If data is fetched immediately upon initialization, one can safely start from `Loading`, like we did before. I've included a Typescript version of the library in recent work projects, because I don't want to model data fetching in any other way (anymore). Here's `RemoteData` in Typescript:
+Data is often not loading upon application initialization. `RemoteData` includes a `NotAsked` variant for that case. If data is fetched immediately, one can start from `Loading` state, like we did before. I've included a Typescript version of the library in recent work projects. It's been well-received. Here's `RemoteData` in Typescript:
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:1-19 %}
 
-The type is defined using [generics](https://www.typescriptlang.org/docs/handbook/generics.html), since who knows what kind of data someone is fetching and exactly what can go wrong? Let's use `RemoteData` in the example.
+The type is defined using [generics](https://www.typescriptlang.org/docs/handbook/generics.html). Folks fetch different shapes of data and things can go wrong in many ways. Let's use `RemoteData` in the example.
 
 {% include_code typescript-union-types/fetch_with_remotedata.ts lang:typescript lines:1-35 %}
 
@@ -61,23 +64,23 @@ It's not very different to what we had before, but now all realistic outcomes ar
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:21-31 %}
 
-You probably occasionally still need to test which variant of `RemoteData` is present (e.g. you might only care if a value is `Success`), and that can be done easily using some helpers. Using `switch` is not mandatory!
+Sometimes you still need to test which variant of `RemoteData` is present. E.g. you might only care if a value is `Success`, and for that you can use helpers below. Using `switch` is not mandatory!
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:32-54 %}
 
 ### Live example with React
 
-So far the `render` function has only served as an example and has not been used. [Here's a live example](https://codesandbox.io/s/j3wxq7q073?fontsize=14&view=preview) (with React) that actually renders something.
+So far the `render` function has only served as an example and is never called. [Here's a live example](https://codesandbox.io/s/j3wxq7q073?fontsize=14&view=preview) (with React) that actually renders something.
 
 ## Advanced example: Initializing an application
 
-Single page applications often require some data to be available for all (sub)components. For example, many logical parts of an application might need to be translated. What if we fetched translations in addition to the user data?
+Single page applications often need some data to be available for all (sub)components. For example, many logical parts of an application might need to be translated. We have the user data. What if we fetched translations, too?
 
 Let's find out if we can design a solid application initialization logic. Consider the example below:
 
 {% include_code typescript-union-types/app_init_take_one.ts lang:typescript  lines:11-37 %}
 
-We are using `RemoteData` with two requests. I advise you to take a moment to figure out all of the logical outcomes for these concurrent requests. You might want to write the rendering logic yourself as an exercise. In any case, you'll find a naive solution below.
+We are using `RemoteData` with two requests. You should take a moment to figure out all the logical outcomes for these concurrent requests. You might want to write the rendering logic yourself as an exercise. In any case, you'll find a naive solution below.
 
 {% include_code typescript-union-types/app_init_take_one.ts lang:typescript  lines:39-56 %}
 
@@ -91,7 +94,7 @@ Here's a model for app state in the fashion of `RemoteData`.
 
 {% include_code typescript-union-types/AppState.ts lang:typescript  lines:8-23 %}
 
-Some of the types include data, just like in `RemoteData`. It's quite handy - a reference to `Ready` will always contain user data and translations for the lifecycle of the whole application.
+Some of the types include data, like in `RemoteData`. It's quite handy - a reference to `Ready` will always contain user data and translations. You can share that reference application-wide.
 
 Time to improve on the previous example.
 
@@ -107,11 +110,16 @@ Time to improve on the previous example.
 
 ### "Your app initialization example is contrived!"
 
-Some of the possible logical outcomes could be avoided if one used `Promise.all` in `main` and had the application wait until all of the data is loaded (or for the first failure). Nothing would really change for the worse, and there would be less code to maintain. Sure.
+It would be simpler to use `Promise.all` in `main`. The application could wait until all the data is loaded, or for the first failure. Nothing would change for the worse, and there would be less code to maintain. Sure.
 
-The reason why I went with this example was that I wanted you to see that something as tricky as race conditions between simultaneous jobs can be managed with proper planning. You might not always have this level of control over when an asynchronous job starts!
+I chose the example for a reason. I wanted you to see that something as tricky as race conditions between simultaneous jobs can be managed with proper planning. You might not always have this level of control over when an asynchronous job starts!
 
-I was recently tasked with having key search results show immediately if they finish loading before some of the other results. The pattern used above works in a case like that. Something like `KeyResultsReady` is a valid option for `SearchState`, just as `AllResultsReady` is. Possible flows are then `Loading` -> `KeyResultsReady` -> `AllResultsReady` and `Loading` -> `AllResultsReady` (barring failures).
+I was recently tasked with having key search results show before some of the other results. It was because loading key results took one tenth of the time vs. other results. The pattern used above works in a case like that. Something like `KeyResultsReady` is a valid option for `SearchState`, just as `AllResultsReady` is. Possible flows (barring failures) are then
+
+- `Loading` -> `KeyResultsReady` -> `AllResultsReady`
+- `Loading` -> `AllResultsReady`
+
+Again, this makes intentions clear.
 
 ### Conclusion
 
