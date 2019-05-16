@@ -14,4 +14,11 @@ content %}
   </li>
   {% endfor %}
 </ul>
+
+<h1>External posts</h2>
+<ol class="article-list list--unstyled">
+  {% for name, link in EXTERNAL_POSTS %}
+  <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+  {% endfor %}
+</ol>
 {% endblock %}
