@@ -1,5 +1,5 @@
 ---
-Title: Union types in Typescript: modeling state
+Title: Union types in TypeScript: modeling state
 Date: 2019-05-02 00:00
 Modified: 2019-05-10 00:00
 Status: published
@@ -7,13 +7,13 @@ Category: Articles
 Tags: typescript, advanced-types, refactoring
 Slug: typescript-union-types
 Sourcecode: https://github.com/klemola/matiasklemola.com/tree/master/content/code/typescript-union-types
-Summary: Get familiar with union types in Typescript with practical examples. You will get rid of of complex and buggy boolean logic by using union types to model the state of your application. Your colleagues will thank you later.
-Audience: Folks who are somewhat familiar with Typescript, and willing to learn about advanced types. I use some patterns analogous to React, so it helps if you've seen React code before.
+Summary: Get familiar with union types in TypeScript with practical examples. You will get rid of of complex and buggy boolean logic by using union types to model the state of your application. Your colleagues will thank you later.
+Audience: Folks who are somewhat familiar with TypeScript, and willing to learn about advanced types. I use some patterns analogous to React, so it helps if you've seen React code before.
 ---
 
 People often trip up on logic involving boolean values. It has happened to me too! Dynamic languages (e.g. JavaScript) offer limited choices for modeling different outcomes. One could use weak enums (list of possible string values). It's still possible to use invalid values via typos. Inline boolean values are not named and might not communicate intention.
 
-Typescript provides a better alternative. I'd like to show you how I've modeled different logical outcomes using union types.
+TypeScript provides a better alternative. I'd like to show you how I've modeled different logical outcomes using union types.
 
 ## Example: Fetching data
 
@@ -38,13 +38,13 @@ Ignoring the first option for now, let's model these possible outcomes in a unio
 
 Now we have solid names for different outcomes. They should explain what we _want_ to model. We also have extra information associated with `Success` and `Failure` types. That will be useful later.
 
-Notice that we have a `type` attribute in all the type definitions. `Data` is a [tagged union](https://en.wikipedia.org/wiki/Tagged_union), also known as a discriminated union. We need some kind of way to tell different options apart - a tag or a discriminator. It is possible in Typescript by using literal string values as types. You might have seen this pattern already if you have written actions in `redux`.
+Notice that we have a `type` attribute in all the type definitions. `Data` is a [tagged union](https://en.wikipedia.org/wiki/Tagged_union), also known as a discriminated union. We need some kind of way to tell different options apart - a tag or a discriminator. It is possible in TypeScript by using literal string values as types. You might have seen this pattern already if you have written actions in `redux`.
 
 How does this help? See another example below:
 
 {% include_code typescript-union-types/fetch_with_union_types.ts lang:typescript lines:19-42 %}
 
-Nice, right? Creating `Data` values is not very ergonomic, but look at `render`! It's super clean compared to the first example. `render` now always returns something meaningful. Typescript knows exactly what type we are dealing with once we have determined the current value of `Data` using a `switch` statement. That's why we don't have to test for the presence of the data anymore. Typescript can ensure that all possible variations are taken into account. You only have to enable the `noFallthroughCasesInSwitch` option in `tsconfig.json`.
+Nice, right? Creating `Data` values is not very ergonomic, but look at `render`! It's super clean compared to the first example. `render` now always returns something meaningful. TypeScript knows exactly what type we are dealing with once we have determined the current value of `Data` using a `switch` statement. That's why we don't have to test for the presence of the data anymore. TypeScript can ensure that all possible variations are taken into account. You only have to enable the `noFallthroughCasesInSwitch` option in `tsconfig.json`.
 
 But wait! There's still room for improvement...
 
@@ -52,7 +52,7 @@ But wait! There's still room for improvement...
 
 One of the nicest abstractions I've come across is `RemoteData`. I encountered it while working on a semi-large Elm project. Our `Data` type is already pretty close to how `RemoteData` [is defined](https://package.elm-lang.org/packages/krisajenkins/remotedata/latest/RemoteData) (hats off to Kris Jenkins!).
 
-Data is often not loading upon application initialization. `RemoteData` includes a `NotAsked` variant for that case. If data is fetched immediately, one can start from `Loading` state, like we did before. I've included a Typescript version of the library in recent work projects. It's been well-received. Here's `RemoteData` in Typescript:
+Data is often not loading upon application initialization. `RemoteData` includes a `NotAsked` variant for that case. If data is fetched immediately, one can start from `Loading` state, like we did before. I've included a TypeScript version of the library in recent work projects. It's been well-received. Here's `RemoteData` in TypeScript:
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:1-19 %}
 
@@ -121,7 +121,7 @@ I was recently tasked with having key search results show before some of the oth
 
 Again, this makes intentions clear.
 
-### Conclusion
+## Conclusion
 
 Key benefits of using union types for modeling state are
 
@@ -132,6 +132,6 @@ Key benefits of using union types for modeling state are
 
 There are some tradeoffs. One has to write all the interfaces and helper functions. It takes some time to figure out decent names for different values. There's some learning curve involved.
 
-I would say, though, that this kind of premeditation is useful. The general benefit of adding types is to avoid bugs and to verify that your code does what you think it does. This is why you probably are using Typescript anyway!
+I would say, though, that this kind of premeditation is useful. The general benefit of adding types is to avoid bugs and to verify that your code does what you think it does. This is why you probably are using TypeScript anyway!
 
 Thanks for reading.

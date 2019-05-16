@@ -67,7 +67,7 @@ function fetchUser() {
 function fetchTranslations() {
   return new Promise<Translations>(resolve =>
     resolve({
-      appTitle: 'Typescript union types example',
+      appTitle: 'TypeScript union types example',
       greeting: 'Hello',
     })
   )
