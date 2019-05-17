@@ -88,7 +88,7 @@ class Example extends React.Component<{}, State> {
       setTimeout(
         () =>
           resolve({
-            appTitle: 'Typescript union types example',
+            appTitle: 'TypeScript union types example',
             greeting: 'Hello',
           }),
         500
