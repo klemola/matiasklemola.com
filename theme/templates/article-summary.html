@@ -17,5 +17,8 @@
     {% if article.sourcecode %}
     <p><a class="article-summary__sourcecode-link" href="{{ article.sourcecode }}" target="_blank">All source code from this article</a></p>
     {% endif %}
+    {% if article.publication %}
+    <p class="article-summary__repost">Originally published at <a href="{{ article.origin }}"">{{ article.publication }}</a>.</p>
+    {% endif %}
   {% endif %}
 </div>

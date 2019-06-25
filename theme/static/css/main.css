@@ -117,12 +117,27 @@
 .article-content > figure.code,
 .article-content > .highlight {
   position: relative;
-  background: #2b2b2b;
   color: var(--color-text);
   width: calc(100% + 2 * var(--figure-offset));
   margin: var(--spacing-s) calc(0px - var(--figure-offset));
+}
+
+.article-content > table,
+.article-content > figure.code,
+.article-content > .highlight {
+  background: #2b2b2b;
   border-radius: var(--border-radius);
   border: 1px solid var(--color-border);
+}
+
+.article-content__image {
+  margin: var(--spacing-m) calc(0px - var(--figure-offset));
+}
+
+.article-content__image img {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  background: #2b2b2b;
 }
 
 figure.code figcaption {
@@ -219,7 +234,8 @@ figure.code figcaption > a {
   margin-top: var(--spacing-xs);
 }
 
-.article-summary__sourcecode-link {
+.article-summary__sourcecode-link,
+.article-summary__repost {
   font-style: italic;
 }
 
@@ -257,6 +273,12 @@ figure.code figcaption > a {
   .article-content > figure.code,
   .article-content > .highlight {
     width: calc(100% + 2 * var(--content-padding));
+  }
+
+  .article-content__image img,
+  .article-content > table,
+  .article-content > figure.code,
+  .article-content > .highlight {
     border-radius: 0;
     border-left: none;
     border-right: none;

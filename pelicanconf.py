@@ -18,7 +18,7 @@ AUTHOR_SAVE_AS = ''
 TYPOGRIFY = False
 PATH = 'content'
 
-STATIC_PATHS = ['code']
+STATIC_PATHS = ['code', 'images']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['readtime', 'liquid_tags.include_code']
 IGNORE_FILES = ['__pycache__', 'node_modules']
