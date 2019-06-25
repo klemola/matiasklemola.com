@@ -1,11 +1,14 @@
 ---
 Title: Five years at Valuemotive
-Date: 2019-06-20 00:00
+Date: 2019-06-25 00:00
+Status: published
 Category: Articles
 Tags: career, personal, valuemotive
 Slug: five-years-at-valuemotive
 Summary: Looking back at my career progression from a junior front-end developer into a software architect and HR rep at Valuemotive.
 Audience: Folks who are interested in working in a consultancy, developers with junior level of experience, and (future) Valuemotive employees.
+Publication: Valuemotive blog
+Origin: https://blog.valuemotive.com/five-years-at-valuemotive-152b25663711
 ---
 
 ## 2014: Prelude
@@ -14,13 +17,25 @@ I graduated from Haaga-Helia university with a bachelor's degree in IT in late 2
 
 By 2014 I was unsatisfied about overwork, bad management and lack of new things to learn. Some of my closest friends had recently started to work as consultants. They praised the variety in their work, their salaries and the independent approach to work. It sounded lucrative. I parted ways with the startup and started to look for greener pastures.
 
+<div class="article-content__image">
+  <img src="{static}/images/vm_prelude.jpg" alt="Time for new adventures">
+</div>
+
 Some weeks later my phone rang. On the other side was a recruiter, who got me in contact with Valuemotive. We set up an interview with the CEO Pekka Lehti and an experienced developer Kristo Kurtén. We met over coffee in a downtown Helsinki coffeehouse, since at the time Valuemotive didn't have a permanent office. I was initially nervous (who wouldn't be at that point in their career). The setting and the tone of the conversation made me relax - I wasn't in an interrogation.
 
 Things went well. Valuemotive started scouting for a project that would be ideal for my experience. After couple of weeks I met with a client and signed a contract with Valuemotive.
 
+<div class="article-content__image">
+  <img src="{static}/images/vm_hire.jpg" alt="Hired!">
+</div>
+
 ## 2014 - early 2016: First project as a junior front-end dev
 
 Valuemotive has a vast network of partner consultancies. Some team is often missing the last developer to round it up. One of our partners can't quite get that position filled with the normal flow of employees. In that case they often turned to us. My first project was a such partnership. A 5-year project to modernize and centralize the national boat registry. No biggie!
+
+<div class="article-content__image">
+  <img src="{static}/images/vm_boat_registry.jpg" alt="Sailing the seas of a boat registry">
+</div>
 
 Well, my first days in the project were actually pretty smooth. The team size was adequate and the level of expertise at hand was stunning (especially to a junior dev). Normalizing vast amounts of data from different sources and figuring out a proper data model for the registry was the biggest undertaking in the project as a whole. The challenging task was not my responsibility, though.
 
@@ -40,6 +55,10 @@ I had many options for the next project, six if I recall correctly. All of them 
 
 We built a social dating site. Our suggestion to try [Elixir](https://elixir-lang.org/) + [Phoenix](https://phoenixframework.org/) was rejected, even though the real-time focus of the dating site would have been a great fit (plus Elm works great with Phoenix). We then chose a neutral stack for the back-end - [NodeJS](https://nodejs.org/en/), _Express_, _KnexJS_ and some WebSocket lib that I can't quite recall.
 
+<div class="article-content__image">
+  <img src="{static}/images/vm_dating_app.jpg" alt="In love with Elm">
+</div>
+
 Starting from scratch in a full-stack project was a great learning experience. Using Elm in a commercial project was not common at the time - even globally. Me and my teammate came up with creative ways to deliver features. Back-end work was a big part of my role too. I spent a considerable chunk of the project on integrating external payment services into the application. I needed to use SOAP and write scheduled routines for monthly payments and the like.
 
 Working with Elm was a pleasure. I was only mildly familiar with strong static typing at the time, and the benefits were obvious. We made big changes in UI architecture during the project without having to fear for breaking things. See my colleague's [article](https://ohanhi.com/why-and-when-of-choosing-elm.html) for a summary of the things that Elm can help you with.
@@ -58,6 +77,10 @@ I had a couple of months to spare in the summer of 2017. While I was busy with p
 
 The service design phase was almost complete when I joined the project. Our goal was to make it easy to manage physical ads on e.g. ski centers. The end-user would create ad campaigns for specific locations. Our team of four created a [CRUD](https://www.codecademy.com/articles/what-is-crud) application with familiar tech, Java and React. The React ecosystem had matured. We used [Redux](https://redux.js.org/) and several third party React components. We created a "cloud infrastructure" for the application - some [Heroku](https://www.heroku.com/) dynos and a database. Some client organizations need a full fledged cloud environment with VPCs, private networks and other security measures. Sometimes a simple Heroku instance will do the job well enough.
 
+<div class="article-content__image">
+  <img src="{static}/images/vm_ad_tool.jpg" alt="Buy stuff">
+</div>
+
 I had fun working with familiar folk, and as a super nice thing we were able to work from Valuemotive office. After careful planning, productive pair programming and lots of ice-cream we had a nice application ready for deployment. The completion of the project was followed up by another project hunt. After yet another last-minute change I found myself working with the Elm-guru from before.
 
 ---
@@ -69,6 +92,10 @@ _Working with my Valuemotive colleagues resulted in a lasting relationship with 
 The national railway company was looking to replace their ticket vending machines, which were becoming outdated. The hardware for the new <abbr title="Ticket Vending Machine">TVM</abbr>s was already selected. Our team worked on the sales software and a layer between software and the hardware devices (such as the receipt printer).
 
 This project was spearheaded by an extensive service design phase, too. Our team was able to base all user experience decisions on hard sales data and loads of interviews. We didn't stop the research there - service design was present throughout the project, and we received extra advice from accessibility experts.
+
+<div class="article-content__image">
+  <img src="{static}/images/vm_tvm.jpg" alt="A friendly TVM">
+</div>
 
 Working with specific hardware was unusual in the face of web development. Knowing exactly what kind of screen, input and general environment a user would have made it possible to hard code things that normally require complex logic. On the other hand we were at the mercy of the operating system, hardware quirks and some unideal aspects of the touch screen.
 
@@ -94,6 +121,10 @@ One can set up a service by clicking around the web interface of a cloud provide
 
 I put Terraform and my knowledge of individual AWS services into good use in early 2019. A startup was looking into building themselves a serious private cloud from the get go (instead of moving to it when faced with the limitations of simple services). They were familiar with the synergy of using AWS services together, so I designed a [VPC](https://aws.amazon.com/vpc/) for their specific needs. The design was centered on a cluster of [Docker containers](https://www.docker.com/).
 
+<div class="article-content__image">
+  <img src="{static}/images/vm_cloud.jpg" alt="Cloud containers (ouch)">
+</div>
+
 Having such a design-centric project was a blast, and was finished without a hitch. After drawing several iterations of networking diagrams, I also felt confident in the longevity of the setup.
 
 The project had barely been wrapped up when I joined another project. It had been a while, but I was writing a tool for professionals again. It's great to be able to talk to the future end-users face to face.
@@ -111,6 +142,10 @@ A colleague approached me in late 2018 about a new role in the company. Valuemot
 I'm intimately familiar with our culture, what we do and what it takes to do the job well. That is why I had the confidence to take up the job - even though I don't have the formal qualification work in HR. We are in contact with several third party recruiters who have helped us tremendously over the years. Communicating with the recruiters and keeping track of ongoing processes takes a good chunk of time. I screen the candidates and hold at least the first interview. The decision to hire is still a group effort.
 
 I had some ideas of my own for the role as well. Having more and more employees and clients can make it tough to keep track of individual career progression and, most importantly, well-being. Being a stress-prone overachiever myself, I knew that it's difficult to take these things up with someone. So even before I started full-time in the new role, I piloted several well-being services in Valuemotive. We had several people try them out and (optionally) share their experiences. I firmly believe that it's possible to prevent exhaustion and other severe conditions by promoting well-being at work. We also have a great tradition in the form of an informal weekly meeting where Valuemotive employees share an honest summary of their work week, and weekend plans. Such sharing often gives cues about hardship and I can then try to work out the issues with a colleague in private.
+
+<div class="article-content__image">
+  <img src="{static}/images/vm_kalasatama.jpg" alt="Second home (new Valuemotive office)">
+</div>
 
 The transition to the new role took place in mid March 2019. I was a bit lost for the first few days. HR-related work is memory intensive, so having a Trello board to keep track of active processes was super helpful (taking individual's privacy into account, of course). There was a massive backlog of leads from recruiters. Though I knew that I'd be on the phone a lot, I was still surprised by how much time I spent in a phone booth. I had all the time in the world to spend on recruitment, so I was able to organize several interviews per week and communicate about the next steps. It didn't take very long for me to get comfortable with the new tasks, and by June I wasn't surprised that often!
 
