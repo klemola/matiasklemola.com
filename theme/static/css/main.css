@@ -114,7 +114,7 @@
 
 .article-content__image,
 .article-content > table,
-.article-content > figure.code,
+.article-content > figure,
 .article-content > .highlight {
   position: relative;
   color: var(--color-text);
@@ -122,8 +122,9 @@
   margin: var(--spacing-s) calc(0px - var(--figure-offset));
 }
 
+.article-content__image,
 .article-content > table,
-.article-content > figure.code,
+.article-content > figure,
 .article-content > .highlight {
   background: #2b2b2b;
   border-radius: var(--border-radius);
@@ -140,10 +141,18 @@
   background: #2b2b2b;
 }
 
-figure.code figcaption {
+figure figcaption {
   padding: var(--spacing-xs) var(--content-padding);
-  color: var(--color-text-muted);
   font-style: italic;
+}
+
+figure figcaption.code {
+  color: var(--color-text-muted);
+}
+
+figure > img {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 figure.code .highlight {
@@ -239,6 +248,10 @@ figure.code figcaption > a {
   font-style: italic;
 }
 
+.cover-image {
+  margin-top: 0;
+}
+
 .intro {
   display: flex;
   flex-direction: row;
@@ -270,15 +283,16 @@ figure.code figcaption > a {
 @media (max-width: 720px) {
   .article-content__image,
   .article-content > table,
-  .article-content > figure.code,
+  .article-content > figure,
   .article-content > .highlight {
     width: calc(100% + 2 * var(--content-padding));
   }
 
   .article-content__image img,
   .article-content > table,
-  .article-content > figure.code,
-  .article-content > .highlight {
+  .article-content > figure,
+  .article-content > .highlight,
+  figure > img {
     border-radius: 0;
     border-left: none;
     border-right: none;

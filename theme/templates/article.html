@@ -7,13 +7,9 @@
 {% endblock %}
 {% block head %}
 {{ super() }}
-
 {% import 'translations.html' as translations with context %}
 {% if translations.entry_hreflang(article) %}
 {{ translations.entry_hreflang(article) }}
-{% endif %}
-{% if article.description %}
-<meta name="description" content="{{ article.description }}" />
 {% endif %}
 {% for tag in article.tags %}
 <meta name="tags" content="{{ tag }}" />
@@ -28,6 +24,9 @@
   <hr />
 </header>
 <div class="article-content">
+  {% if article.cover %}
+  <img class="article-content__image cover-image" src="/images/{{article.cover}}"/>
+  {% endif %}
   {{ article.content }}
 </div>
 <footer class="article-footer">
