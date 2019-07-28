@@ -7,6 +7,7 @@ Tags: travel, tips
 Slug: albania
 Summary: A brief guide to travel in Southern Albania from personal experience.
 Audience: Anybody who's open to new experiences and is looking for an alternative travel destination.
+Cover: albania/sarande_fisher.jpg
 ---
 
 It had been a long and jolly beach day in Ksamil. I was in a bus, on my way back to the city of Sarandë. The bus passed a bar that was painted with the colors of a football team. The wall was bright red with the words "Partizani Kampion" in white. It looked curious. Me and my fiancée had plans to go out for drinks later- we'd seen praise for a cocktail bar called [Jericho][jericho]. I suggested that we start the evening by checking out the football bar. It's one block uphill from the Sarandë central square.
@@ -21,17 +22,21 @@ I feel that Albanians are humble and really care about making a good impression.
 
 There's plenty of reasons to visit Albania. The clear waters of Ionian Sea and vast mountain ranges are beautiful. The area has been populated for _millennia_. You'll find ancient ruins and beautiful churches. Traditional Albanian dishes and dishes from Greece, Italy and others provide delicious variety. Living and accommodation costs are relatively low. Most importantly I have felt extremely welcome there. For a Finn such as I, Albania is relatively close - 3.5 hours by plane. The weather is distinctly warmer than in Northern Europe.
 
----
+![Looking at the Ionian Sea from our own patio, in Himarë]({static}/images/albania/mare_terrace.jpg)
 
 Albania is an European country of a little less than three million people. Albania has it's own currency, [lek] (plural: lekë), and it's own language (Albanian). Albania was a communist republic since World War II until the early nineties. Becoming the world's first atheist state, religion was banned and hundreds of places of worship were destroyed. These days Albania doesn't have an official religion. Islam is the biggest religion in Albania, followed by Christianity. Religion is not apparent in the daily life from a tourist's perspective. We've been to beautiful old churches. You'll hear a prayer call every now and then.
 
 Economy of Albania has been growing for a long time. Rapid growth took place in the later half of the 20th century. Even the the global financial crisis of 2007-2008 didn't stop the growth. Albania is an official candidate for membership in the European Union. Albania has become more connected to the world after the government allowed citizens to travel abroad in 1990 and improved ties with foreign states. There's no doubt tourism will boost up the economic growth.
 
-## When to travel - tourism in Albania
+![There are more than 100 000 bunkers in Albania. They were built to protect the people from an enemy that never was. This one is now a ladybug.]({static}/images/albania/himare_bunker.jpg)
+
+## When to travel (pick your season)
 
 There are three distinct seasons for tourism in Albania. The "middle season" is from mid-June to mid-July, and the "high season" lasts from mid-July through August, and the "low season" is all other parts of the year. The seasons affects the prices and availability of both accommodation and services. Some hotels, restaurants and stores might be closed during the low season. The middle season is a bit busier, and when most Europeans have their holidays, the high season brings a lot of traffic to Albania. I've been in Albania during low and mid seasons, and could spot the difference. I paid roughly 50% more for accommodation and could see a difference in the crowds during the mid season. You should consider the weather and transportation when choosing the time of travel. Late spring and early summer might be more tolerable if you don't like 30°C+ temperatures and crowds.
 
 Not that (Southern) Albania's a full on tourist destination. I've heard that it's similar to how Croatia was some 10 years ago. Right now it's still quite rare for an European to travel to Albania unless they are from neighboring countries like Italy and Greece. I found Albania to be far less superficial than touristy areas in Portugal, Spain, Southern France and the like. Judging from what I heard from locals and travelers, things are picking up every year. I think that it's possible for Albania to reach similar level of tourism as more popular Mediterranean destinations eventually.
+
+![Sarandë beach promenade in July]({static}/images/albania/sarande_promenade.jpg)
 
 Sarandë and other popular vacation destinations take tourists into account. You'll find the usual souvenir and beach equipment stands in the beach promenades, bunch of bus tours to attractions and eager taxi drivers waiting for passengers. Best beaches are often private and sun chairs will cost a humble amount of lekë.
 
@@ -47,6 +52,8 @@ Much of Albania is covered by mountains. In order to travel between coastal citi
 
 I've had sweaty palms when on top of a 1.5km tall mountain on a bus filled to the brim, in the rain. There's bunch of memorial sites for people who have driven off the road and plunged into a quick and sure death. Don't be alarmed, though. The roads are in great condition and the bus drivers know what they're doing. I was in awe when a bus driver was smoking a cigarette, driving with just one hand, and administering break while driving down a mountain. There have been no close calls on my many bus rides. Locals are totally used to this.
 
+![Looking at the mountains between Sarandë and Gjirokastër from the bus]({static}/images/albania/mountains.jpg)
+
 Bus fares between cities are only some euros. If you're adventurous, you can also pay for a private-ish ride by a small bus or a taxi service. Some (possibly unofficial) drivers only charge less than ten euros for such a ride.
 
 Pay attention to how bus schedules are defined, and try to be flexible. It's not uncommon for some bus rides to be a no-show if there are too few passengers. For instance, I went to Butrint with my fiancée in the low season with a bus. We were going to take the last bus back to Sarandë, but it didn't show up. We didn't see any taxis nearby, so we went to ask the national park guard about what to do. He then went to discuss the situation with the Butrint ticket salesperson, who said that his shift had just ended and that he can drive us "home" in his personal car. So he did. This year we were in Butrint again, and got a ride back to Ksamil from a young couple. Albanians truly are kind!
@@ -56,6 +63,8 @@ Pay attention to how bus schedules are defined, and try to be flexible. It's not
 Staying at a hotel in Albania has been consistently wonderful. Many of the hotels are quite new and well-equipped. You'll find Wi-Fi, air conditioning, very comfortable double beds, fridges and other modern comforts. I mentioned before that Albanians are known for their hospitality. It extends to room service and cleaning. Our hotel rooms have always been tip-top and our linens and towels fresh. We've had our laundry done for free.
 
 The hotels are often quite small, having only some six to a dozen rooms. I find it very comfortable. During the low season I've felt that me and my fiancée have sometimes been the only people staying in a hotel at the time. Peacefulness abound.
+
+![Our room in Mare Bed and Breakfast]({static}/images/albania/mare_room.jpg)
 
 You'll quickly notice that the infrastructure of the mountainous area means that one cannot dispose toilet paper and other items into the toilet. This might be different from what you're used to. Some restaurants might feature a "hole in a floor" type of toilet. I am also not sure if most people can safely drink the tap-water - we bought bottled mineral water (sometimes hotels even had some in the fridge for free).
 
@@ -70,6 +79,8 @@ Most of the restaurants in Southern Albania seem to be privately owned. I didn't
 We've had a lovely time in [Taverna RRapo][rrapo] in Sarandë, which is ran by a family. Lack of hired waiters makes the service feel more intimate. We had delicious stuffed peppers on our first visit. We ordered them again on our second visit, and the response was "mom's not here, no stuffed peppers". At that time they fired up the grill just for us. I ordered grilled chicken for about 700 lek (~6 euros), thinking that I'll get chicken fillets. I was served a whole chicken instead!
 
 Main courses are often grilled. It's typical to match grilled meat (chicken, lamb) with tzatziki or other yoghurt based dip. Albanian kitchen favors oven cooked dishes such as moussaka, pastichio and lasagne - many dishes are based on Italian and Greek cuisine. Stuffed peppers and tomatoes are also common. Many restaurants serve pizza that is prepared in a stone oven. It's rare to see a specifically vegetarian section in a menu. The menus always had many vegetarian options, though. Some restaurants prepare vegetarian alternatives of e.g. moussakas. Common starters include white cheese (prepared in various ways), olives and grilled vegetables.
+
+![Grilled white cheese, filled paprikas, cold Korças and a happy fiancée at Taverna Rrapo!]({static}/images/albania/taverna.jpg)
 
 Most restaurants have a nice selection of fresh seafood. Seafood prices vary a lot. Rarest catches can be relatively expensive, up to 4000 lek. Being allergic to seafood, I can't say much of the taste. If you want to enjoy seafood, try [Taverna Lefteri][lefteri]. It's the oldest restaurant in Himarë, and has the best reviews.
 
@@ -91,25 +102,35 @@ One of the major attractions outside Sarandë city limits is [the Blue Eye][blue
 
 The beaches of Sarandë and Himarë have a pebbly floor. It's comfortable enough for me, but if you're looking for sandy beaches, look no further than Ksamil. Town of Ksamil is a 20 minute bus ride away from Sarandë. You can board a municipal bus that is very affordable, or take a private ride. Ksamil has plenty of private beaches. Renting a sun chair for the day costs about 4-5 euros. I've had a really nice beach day at [Guvat][guvat]. The restaurant servers drinks directly to sun chairs. You can take a break from swimming and sunbathing, and enjoy a e.g. a pasta in the restaurant. The beach is small enough to feel cozy. Ksamil itself has plenty of hotels and restaurants.
 
+![View from a sun chair at Guvat in Ksamil]({static}/images/albania/ksamil_beach.jpg)
+
 #### Butrint
 
 The greatest attraction of the Sarandë area is the archaeological national park of Butrint. Butrint is a few kilometers south of Ksamil. The Sarandë-Ksamil bus line takes you there. Quote [triphistoric.com][butrint]:
 
 > Originally part of an area called Epirus, Butrint has been occupied by the Greeks, the Romans, the Byzantines and the Venetians. As a result, Butrint offers a wealth of incredible archaeological structures, including a well preserved Greek theatre, fortifications which have been changed by each civilisation which occupied it, Roman public baths inside which lies a paleo-Christian baptistery and a 9th century basilica.
 
+![Butrint theatre]({static}/images/albania/butrint.jpg)
+
 The structures are indeed well preserved. You can walk around the ruins on the ground and on wooden pathways. The Greek amphitheater is in such good condition that during the Butrint Summer Festival (mid July) you can go and see a play on it! We saw Othello played by the Bulgarian Army Theatre. There's a path that circles the area from the city ruins to a fortified castle-like structure at the top. From there you can see the nearby village, and Corfu on the horizon.
 
 The atmosphere is just magical. We had the chance to wander around in peace during the early evening. I felt connected to ancient ways of life. The structures have retained their basic shape and many details, so with a little imagination you can see people living there.
 
+![Summer Festival in Butrint]({static}/images/albania/butrint_play.jpg)
+
 ### Himarë
 
 The [Castle of Himarë][himarecastle], or the old town, is well worth a visit. It's several kilometers uphill from Himarë city center. We could wander the narrow streets of the old town without seeing many other visitors. There is a small café near the top with glorious views of the bay(s). At the top of the old town you'll find an old church with beautiful paintings and an eerie feel. The lack of staff (guards, guides etc.) will let you immerse into the centuries that have passed while the old town has been defended from invaders and has stayed intact.
+
+![View from the Castle of Himarë]({static}/images/albania/himare_castle2.jpg)
 
 ### Gjirokastër
 
 Of the cities' castles, [Gjirokastër's castle][gjirokastercastle] is the most impressive. The castle overlooks the city and it's old town, which is a UNESCO World Heritage Site. Inside you'll find the National Museum of Armaments, a tomb and an open area on the ramparts. The ramparts contain an American airplane(!) and a festival stage. The castle was mostly empty when we visited it. It's kept in good condition and has plenty of interesting hallways and cellars that you can explore.
 
 Gjirokastër's old town contains old houses of powerful families, open for visitors. [Skenduli House][skendulihouse] and [Zekate House][zekatehouse] provide an interesting look into life of Albanians in the past. There's a distinct eastern influence and plenty of beautiful ornaments. You can wander freely (for a fee), or take a guided tour. We visited the Zekate House specifically and found it impressive. The old town also contains a bazaar full of handcrafted items such as jewelry, instruments and souvenirs for sale.
+
+![Looking at the ramparts at Castle of Gjirokastër]({static}/images/albania/gjirokaster_castle.jpg)
 
 ## Find your way
 
@@ -119,7 +140,11 @@ In any case, you won't be disappointed. I certainly have enjoyed both of my trip
 
 ---
 
+All photos in the article were shot by me. If you want to use them in an other context, please credit me (or link them to this article).
+
 If you have any questions, feel free to contact me at [hello@matiasklemola.com](mailto:hello@matiasklemola.com) or on [Twitter](https://twitter.com/matiasklemola)!
+
+![Sunset in Gjirokastër]({static}/images/albania/gjirokaster_sunset.jpg)
 
 [smilealbania]: https://invest-in-albania.org/project-smile-albania-recruiting-youth-to-promote-tourism/
 [lek]: https://en.wikipedia.org/wiki/Albanian_lek
