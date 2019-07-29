@@ -1,7 +1,7 @@
 ---
 Title: You should travel to Albania!
 Date: 2019-07-19 00:00
-Status: draft
+Status: published
 Category: Articles
 Tags: travel, tips
 Slug: albania
@@ -10,7 +10,7 @@ Audience: Anybody who's open to new experiences and is looking for an alternativ
 Cover: albania/sarande_fisher.jpg
 ---
 
-It had been a long and jolly beach day in Ksamil. I was in a bus, on my way back to the city of Sarandë. The bus passed a bar that was painted with the colors of a football team. The wall was bright red with the words "Partizani Kampion" in white. It looked curious. Me and my fiancée had plans to go out for drinks later- we'd seen praise for a cocktail bar called [Jericho][jericho]. I suggested that we start the evening by checking out the football bar. It's one block uphill from the Sarandë central square.
+It had been a long and jolly beach day in Ksamil. I was in a bus, on my way back to the city of Sarandë. The bus passed a bar that was painted with the colors of a football team. The wall was bright red with the words "Partizani Kampion" in white. It looked curious. Me and my fiancée had plans to go out for drinks later - we'd seen praise for a cocktail bar called [Jericho][jericho]. I suggested that we start the evening by checking out the football bar. It's one block uphill from the Sarandë central square.
 
 The bar was almost empty, like most bars in early June. It was more like a living room, actually. The place was covered in memorabilia of the FK Partizani. There were scarves and shirts hanging on the wall, trophies everywhere. The inside of the bar was also painted with the team's colors. The owner came up to us and told us about his fandom for the team. He asked if we could pose with Partizani scarves for a photo, for a Facebook page he administers.
 
@@ -20,11 +20,11 @@ He told us to pick our beers from a fridge - there was no tap. While we were enj
 
 I feel that Albanians are humble and really care about making a good impression. It's not granted that all Albanians understand English (Italian or Greek might work better), but it's not a problem. With goodwill, things go smoothly.
 
-There's plenty of reasons to visit Albania. The clear waters of Ionian Sea and vast mountain ranges are beautiful. The area has been populated for _millennia_. You'll find ancient ruins and beautiful churches. Traditional Albanian dishes and dishes from Greece, Italy and others provide delicious variety. Living and accommodation costs are relatively low. Most importantly I have felt extremely welcome there. For a Finn such as I, Albania is relatively close - 3.5 hours by plane. The weather is distinctly warmer than in Northern Europe.
+There's plenty of reasons to visit Albania. The clear waters of the Ionian Sea and vast mountain ranges are beautiful. The area has been populated for _millennia_. You'll find ancient ruins and beautiful churches. Traditional Albanian dishes and dishes from Greece, Italy and others provide delicious variety. Living and accommodation costs are relatively low. Most importantly I have felt extremely welcome there. For a Finn such as I, Albania is relatively close - 3.5 hours by plane. The weather is distinctly warmer than in Northern Europe.
 
 ![Looking at the Ionian Sea from our own patio, in Himarë]({static}/images/albania/mare_terrace.jpg)
 
-Albania is an European country of a little less than three million people. Albania has it's own currency, [lek] (plural: lekë), and it's own language (Albanian). Albania was a communist republic since World War II until the early nineties. Becoming the world's first atheist state, religion was banned and hundreds of places of worship were destroyed. These days Albania doesn't have an official religion. Islam is the biggest religion in Albania, followed by Christianity. Religion is not apparent in the daily life from a tourist's perspective. We've been to beautiful old churches. You'll hear a prayer call every now and then.
+Albania is an European country of a little less than three million people. Albania has its own currency [lek] (plural: lekë), and its own language (Albanian). Albania was a communist republic since World War II until the early nineties. Becoming the world's first atheist state, religion was banned and hundreds of places of worship were destroyed. These days Albania doesn't have an official religion. Islam is the biggest religion in Albania, followed by Christianity. Religion is not apparent in the daily life from a tourist's perspective. We've been to beautiful old churches. You'll hear a prayer call every now and then.
 
 Economy of Albania has been growing for a long time. Rapid growth took place in the later half of the 20th century. Even the the global financial crisis of 2007-2008 didn't stop the growth. Albania is an official candidate for membership in the European Union. Albania has become more connected to the world after the government allowed citizens to travel abroad in 1990 and improved ties with foreign states. There's no doubt tourism will boost up the economic growth.
 
@@ -42,7 +42,7 @@ Sarandë and other popular vacation destinations take tourists into account. You
 
 ## Getting there and getting around
 
-Southern coastal Albania, or _Albanian Riviera_, is easily accessible by flying to Corfu. Corfu is a Greek island just miles from the coast of Albania. From what I've seen, at least Finnish, English and German airlines fly to Corfu. You can take a ferry from the port of Corfu (only 10 minutes from the airport [by bus][airportbus]) to the coastal Albanian cities such as Sarandë and Himarë. There are several ferry connections per day, especially in the afternoon. The ferry costs about 25 euros per trip. We bought our tickets from [Ionian Seaways][ionianseaways]. You can buy the ticket and print it. Otherwise you have to visit their ticket office by the Corfu/Sarandë port. The capital of Albania, Tirana, has an airport of it's own. Tirana is to the north and inland. There are bus connections from Tirana to Southern Albania on two different routes, coast route through Vlorë, and other passing through Gjirokastër.
+Southern coastal Albania, or _Albanian Riviera_, is easily accessible by flying to Corfu. Corfu is a Greek island just miles from the coast of Albania. From what I've seen, at least Finnish, English and German airlines fly to Corfu. You can take a ferry from the port of Corfu (only 10 minutes from the airport [by bus][airportbus]) to the coastal Albanian cities such as Sarandë and Himarë. There are several ferry connections per day, especially in the afternoon. The ferry costs about 25 euros per trip. We bought our tickets from [Ionian Seaways][ionianseaways]. You can buy the ticket and print it. Otherwise you have to visit their ticket office by the Corfu/Sarandë port. The capital of Albania, Tirana, has an airport of its own. Tirana is to the north and inland. There are bus connections from Tirana to Southern Albania on two different routes, coast route through Vlorë, and other passing through Gjirokastër.
 
 Some people travel all the way from Croatia to Albania following the coastal routes. I've heard that it is a beautiful experience and easily done with a rental car.
 
@@ -50,11 +50,11 @@ I've always travelled straight to Sarandë after landing in Corfu. Sarandë is a
 
 Much of Albania is covered by mountains. In order to travel between coastal cities and from coast to inner Albania, you'll have to ride alongside or cross the mountains. This might be why Albanian railroad network was never extended to the Southern parts. Traveling from Sarandë to locations mentioned above can be intense, at least if you're from a flat area such as Southern Finland.
 
-I've had sweaty palms when on top of a 1.5km tall mountain on a bus filled to the brim, in the rain. There's bunch of memorial sites for people who have driven off the road and plunged into a quick and sure death. Don't be alarmed, though. The roads are in great condition and the bus drivers know what they're doing. I was in awe when a bus driver was smoking a cigarette, driving with just one hand, and administering break while driving down a mountain. There have been no close calls on my many bus rides. Locals are totally used to this.
+I've had sweaty palms when on top of a 1.5km tall mountain on a bus filled to the brim, in the rain. There are several memorial sites for people who have driven off the road and plunged into a quick and sure death. Don't be alarmed, though. The roads are in great condition and the bus drivers know what they're doing. I was in awe when a bus driver was smoking a cigarette, driving with just one hand, and administering break while driving down a mountain. There have been no close calls on my many bus rides. Locals are totally used to this.
 
 ![Looking at the mountains between Sarandë and Gjirokastër from the bus]({static}/images/albania/mountains.jpg)
 
-Bus fares between cities are only some euros. If you're adventurous, you can also pay for a private-ish ride by a small bus or a taxi service. Some (possibly unofficial) drivers only charge less than ten euros for such a ride.
+Bus fares between cities are only a few euros. If you're adventurous, you can also pay for a private-ish ride by a small bus or a taxi service. Some (possibly unofficial) drivers only charge less than ten euros for such a ride.
 
 Pay attention to how bus schedules are defined, and try to be flexible. It's not uncommon for some bus rides to be a no-show if there are too few passengers. For instance, I went to Butrint with my fiancée in the low season with a bus. We were going to take the last bus back to Sarandë, but it didn't show up. We didn't see any taxis nearby, so we went to ask the national park guard about what to do. He then went to discuss the situation with the Butrint ticket salesperson, who said that his shift had just ended and that he can drive us "home" in his personal car. So he did. This year we were in Butrint again, and got a ride back to Ksamil from a young couple. Albanians truly are kind!
 
@@ -66,7 +66,7 @@ The hotels are often quite small, having only some six to a dozen rooms. I find 
 
 ![Our room in Mare Bed and Breakfast]({static}/images/albania/mare_room.jpg)
 
-You'll quickly notice that the infrastructure of the mountainous area means that one cannot dispose toilet paper and other items into the toilet. This might be different from what you're used to. Some restaurants might feature a "hole in a floor" type of toilet. I am also not sure if most people can safely drink the tap-water - we bought bottled mineral water (sometimes hotels even had some in the fridge for free).
+You'll quickly notice that the infrastructure of the mountainous area means that one cannot dispose of toilet paper and other items into the toilet. This might be different from what you're used to. Some restaurants might feature a "hole in a floor" type of toilet. I am also not sure if most people can safely drink the tap-water - we bought bottled mineral water (sometimes hotels even had some in the fridge for free).
 
 Accommodation is very affordable compared to most European countries. A night in [Hotel Kodra][kodrahotel] in Gjirokastër was 40 euros during the low season. The price included a breakfast for two. I was expecting a standard breakfast buffet of bread, bacon, cereal, juice and coffee, but what we received was far better. We were instructed to choose a table, and then we were personally served a hour-long feast of some ten different shared plates of doughnuts, cheeses, fruits and other delicious bites. Coffee was made to order (e.g. cappuccino). Incredible.
 
@@ -76,7 +76,7 @@ I recommend [Titania hotel][titaniahotel] for people staying in Sarandë. Titani
 
 Most of the restaurants in Southern Albania seem to be privately owned. I didn't see any proper chain restaurants, and western franchises like McDonalds are nowhere to be found.
 
-We've had a lovely time in [Taverna RRapo][rrapo] in Sarandë, which is ran by a family. Lack of hired waiters makes the service feel more intimate. We had delicious stuffed peppers on our first visit. We ordered them again on our second visit, and the response was "mom's not here, no stuffed peppers". At that time they fired up the grill just for us. I ordered grilled chicken for about 700 lek (~6 euros), thinking that I'll get chicken fillets. I was served a whole chicken instead!
+We've had a lovely time in [Taverna RRapo][rrapo] in Sarandë, which is run by a family. Lack of hired waiters makes the service feel more intimate. We had delicious stuffed peppers on our first visit. We ordered them again on our second visit, and the response was "mom's not here, no stuffed peppers". At that time they fired up the grill just for us. I ordered grilled chicken for about 700 lek (~6 euros), thinking that I'll get chicken fillets. I was served a whole chicken instead!
 
 Main courses are often grilled. It's typical to match grilled meat (chicken, lamb) with tzatziki or other yoghurt based dip. Albanian kitchen favors oven cooked dishes such as moussaka, pastichio and lasagne - many dishes are based on Italian and Greek cuisine. Stuffed peppers and tomatoes are also common. Many restaurants serve pizza that is prepared in a stone oven. It's rare to see a specifically vegetarian section in a menu. The menus always had many vegetarian options, though. Some restaurants prepare vegetarian alternatives of e.g. moussakas. Common starters include white cheese (prepared in various ways), olives and grilled vegetables.
 
@@ -122,7 +122,7 @@ The atmosphere is just magical. We had the chance to wander around in peace duri
 
 The [Castle of Himarë][himarecastle], or the old town, is well worth a visit. It's several kilometers uphill from Himarë city center. We could wander the narrow streets of the old town without seeing many other visitors. There is a small café near the top with glorious views of the bay(s). At the top of the old town you'll find an old church with beautiful paintings and an eerie feel. The lack of staff (guards, guides etc.) will let you immerse into the centuries that have passed while the old town has been defended from invaders and has stayed intact.
 
-![View from the Castle of Himarë]({static}/images/albania/himare_castle2.jpg)
+![View from the Castle of Himarë]({static}/images/albania/himare_castle.jpg)
 
 ### Gjirokastër
 
@@ -134,13 +134,13 @@ Gjirokastër's old town contains old houses of powerful families, open for visit
 
 ## Find your way
 
-There are number of ways to structure your visit to Albania. You can visit several cities and attractions, bringing more unique experiences to your reach. If you want to have more of a relaxed and easy vacation, you can just stay in Sarandë or Himarë for the duration of your trip. The latter option is recommended to families with small children. You can choose a small and cozy hotel or apartment, or pick one of the few resorts.
+There are a number of ways to structure your visit to Albania. You can visit several cities and attractions, bringing more unique experiences to your reach. If you want to have more of a relaxed and easy vacation, you can just stay in Sarandë or Himarë for the duration of your trip. The latter option is recommended to families with small children. You can choose a small and cozy hotel or apartment, or pick one of the few resorts.
 
-In any case, you won't be disappointed. I certainly have enjoyed both of my trips and have missed Albania as soon as the ferry has left the port of Sarandë.
+In any case, you won't be disappointed. I certainly have enjoyed both of my trips and have missed Albania as soon as the ferry left the port of Sarandë.
 
 ---
 
-All photos in the article were shot by me. If you want to use them in an other context, please credit me (or link them to this article).
+All photos in the article were shot by me. If you want to use them in another context, please credit me (or link them to this article).
 
 If you have any questions, feel free to contact me at [hello@matiasklemola.com](mailto:hello@matiasklemola.com) or on [Twitter](https://twitter.com/matiasklemola)!
 
