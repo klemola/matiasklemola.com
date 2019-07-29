@@ -7,7 +7,7 @@
   <span class="article-summary__readtime">{{article.readtime.minutes}} min read</span>
   {% endif %}
   {% if article.summary %}
-  <p class="article-summary__text">{{ article.summary }}</p>
+  <p class="article-summary__text">{{ article.summary | striptags }}</p>
   {% endif %}
   {% if page_name is not defined %}
     {% if article.audience %}

@@ -10,18 +10,20 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#ffee00">
 
-  <meta property="og:title" content="Matias Klemola" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.matiasklemola.com/" />
-  <meta
-      property="og:image"
-      content="https://matiasklemola.com/og_image.jpg"
-  />
-  <meta
-      property="og:description"
-      content="Matias Klemola personal website"
-  />
   <meta property="og:site_name" content="Matias Klemola" />
+  {% if article is defined %}
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ article.slug }}" />
+  <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
+  <meta property="og:description" content="{{ article.summary | striptags }}" />
+  <meta property="og:image" content="{{ SITEURL }}{% if article.cover is defined %}/images/{{ article.cover }}{% else %}/og_image.jpg{% endif %}" />
+  {% else %}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}" />
+  <meta property="og:title" content="{{ SITENAME }}" />
+  <meta property="og:description" content="Matias Klemola personal website" />
+  <meta property="og:image" content="{{ SITEURL }}/og_image.jpg" />
+  {% endif %}
 
   <link rel="canonical" href="https://matiasklemola.com" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

@@ -37,6 +37,16 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+        'markdown_captions': {},
+    },
+    'output_format': 'html5',
+}
+
 sys.path.append(os.curdir)
 sys.path.append(os.path.join(os.curdir, 'content', 'data'))
 
