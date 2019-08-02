@@ -1,6 +1,6 @@
 ---
 Title: You should travel to Albania!
-Date: 2019-07-19 00:00
+Date: 2019-07-29 00:00
 Status: published
 Category: Articles
 Tags: travel, tips
@@ -12,7 +12,7 @@ Cover: albania/sarande_fisher.jpg
 
 It had been a long and jolly beach day in Ksamil. I was in a bus, on my way back to the city of Sarandë. The bus passed a bar that was painted with the colors of a football team. The wall was bright red with the words "Partizani Kampion" in white. It looked curious. Me and my fiancée had plans to go out for drinks later - we'd seen praise for a cocktail bar called [Jericho][jericho]. I suggested that we start the evening by checking out the football bar. It's one block uphill from the Sarandë central square.
 
-The bar was almost empty, like most bars in early June. It was more like a living room, actually. The place was covered in memorabilia of the FK Partizani. There were scarves and shirts hanging on the wall, trophies everywhere. The inside of the bar was also painted with the team's colors. The owner came up to us and told us about his fandom for the team. He asked if we could pose with Partizani scarves for a photo, for a Facebook page he administers.
+The bar was almost empty, like most bars in early June. It was more like a living room, actually. The place was covered in memorabilia of the FK Partizani. There were scarves and shirts hanging on the wall, trophies everywhere. The inside of the bar was also painted with the team's colors. The owner came up to us and told us about his fandom for the team. He asked if we could pose with Partizani scarves for a photo that would be posted to a Facebook page he administers.
 
 He told us to pick our beers from a fridge - there was no tap. While we were enjoying our beers, he brought us snacks from the kitchen. Eventually we were the only customers. We then felt like guests at somebody's home. The owner seemed really happy with us foreigners visiting his bar and the second round of beers was on him. An experience like this is a great example of Albanian hospitality!
 
@@ -100,7 +100,7 @@ City of Sarandë has two major attractions; the [Lekuresi Castle][sarandecastle]
 
 One of the major attractions outside Sarandë city limits is [the Blue Eye][blueeye]. It's said to be a "beautiful oasis with deep blue water". It's quite close to Sarandë, on the route to Gjirokastër.
 
-The beaches of Sarandë and Himarë have a pebbly floor. It's comfortable enough for me, but if you're looking for sandy beaches, look no further than Ksamil. Town of Ksamil is a 20 minute bus ride away from Sarandë. You can board a municipal bus that is very affordable, or take a private ride. Ksamil has plenty of private beaches. Renting a sun chair for the day costs about 4-5 euros. I've had a really nice beach day at [Guvat][guvat]. The restaurant servers drinks directly to sun chairs. You can take a break from swimming and sunbathing, and enjoy a e.g. a pasta in the restaurant. The beach is small enough to feel cozy. Ksamil itself has plenty of hotels and restaurants.
+The beaches of Sarandë and Himarë have a pebbly floor. It's comfortable enough for me, but if you're looking for sandy beaches, look no further than Ksamil. Town of Ksamil is a 20 minute bus ride away from Sarandë. You can board a municipal bus that is very affordable, or take a private ride. Ksamil has plenty of private beaches. Renting a sun chair for the day costs about 4-5 euros. I've had a really nice beach day at [Guvat][guvat]. The restaurant servers drinks directly to sun chairs. You can take a break from swimming and sunbathing, and enjoy e.g. a pasta in the restaurant. The beach is small enough to feel cozy. Ksamil itself has plenty of hotels and restaurants.
 
 ![View from a sun chair at Guvat in Ksamil]({static}/images/albania/ksamil_beach.jpg)
 
