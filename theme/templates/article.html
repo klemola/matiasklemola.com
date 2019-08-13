@@ -29,7 +29,7 @@
   {% endif %}
   {{ article.content }}
 </div>
-<footer class="article-footer">
+<footer id="af" class="article-footer">
   {% if article.modified %}
   <div class="article-footer__date-modified"><time datetime="{{ article.modified.isoformat() }}">
   The article was updated on {{ article.locale_modified }}.

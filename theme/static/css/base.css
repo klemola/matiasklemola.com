@@ -145,3 +145,35 @@ td:first-child,
 th:first-child {
   padding: 0 var(--spacing-xs) 0 0;
 }
+
+button,
+.button {
+  background: var(--color-light);
+  color: var(--color-dark);
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  border: 1px solid var(--color-light);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+button:hover,
+button:active,
+.button:hover,
+.button:active {
+  background: var(--color-light-alternative);
+}
+
+.button:active {
+  box-shadow: inset 0px -1px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.button--secondary {
+  background: none;
+  color: var(--color-light);
+  border: 1px solid var(--color-light);
+}
+
+.button--secondary:hover,
+.button--secondary:active {
+  color: var(--color-dark);
+}
