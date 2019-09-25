@@ -60,6 +60,7 @@
   <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL|format(tag.slug) }}{% else %}{{ TAG_FEED_RSS|format(tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
   {% endif %}
   {% endblock head %}
+  <script src="/scripts/mk.js"></script>
 </head>
 
 <body>
