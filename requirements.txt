@@ -1,4 +1,0 @@
-pelican==4.1.0
-Markdown==3.1
-Pygments==2.3.1
- markdown-captions==1.0.0

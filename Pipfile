@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pelican = "==4.1.2"
+Markdown = "==3.1.1"
+Pygments = "==2.4.2"
+markdown-captions = "==1"
+
+[dev-packages]
+pep8 = "==1.7.1"
+autopep8 = "==1.4.4"
+
+[requires]
+python_version = "3.7"
