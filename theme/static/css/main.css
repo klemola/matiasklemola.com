@@ -203,6 +203,11 @@ figure.code figcaption > a {
   margin: 0 calc(0px - var(--spacing-s));
 }
 
+.widget-container--static {
+  display: block;
+  margin: 0 calc(0px - var(--spacing-s));
+}
+
 .widget-container__widget {
   flex: 1;
   margin: var(--spacing-s);
@@ -340,6 +345,7 @@ figure.code figcaption > a {
   .widget-container__widget {
     flex: none;
     margin: var(--spacing-s) 0;
+    width: 100%;
   }
 
   .intro {
