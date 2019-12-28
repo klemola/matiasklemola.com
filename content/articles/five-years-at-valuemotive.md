@@ -3,7 +3,7 @@ Title: Five years at Valuemotive
 Date: 2019-06-25 00:00
 Status: published
 Category: Articles
-Tags: career, personal, valuemotive
+Tags: career, personal, valuemotive, nostalgia
 Slug: five-years-at-valuemotive
 Summary: Looking back at my career progression from a junior front-end developer into a software architect and HR rep at Valuemotive.
 Audience: Folks who are interested in working in a consultancy, developers with junior level of experience, and (future) Valuemotive employees.
