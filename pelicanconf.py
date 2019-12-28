@@ -9,7 +9,7 @@ SITENAME = 'matiasklemola.com'
 SITEURL = 'https://matiasklemola.com'
 TIMEZONE = 'Europe/Helsinki'
 DEFAULT_LANG = 'English'
-DEFAULT_DATE_FORMAT = '%A, %B %-d, %Y'
+DEFAULT_DATE_FORMAT = '%B %-d, %Y'
 
 DEFAULT_PAGINATION = False
 PAGE_URL = '{slug}'
@@ -23,7 +23,7 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['readtime', 'liquid_tags.include_code']
 IGNORE_FILES = ['__pycache__', 'node_modules']
 
-DIRECT_TEMPLATES = ['index', 'posts']
+DIRECT_TEMPLATES = ['index', 'articles', 'journal']
 THEME = './theme'
 THEME_STATIC_DIR = '.'
 

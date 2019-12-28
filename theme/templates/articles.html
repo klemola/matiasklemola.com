@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %}{{ SITENAME }} - Articles{% endblock %}
+{% block content %}
+<h1>Articles</h1>
+
+<ol class="article-list list--unstyled">
+  {% for article in articles | selectattr('category', '==', 'articles') %}
+  {% include 'article-list-entry.html' %}
+  {% endfor %}
+</ol>
+
+<h2>On other websites</h2>
+<ol class="article-list list--unstyled">
+  {% for name, link in EXTERNAL_ARTICLES %}
+  <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+  {% endfor %}
+</ol>
+{% endblock %}

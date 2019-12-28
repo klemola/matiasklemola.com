@@ -80,7 +80,7 @@
         <nav class="site-header__nav">
           <ul class="site-header__nav__links list--unstyled">
           {% for title, link, p_name in MENUITEMS %}
-              <li><a href="{{ link }}" {% if p_name == page_name %} class="active"{% endif %}>{{ title }}</a></li>
+              <li><a href="{{ link }}" {% if p_name == page_name or (article is defined and p_name == article.category) %} class="active"{% endif %}>{{ title }}</a></li>
           {% endfor %}
           {% if DISPLAY_PAGES_ON_MENU %}
             {% for p in pages %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}{{ SITENAME }} - Journal{% endblock %}
+{% block content %}
+<h1>Journal</h1>
+
+<ol class="article-list list--unstyled">
+  {% for article in articles | selectattr('category', '==', 'journal') %}
+  {% include 'article-list-entry.html' %}
+  {% endfor %}
+</ol>
+{% endblock %}

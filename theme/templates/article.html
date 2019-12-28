@@ -35,11 +35,6 @@
   The article was updated on {{ article.locale_modified }}.
   </time></div>
   {% endif %}
-  {% if article.category %}
-  <div class="category">
-  In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-  </div>
-  {% endif %}
   {% if article.tags %}
   <div class="tags">
     Tagged as {% for tag in article.tags %}

@@ -2,7 +2,7 @@
 Title: First EP by Paimentolais&shy;elämä released
 Date: 2019-03-01 00:00
 Status: published
-Category: News
+Category: Journal
 Tags: music, new-release
 Slug: paimentolaiselama-release
 Summary: Me and my bandmates recently released our first collection of songs.
