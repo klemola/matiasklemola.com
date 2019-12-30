@@ -19,13 +19,13 @@
   <meta property="og:url" content="{{ SITEURL }}/{{ article.slug }}" />
   <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
   <meta property="og:description" content="{{ article.summary | striptags }}" />
-  <meta property="og:image" content="{{ SITEURL }}{% if article.cover is defined %}/images/{{ article.cover }}{% else %}/og_image.jpg{% endif %}" />
+  <meta property="og:image" content="{{ SITEURL }}{% if article.cover is defined %}/images/{{ article.cover }}{% else %}/og_image.png{% endif %}" />
   {% else %}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}" />
   <meta property="og:title" content="{{ SITENAME }}" />
   <meta property="og:description" content="Personal website of {{ AUTHOR }}" />
-  <meta property="og:image" content="{{ SITEURL }}/og_image.jpg" />
+  <meta property="og:image" content="{{ SITEURL }}/og_image.png" />
   {% endif %}
 
   <link rel="canonical" href="https://matiasklemola.com" />
