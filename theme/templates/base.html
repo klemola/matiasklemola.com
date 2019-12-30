@@ -96,7 +96,7 @@
         </nav>
       </div>
     </header>
-    <section class="content">
+    <section class="content {% if article is defined and article.cover %}article--with-cover{% else %}article{% endif %}">
     {% block content %}
     {% endblock %}
     </section>

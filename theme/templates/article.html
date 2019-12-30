@@ -17,16 +17,18 @@
 {% endblock %}
 {% block content %}
 <header class="article-header">
-  <h1 class="article-title">{{ article.title }}</h1>
-  {% import 'translations.html' as translations with context %}
-  {{ translations.translations_for(article) }}
-  {% include 'article-summary.html' %}
+  {% if article.cover %}
+  <img class="article-header__cover-image" src="/images/{{article.cover}}"/>
+  {% endif %}
+  <div class="article-header__content">
+    <h1 class="article-title">{{ article.title }}</h1>
+    {% import 'translations.html' as translations with context %}
+    {{ translations.translations_for(article) }}
+    {% include 'article-summary.html' %}
+  </div>
   <hr />
 </header>
 <div class="article-content">
-  {% if article.cover %}
-  <img class="article-content__image cover-image" src="/images/{{article.cover}}"/>
-  {% endif %}
   {{ article.content }}
 </div>
 <footer id="af" class="article-footer">
