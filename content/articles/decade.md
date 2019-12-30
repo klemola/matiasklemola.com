@@ -1,11 +1,12 @@
 ---
 Title: The Decade
-Date: 2019-12-31 00:00
-Status: draft
+Date: 2019-12-30 00:00
+Status: published
 Category: Journal
 Tags: nostalgia, list, music, games, travel
 Slug: decade
 Summary: Top 10s of things from the 10s. Let's get sentimental!
+Cover: decade/decade.png
 ---
 
 We're soon done with the decade. Time to get sentimental and look back at how my life has changed. I was 21 when the decade started, so it covered most of my 20s. It's no surprise that many significant life events took place during that time. I also listened to tons of records, read about a hundred books, played a great many games and traveled often.
@@ -18,7 +19,9 @@ What did your decade look like? Let me know on [Twitter][tw]!
 
 ## 10s ✕ LPs
 
-So many great records came out in ten years that it's simply not possible to make a fair top ten list of them. I chose albums that are the most memorable and original. There are just two debut albums in the list. Some acts like D'Angelo and Avalanches released amazing records after a long break (for both the previous album came out in 2000). _Lonerism_ was the "life is changing and I'm lost" album, while James Blake and Battles paved the way for completely new styles of music.
+![Some of the best records of the decade]({static}/images/decade/lps.jpg)
+
+So many great records came out in ten years that it's simply not possible to make a fair top ten list of them. I chose albums that are the most memorable and original. Some acts like D'Angelo and Avalanches released amazing records after a long break (for both the previous album came out in 2000). _Lonerism_ was the "life is changing and I'm lost" album, while James Blake and Battles paved the way for completely new styles of music. Streaming became the norm for music discovery and playback, but I still enjoy listening to vinyl LPs.
 
 1. Tame Impala - _Lonerism_
 1. of Montreal - _Paralytic Stalks_
@@ -31,9 +34,11 @@ So many great records came out in ten years that it's simply not possible to mak
 1. James Blake - _James Blake_
 1. My Bloody Valentine - _mbv_
 
-Loved these, too: Kanye West - _My Beautiful Dark Twisted Fantasy_, Jens Lekman - _I Know What Love Isn't_, Nick Cave - _Skeleton Tree_, Sufjan Stevens - _The Age of Adz_, Bombino - _Nomad_, Kendrick Lamar - _To Pimp a Butterfly_, Twin Shadow - _Forget_, Iceage - _Plowing Into the Field of Love_
+Loved these, too: Tobias Jesso Jr. - _Goon_, Centipede - _Brazen Bull_, Kanye West - _My Beautiful Dark Twisted Fantasy_, Jens Lekman - _I Know What Love Isn't_, Nick Cave - _Skeleton Tree_, Sufjan Stevens - _The Age of Adz_, Bombino - _Nomad_, Twin Shadow - _Forget_, Iceage - _Plowing Into the Field of Love_
 
 ## 10s ✕ gigs
+
+![Tame Impala at Flow Festival '19]({static}/images/decade/gigs.jpg)
 
 I saw more than a hundred gigs during the 10s. Many of them were intimate and low-key; local bands playing in the basement of a bar, or in someone's living room. Some of them were truly epic like Kanye West's three-act rap opera and Tame Impala's laser and confetti extravaganza. Lots of vivid memories, alone and together. I also played my first gig with Paimentolaiselämä in 2019!
 
@@ -52,6 +57,8 @@ Had a good time with: Outkast (FF '18), Friends (FF '11), Death From Above 1979 
 
 ## 10s ✕ books
 
+![Some of the best books of the decade]({static}/images/decade/books.jpg)
+
 My reading habits fluctuated during the decade. Reading books on an iPad was delightful, but I ended up favoring physical books anyway. I've always read biographies and other types of non-fiction, yet fiction has dominated the last three years. Keith Richards' _Life_ is a thrilling read, and so is _Total Recall_. Keith and Arnold have achieved greatness early in life and stayed relevant after. _What If?_ is unique in its format, and hilarious. _The Fifth Season_ gripped me with it's bleak world and I completed the trilogy in just a couple of weeks. (Nordic) detective stories have been my comfort reading.
 
 1. _Life_ by Keith Richards
@@ -68,6 +75,8 @@ My reading habits fluctuated during the decade. Reading books on an iPad was del
 Other great books: _Exhalation: Stories_ by Ted Chiang, _La Vérité sur l'affaire Harry Quebert_ by Joël Dicker, _All the Light We Cannot See_ by Anthony Doerr, _Steve Jobs_ by Walter Isaacson
 
 ## 10s ✕ games
+
+![10 minutes into Zelda: Breath of the Wild on a brand new Nintendo Switch]({static}/images/decade/games.jpg)
 
 The games of the 10s were more immersive and at the same time plagued with free-to-play games and their microtransactions. The world is not black and white, though, and neither are free-to-play games. Fortnite, Fallout Shelter and Pokemon Go kept me entertained for hundreds of hours. I spent the most time with World of Warcraft, though. Raiding the Icecrown Citadel with my guild gave me the best gaming experience so far. I even met many of the guildmates face to face, even though they came from all over Europe. Cities Skylines and it's DLC was addictive to no end. Zelda: BoTW and Witcher 3, among others, were great single player experiences.
 
@@ -86,7 +95,9 @@ I also enjoyed: Mario Kart 8 Deluxe, Red Dead Redemption 2, Assassin's Creed Ody
 
 ## 10s ✕ new things
 
-In 2010 I was still living in my childhood home. I had recently started studying business IT. Ten years later I'm living with my fioncée and expecting a child. I've been working professionally for about eight years. I have new hobbies and habits. Life is less self-centered and more complex, yet steady. I wonder if the next decade can be this varied?
+![Me and my fiancée at the H2Ö festival]({static}/images/decade/newthings.jpg)
+
+In 2010 I was still living in my childhood home. I had recently started studying business IT. Ten years later I'm living with my fiancée and expecting a child. I've been working professionally for about eight years. I have new hobbies and habits. Life is less self-centered and more complex, yet steady. I wonder if the next decade can be this varied?
 
 1. Tinder and the love of my life, soon-to-be wife, Ilona
 1. This whole romantic relationship thing (with some failed attempts)
@@ -100,6 +111,8 @@ In 2010 I was still living in my childhood home. I had recently started studying
 1. Discovering vegetarian food
 
 ## 10s ✕ travel
+
+![Flying over Albania]({static}/images/decade/travel.jpg)
 
 I traveled a lot. I went to see online friends in strange places, family in Montréal, traveled for work and for leisure. Albania is a hedonist's dream, California is epic. Friends showed me around in places like Vienna and Szczecin. Ironically I haven't traveled all that much inside Finland, but the trip to Jyväskylä and Höstfest was great. I also visited Lohja and nearby places like the Fiskars village often because my fiancée's folks live in the area.
 
@@ -117,6 +130,8 @@ I traveled a lot. I went to see online friends in strange places, family in Mont
 Other memorable destinations: Various trips to Lohja (Finland), Corfu (Greece), Riga (Latvia), Hamburg (Germany), Sint-Niklaas (Belgium), Bern (Switzerland), Jyväskylä (Finland)
 
 ## 10s ✕ software development
+
+![My desk at the Valuemotive office]({static}/images/decade/sw.jpg)
 
 Finally, I progressed from knowing next to nothing about software development into a seasoned software architect. Your average tech site might mention blockchains, AI and VR as the most significant things this decade, but I'll focus on things that have had a tangible effect in the way I develop things. The Elm programming language changed the way I think about UI development. I used a number of lightweight editors during the decade, and Visual Studio Code being the best of them. The way apps were built and deployed changed over the years. Cloud providers and containers became relevant. The prevalence of smartphones couldn't be ignored.
 
