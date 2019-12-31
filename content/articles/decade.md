@@ -34,7 +34,7 @@ So many great records came out in ten years that it's simply not possible to mak
 1. James Blake - _James Blake_
 1. My Bloody Valentine - _mbv_
 
-Loved these, too: Tobias Jesso Jr. - _Goon_, Centipede - _Brazen Bull_, Kanye West - _My Beautiful Dark Twisted Fantasy_, Jens Lekman - _I Know What Love Isn't_, Nick Cave - _Skeleton Tree_, Sufjan Stevens - _The Age of Adz_, Bombino - _Nomad_, Twin Shadow - _Forget_, Iceage - _Plowing Into the Field of Love_
+Loved these, too: Tobias Jesso Jr. - _Goon_, Centipede - _Brazen Bull_, Nick Cave - _Skeleton Tree_, St. Vincent - _St. Vincent_, Kanye West - _My Beautiful Dark Twisted Fantasy_, Jens Lekman - _I Know What Love Isn't_, Grimes - _Visions_, Sufjan Stevens - _The Age of Adz_, Bombino - _Nomad_, Twin Shadow - _Forget_, Iceage - _Plowing Into the Field of Love_
 
 ## 10s ✕ gigs
 
