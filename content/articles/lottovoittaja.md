@@ -2,7 +2,7 @@
 Title: New release: Paimentolaiselämä - "Lottovoittaja"
 Date: 2019-10-25 00:00
 Status: published
-Category: News
+Category: Journal
 Tags: music, new-release, music-video, youtube
 Slug: lottovoittaja
 Summary: Check out my band's first music video for our brand new single!

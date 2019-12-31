@@ -5,24 +5,27 @@
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Matias Klemola personal website" />
-  <meta name="apple-mobile-web-app-title" content="Matias Klemola" />
+  <meta name="description" content="Personal website of {{ AUTHOR }}" />
+  <meta name="apple-mobile-web-app-title" content="{{ SITENAME }}" />
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#ffee00">
 
-  <meta property="og:site_name" content="Matias Klemola" />
+  <meta property="og:site_name" content="{{ SITENAME }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@MatiasKlemola" />
+
   {% if article is defined %}
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ SITEURL }}/{{ article.slug }}" />
   <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
   <meta property="og:description" content="{{ article.summary | striptags }}" />
-  <meta property="og:image" content="{{ SITEURL }}{% if article.cover is defined %}/images/{{ article.cover }}{% else %}/og_image.jpg{% endif %}" />
+  <meta property="og:image" content="{{ SITEURL }}{% if article.cover is defined %}/images/{{ article.cover }}{% else %}/og_image.png{% endif %}" />
   {% else %}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}" />
   <meta property="og:title" content="{{ SITENAME }}" />
-  <meta property="og:description" content="Matias Klemola personal website" />
-  <meta property="og:image" content="{{ SITEURL }}/og_image.jpg" />
+  <meta property="og:description" content="Personal website of {{ AUTHOR }}" />
+  <meta property="og:image" content="{{ SITEURL }}/og_image.png" />
   {% endif %}
 
   <link rel="canonical" href="https://matiasklemola.com" />
@@ -30,7 +33,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#222222">
   <link rel="preload" href="/css/main.css" as="style">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/print.css" media="print" />
@@ -77,7 +80,7 @@
         <nav class="site-header__nav">
           <ul class="site-header__nav__links list--unstyled">
           {% for title, link, p_name in MENUITEMS %}
-              <li><a href="{{ link }}" {% if p_name == page_name %} class="active"{% endif %}>{{ title }}</a></li>
+              <li><a href="{{ link }}" {% if p_name == page_name or (article is defined and p_name == article.category) %} class="active"{% endif %}>{{ title }}</a></li>
           {% endfor %}
           {% if DISPLAY_PAGES_ON_MENU %}
             {% for p in pages %}
@@ -93,7 +96,7 @@
         </nav>
       </div>
     </header>
-    <section class="content">
+    <section class="content {% if article is defined and article.cover %}article--with-cover{% else %}article{% endif %}">
     {% block content %}
     {% endblock %}
     </section>

@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %}{{ SITENAME }} - Journal{% endblock %}
+{% block content %}
+<h1>Journal</h1>
+
+<p>The Journal contains brief pieces about personal things, in contrast to lenghty <a href="/articles">articles</a>. Whenever I feel effusive about something and want to write about it, the result goes here.</p>
+
+<ol class="article-list list--unstyled">
+  {% for article in articles | selectattr('category', '==', 'journal') %}
+  {% include 'article-list-entry.html' %}
+  {% endfor %}
+</ol>
+{% endblock %}

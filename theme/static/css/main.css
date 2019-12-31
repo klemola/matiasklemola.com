@@ -229,6 +229,12 @@ figure.code figcaption > a {
   margin-bottom: var(--spacing-m);
 }
 
+.article-header__cover-image {
+  width: calc(100% + 2 * var(--figure-offset));
+  margin: 0 calc(0px - var(--figure-offset));
+  border-radius: var(--border-radius);
+}
+
 .article-header h4 {
   margin-bottom: 0;
 }
@@ -251,10 +257,6 @@ figure.code figcaption > a {
 .article-summary__sourcecode-link,
 .article-summary__repost {
   font-style: italic;
-}
-
-.cover-image {
-  margin-top: 0;
 }
 
 .intro {
@@ -327,6 +329,7 @@ figure.code figcaption > a {
     width: calc(100% + 2 * var(--content-padding));
   }
 
+  .article-header__cover-image,
   .article-content__image img,
   .article-content > table,
   .article-content > figure,
@@ -398,5 +401,13 @@ figure.code figcaption > a {
     font-style: normal;
     margin-top: var(--spacing-s);
     margin-left: 0;
+  }
+
+  .article--with-cover {
+    padding-top: 0;
+  }
+
+  .article-header__cover-image {
+    border-bottom: 1px solid var(--color-bg-box);
   }
 }
