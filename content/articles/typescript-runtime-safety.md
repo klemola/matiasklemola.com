@@ -6,11 +6,13 @@ Category: Articles
 Tags: typescript, advanced-types, runtime, functional-programming
 Slug: typescript-runtime-safety
 Sourcecode: https://github.com/klemola/matiasklemola.com/tree/master/content/code/typescript-runtime-safety
-Summary: In this article, we’ll explore how to use TypeScript type definitions to get better guarantees for runtime safety. We’ll show how runtypes and io-ts libraries are used and explain why they exist in the first place.
+Summary: Learn how to use TypeScript type definitions to get better guarantees for runtime safety.
 Audience: TypeScript developers looking prevent runtime exceptions and to learn various strategies for error handling.
 Publication: LogRocket blog
-Origin: https://blog.logrocket.com/using-typescript-to-stop-unexpected-data-from-breaking-your-app/
+Origin: https://blog.logrocket.com/using-typescript-to-stop-unexpected-data-from-breaking-your-app
 ---
+
+In this article, we’ll explore how to use TypeScript type definitions to get better guarantees for runtime safety. I’ll show you how [runtypes] and [io-ts] libraries are used and explain why they exist in the first place.
 
 The TypeScript compiler is a powerful friend. It will help you understand what kind of data you are dealing with — function parameters, return types, constants, library definitions, and so on. You can avoid surprising values and find common mistakes with minimal configuration. The compiler will save you from having to validate everything with tests, or manually in a UI, which saves time. Libraries tend to have decent type definitions these days, and many are written in TypeScript. With additional flags, you can turn the (type) quality of the code up:
 
@@ -163,7 +165,9 @@ The `getTodo` function fetches some data, parses the JSON response, and then typ
 
 If I add a new field called “priority” with type `Number` to the Todo record (not present in the API), a call to `getTodo` results in `ValidationError: Expected number, but was undefined`. I can specify less fields than the API provides if I don’t need all of them in the app.
 
-Fields that can be `null` in the API response are supported. They look like this: `priority: Number.Or(Null)`. Note the capital N in Null. It’s defined by `runtypes`.
+!!! note "On nullable values"
+
+    Fields that can be `null` in the API response are supported. They look like this: `priority: Number.Or(Null)`. Note the capital N in Null. It’s defined by `runtypes`.
 
 The to-do app is using a Promise-based flow. Had I used `async / await`, `getTodo` would look like this:
 
@@ -232,7 +236,9 @@ getTodo(1)
 
 For those familiar with generics in TypeScript, the function return type makes sense. If it looks weird for others, don’t be alarmed! It’s just a specific kind of data inside a different kind of data. You can work with the `result` in the function’s promise chain if you want to, but I have chosen to move the logic out of the function. This way, `Todo`s can be fetched and validated, and you can do whatever you want with the results.
 
-Regarding the `.catch` handler above, if `fetch` worked with `Result`s out of the box, it would be possible to chain it with our validation logic. You can build a wrapper that catches exceptions and returns a `Result`. That’s outside the scope of this article. Some languages have a Result-like type baked into their standard library, and it’s used by everything that can fail, making things much safer and convenient than in the TS/JS ecosystem by default.
+!!! note "On fetch and Results"
+
+    Regarding the `.catch` handler above, if `fetch` worked with `Result`s out of the box, it would be possible to chain it with our validation logic. You can build a wrapper that catches exceptions and returns a `Result`. That’s outside the scope of this article. Some languages have a Result-like type baked into their standard library, and it’s used by everything that can fail, making things much safer and convenient than in the TS/JS ecosystem by default.
 
 If you’ve made it this far, awesome! Now you have a new tool at your disposal that can greatly improve the quality of an app. You can play around with this version [in CodeSandbox][codesandbox-fetch-runtypes]. If I can still have your attention, I have something to show.
 
@@ -416,9 +422,15 @@ We then compared `runtypes` to `io-ts` to see if this `Result` thing was any goo
 
 Which one of these different flavors of runtime type checking should you use? It depends on what kind of application you are building. A simple top-down script might be fine if it just crashes when an exception is thrown. A long-running app, such as a mobile app, might benefit from recovering from exceptions or, better yet, work with errors as data. Catching exceptions and working with errors gives you the freedom to choose whether you need a user interaction or should retry the thing that just failed. Some minor things can even be ignored in a controlled fashion. In any case, you’ll likely end up with a more reliable app.
 
-I have focused on validating completely external data. Apps create data from user input too. A TypeScript-based form library such as [Formik][formik] understands your interfaces. It can help you handle possible errors that stem from unreliable user input. This is different from API calls because the application determines how the data is gathered. You can use `runtypes` and `io-ts` for form validation using either [constraints] or [encoders]. It might be more ergonomic to use whatever the form library uses. Formik uses [yup].
+!!! note "Additional safety measures"
 
-In addition to input and output, apps often have internal state of a UI. You can validate your app’s logic by using a state machine. State machines define controlled runtime state transitions and document your intention. They can also trigger side-effects. See: [XState][xstate], written in TypeScript.
+    I have focused on validating completely external data. Apps create data from user input too. A TypeScript-based form library such as [Formik][formik] understands your interfaces. It can help you handle possible errors that stem from unreliable user input. This is different from API calls because the application determines how the data is gathered. You can use `runtypes` and `io-ts` for form validation using either [constraints] or [encoders]. It might be more ergonomic to use whatever the form library uses. Formik uses [yup].
+
+    In addition to input and output, apps often have internal state of a UI. You can validate your app’s logic by using a state machine. State machines define controlled runtime state transitions and document your intention. They can also trigger side-effects. See: [XState][xstate], written in TypeScript.
+
+There. You've made it to the end of the article! Maybe it's time to [tweet about it][twitter-intent]?
+
+Still craving for more? Check out ["Union types in TypeScript: modeling state"][ts-union-types].
 
 [runtypes]: https://github.com/pelotom/runtypes
 [io-ts]: https://gcanti.github.io/io-ts
@@ -439,3 +451,5 @@ In addition to input and output, apps often have internal state of a UI. You can
 [side-effects]: https://jrsinclair.com/articles/2018/how-to-deal-with-dirty-side-effects-in-your-pure-functional-javascript/
 [task]: https://gcanti.github.io/fp-ts/modules/Task.ts
 [tagged unions]: https://mariusschulz.com/blog/tagged-union-types-in-typescript
+[twitter-intent]: https://twitter.com/intent/tweet?url=https%3A%2F%2Fmatiasklemola.com%2Ftypescript-runtime-safety&via=matiasklemola&text=Learn%20how%20to%20use%20TypeScript%20type%20definitions%20to%20get%20better%20guarantees%20for%20runtime%20safety.
+[ts-union-types]: /typescript-union-types

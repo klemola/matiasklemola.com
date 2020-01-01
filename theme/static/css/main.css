@@ -1,7 +1,7 @@
-@import "./normalize.css";
-@import "./variables.css";
-@import "./pygments.css";
-@import "./base.css";
+@import './normalize.css';
+@import './variables.css';
+@import './pygments.css';
+@import './base.css';
 
 /*
   Layout
@@ -57,11 +57,11 @@
 }
 
 .site-header__nav__links li:last-child:after {
-  content: "";
+  content: '';
 }
 
 .site-header__nav__links li::after {
-  content: "•";
+  content: '•';
   font-style: normal;
   margin: 0 var(--spacing-xs);
   padding-bottom: 0.2rem;
@@ -259,6 +259,21 @@ figure.code figcaption > a {
   font-style: italic;
 }
 
+.admonition {
+  padding: var(--content-padding);
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg-box);
+}
+
+.admonition-title {
+  font-weight: var(--font-weight-semibold);
+  margin-top: 0;
+}
+
+.admonition p:last-of-type {
+  margin-bottom: 0;
+}
+
 .intro {
   display: flex;
   flex-direction: row;
@@ -276,7 +291,7 @@ figure.code figcaption > a {
   width: 250px;
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
-  background-image: url("../images/matias.jpg");
+  background-image: url('../images/matias.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -392,7 +407,7 @@ figure.code figcaption > a {
 
   .site-header__nav__links li::after,
   .site-footer__links li::after {
-    content: "";
+    content: '';
     margin: 0;
     padding: 0;
   }
