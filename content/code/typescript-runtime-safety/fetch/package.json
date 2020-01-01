@@ -1,0 +1,23 @@
+{
+  "name": "ts-runtime-safety-fetch",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "fp-ts": "^2.2.0",
+    "io-ts": "^2.0.1",
+    "io-ts-promise": "^2.0.1",
+    "node-fetch": "^2.6.0",
+    "runtypes": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.4",
+    "typescript": "^3.7.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}

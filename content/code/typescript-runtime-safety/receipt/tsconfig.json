@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "baseUrl": "./",
+    "outDir": "./build",
+    "lib": ["esnext"],
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "esModuleInterop": true,
+    "strict": true,
+    "noEmitOnError": true,
+    "noImplicitReturns": true
+  }
+}

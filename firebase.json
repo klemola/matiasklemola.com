@@ -3,6 +3,13 @@
     "public": "output",
     "cleanUrls": true,
     "trailingSlash": false,
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "**/venv/**", "**/__pycache__/**"]
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/venv/**",
+      "**/__pycache__/**",
+      "content/code/**"
+    ]
   }
 }
