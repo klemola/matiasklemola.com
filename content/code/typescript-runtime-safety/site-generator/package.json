@@ -1,0 +1,19 @@
+{
+  "name": "ts-runtime-safety-site-generator",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "runtypes": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.2",
+    "typescript": "^3.7.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
