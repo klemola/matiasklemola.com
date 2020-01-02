@@ -3,11 +3,12 @@ Title: Take control of unexpected data at runtime with TypeScript
 Date: 2020-01-02 00:00
 Status: published
 Category: Articles
-Tags: typescript, advanced-types, runtime, functional-programming
+Tags: typescript, advanced-types, error-handling, functional-programming
 Slug: typescript-runtime-safety
+Cover: covers/typescript-runtime-safety.png
 Sourcecode: https://github.com/klemola/matiasklemola.com/tree/master/content/code/typescript-runtime-safety
 Summary: Learn how to use TypeScript type definitions to get better guarantees for runtime safety.
-Audience: TypeScript developers looking prevent runtime exceptions and to learn various strategies for error handling.
+Audience: Folks who are looking to prevent runtime exceptions and to explore various strategies for error handling.
 Publication: LogRocket blog
 Origin: https://blog.logrocket.com/using-typescript-to-stop-unexpected-data-from-breaking-your-app
 ---
@@ -135,8 +136,8 @@ Think about the proposition that if your app compiles, it works. If you can rely
 The [Elm programming language][elm] is known for promising zero runtime exceptions. It’s a big promise to make. Consider third-party libraries: how in the world can you be sure that code authored by someone else is completely safe, so to speak? That’s only possible if the programming language authors carefully choose a limited set of operations that everybody adheres to. Curious about how Elm makes this possible? All libraries are pure Elm, retrieved from a central package registry that enforces the following:
 
 - Semantic versioning — a library will not compile if the semantic version is wrong.
-- Safety — libraries are written in Elm, so everybody’s code equally safe from exceptions.
-- Any ultimate `Result`s in a library function will be handled by you — a lib can’t cause mayhem. You can also disregard any errors in the library, if it pleases you
+- Safety — libraries are written in Elm, so everybody’s code is equally safe from exceptions.
+- Any ultimate `Result`s in a library function will be handled by you — a lib can’t cause mayhem. You can also disregard any errors in the library, if it pleases you.
 
 Elm has a runtime of its own that requires you to encode/decode (validate) all data that flows in an out of the application. Being a pure functional language, all functions in an app and libs deal only with values provided as their parameters and can only return descriptions of [side-effects], not trigger them. Every function has to have a meaningful return value.
 
