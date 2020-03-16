@@ -1,7 +1,7 @@
 ---
 Title: Union types in TypeScript: modeling state
 Date: 2019-05-02 00:00
-Modified: 2019-05-10 00:00
+Modified: 2020-03-16 00:00
 Status: published
 Category: Articles
 Tags: typescript, advanced-types, refactoring
@@ -38,7 +38,7 @@ Ignoring the first option for now, let's model these possible outcomes in a unio
 
 Now we have solid names for different outcomes. They should explain what we _want_ to model. We also have extra information associated with `Success` and `Failure` types. That will be useful later.
 
-Notice that we have a `type` attribute in all the type definitions. `Data` is a [tagged union](https://en.wikipedia.org/wiki/Tagged_union), also known as a discriminated union. We need some kind of way to tell different options apart - a tag or a discriminator. It is possible in TypeScript by using literal string values as types. You might have seen this pattern already if you have written actions in `redux`.
+Notice that we have a `type` attribute in all the type definitions. `Data` is a [tagged union], also known as a discriminated union. We need some kind of way to tell different options apart - a tag or a discriminator. It is possible in TypeScript by using literal string values as types. You might have seen this pattern already if you have written actions in `redux`.
 
 How does this help? See another example below:
 
@@ -50,13 +50,13 @@ But wait! There's still room for improvement...
 
 ### RemoteData
 
-One of the nicest abstractions I've come across is `RemoteData`. I encountered it while working on a semi-large Elm project. Our `Data` type is already pretty close to how `RemoteData` [is defined](https://package.elm-lang.org/packages/krisajenkins/remotedata/latest/RemoteData) (hats off to Kris Jenkins!).
+One of the nicest abstractions I've come across is `RemoteData`. I encountered it while working on a semi-large Elm project. Our `Data` type is already pretty close to how `RemoteData` [is defined][remote-data-elm] (hats off to Kris Jenkins!).
 
 Data is often not loading upon application initialization. `RemoteData` includes a `NotAsked` variant for that case. If data is fetched immediately, one can start from `Loading` state, like we did before. I've included a TypeScript version of the library in recent work projects. It's been well-received. Here's `RemoteData` in TypeScript:
 
 {% include_code typescript-union-types/RemoteData.ts lang:typescript lines:1-19 %}
 
-The type is defined using [generics](https://www.typescriptlang.org/docs/handbook/generics.html). Folks fetch different shapes of data and things can go wrong in many ways. Let's use `RemoteData` in the example.
+The type is defined using [generics]. Folks fetch different shapes of data and things can go wrong in many ways. Let's use `RemoteData` in the example.
 
 {% include_code typescript-union-types/fetch_with_remotedata.ts lang:typescript lines:1-35 %}
 
@@ -70,7 +70,7 @@ Sometimes you still need to test which variant of `RemoteData` is present. E.g. 
 
 ### Live example with React
 
-So far the `render` function has only served as an example and is never called. [Here's a live example](https://codesandbox.io/s/j3wxq7q073?fontsize=14&view=preview) (with React) that actually renders something.
+So far the `render` function has only served as an example and is never called. [Here's a live example][demo-one] (with React) that actually renders something.
 
 ## Advanced example: Initializing an application
 
@@ -106,7 +106,7 @@ Time to improve on the previous example.
 
 `render` is (once again) cleaner and all app state are taken into account.
 
-[Here's another live example with React](https://codesandbox.io/s/03wv5vpo6l?fontsize=14&view=preview).
+[Here's another live example with React][demo-two].
 
 ### "Your app initialization example is contrived!"
 
@@ -135,3 +135,14 @@ There are some tradeoffs. One has to write all the interfaces and helper functio
 I would say, though, that this kind of premeditation is useful. The general benefit of adding types is to avoid bugs and to verify that your code does what you think it does. This is why you probably are using TypeScript anyway!
 
 Thanks for reading.
+
+---
+
+Still craving for more? Check out ["Take control of unexpected data at runtime with TypeScript"][ts-runtime-safety].
+
+[tagged union]: https://en.wikipedia.org/wiki/Tagged_union
+[remote-data-elm]: https://package.elm-lang.org/packages/krisajenkins/remotedata/latest/RemoteData
+[generics]: https://www.typescriptlang.org/docs/handbook/generics.html
+[demo-one]: https://codesandbox.io/s/j3wxq7q073?fontsize=14&view=preview
+[demo-two]: https://codesandbox.io/s/03wv5vpo6l?fontsize=14&view=preview
+[ts-runtime-safety]: /typescript-runtime-safety

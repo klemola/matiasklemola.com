@@ -53,10 +53,10 @@ export function isFailure<T, E>(
   return remoteData.type === 'Failure'
 }
 
-export function mapSuccess<T>(
-  fn: (data: T) => any,
+export function mapSuccess<T, U>(
+  fn: (data: T) => U,
   remoteData: Success<T>
-): Success<T> {
+): Success<U> {
   return {
     ...remoteData,
     data: fn(remoteData.data),
