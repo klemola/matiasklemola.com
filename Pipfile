@@ -14,4 +14,4 @@ pep8 = "==1.7.1"
 autopep8 = "==1.4.4"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
