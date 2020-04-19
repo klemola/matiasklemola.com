@@ -33,15 +33,33 @@ The only game I've built before is a Tetris clone in Elm. It's based on [tutoria
 
 The prototype works like a board game. Cars take turns to move on a 2D grid-based game board that has a network of blocky roads. Like in real-life board games, there are rules that cars have to follow: basic traffic rules. The cars have to acknowledge each other to avoid collisions.
 
-The metaphor made it easy for me to get started. Car movement is naturally not smooth with this approach, but on the other hand it's easier to see what kind of decisions cars make. I kept the decision tree completely deterministic for a long time and any bugs were easy to reproduce. Cars eventually fell into repetitive patterns, following each other or driving back and forth on the same road.
+The metaphor made it easy for me to get started. Car movement is naturally not smooth with this approach, but on the other hand it's easier to see what kind of decisions cars make.
 
 Version 0.1. 'Tis ugly, but I was happy to see things moving.
 
-<div id="shitty-version-demo"></div>
+<div id="demo-1" class="embed">
+    <iframe src="/embed/liikennematto/demo-1.html" title="liikennematto-demo-1" width="532" height="550"></iframe>
+</div>
+
+!!! note "Demo #1 embed"
+
+    If you don't see anything above, [here's a direct link to demo #1](/embed/liikennematto/demo-1.html).
+    You might have to scroll horizontally on a mobile.
+
+I kept the decision tree completely deterministic for a long time and any bugs were easy to reproduce. Cars eventually fell into repetitive patterns, following each other or driving back and forth on the same road.
 
 ## Intersections, traffic lights, textures
 
 Once cars were not crashing into each other, I worked on intersections. I implemented logic for intersections that use either signals (traffic lights), stop signs or yield rules. Signal intersections periodically cycle the traffic lights. They start from different points in the cycle on different traffic directions. Yielding is based on traffic that goes in the cross-direction of the car that approaches an intersection. Stop sign works like a yield sign, but cars skip a round - in terms of the board game. The logic is not that complicated and I did simplify things a bit, but now I had a working toy traffic simulation. This was probably the highlight of the development so far.
+
+<div id="demo-2" class="embed">
+    <iframe src="/embed/liikennematto/demo-2.html" title="liikennematto-demo-2" width="525" height="540"></iframe>
+</div>
+
+!!! note "Demo #2 embed"
+
+    If you don't see anything above, [here's a direct link to demo #2](/embed/liikennematto/demo-2.html).
+    You might have to scroll horizontally on a mobile.
 
 The SVG based presentation was ugly as a sin, so I applied some textures on the prototype. [Kenney] has a nice selection of free game assets. I used the "Road Textures" and "Racing Pack" collections. What a difference that made! The prototype now looked like something with a purpose, instead of a geometric accident.
 
@@ -64,9 +82,15 @@ I don't know how familiar you are with Elm, but it comes with a pretty nice time
 
 That's where Liikennematto is right now. I've used a couple of hours here and there over several months to develop it. Here's a demo:
 
-<div id="latest-demo"></div>
+<div id="demo-3" class="embed--large" style="--regular-height: 920px; --scaled-height: 460px;">
+    <iframe src="/embed/liikennematto/demo-3.html" title="liikennematto-demo-3" width="720" height="920"></iframe>
+</div>
 
-Here's another version that has the time traveling debugger enabled (unoptimized). TODO
+!!! note "Demo #3 embed"
+
+    If you don't see anything above, [here's a direct link to demo #3](/embed/liikennematto/demo-3.html). This demo probably doesn't work well on mobile - try the direct link instead.
+
+I recommend you to play with a [debug version](/embed/liikennematto/demo-3-debug.html) of the demo above. You can try the time-traveling debugger yourself (lower right corner)!
 
 ## Elm as a prototyping tool
 

@@ -18,10 +18,12 @@ AUTHOR_SAVE_AS = ''
 TYPOGRIFY = False
 PATH = 'content'
 
-STATIC_PATHS = ['code', 'images']
+STATIC_PATHS = ['code', 'images', 'embed']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['readtime', 'liquid_tags.include_code']
 IGNORE_FILES = ['__pycache__', 'node_modules']
+ARTICLE_EXCLUDES = ['embed']
+PAGE_EXCLUDES = ['embed']
 
 DIRECT_TEMPLATES = ['index', 'articles', 'journal']
 THEME = './theme'
