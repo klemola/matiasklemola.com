@@ -167,6 +167,25 @@ figure.code figcaption > a {
   margin: 0;
 }
 
+.embed,
+.embed--large {
+  margin: 2rem 0 1rem;
+  display: flex;
+  justify-content: center;
+  border-radius: var(--border-radius);
+}
+
+.embed iframe,
+.embed--large iframe {
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius);
+}
+
+.embed--large {
+  height: var(--regular-height, auto);
+}
+
 .article-footer {
   margin-top: var(--spacing-m);
 }
@@ -340,8 +359,33 @@ figure.code figcaption > a {
   .article-content__image,
   .article-content > table,
   .article-content > figure,
-  .article-content > .highlight {
+  .article-content > .highlight,
+  .embed,
+  .embed--large {
     width: calc(100% + 2 * var(--content-padding));
+  }
+
+  .embed,
+  .embed--large {
+    margin: 1rem calc(0px - var(--content-padding)) 2rem;
+  }
+
+  .embed iframe {
+    width: 100%;
+  }
+
+  .embed--large {
+    position: relative;
+    height: var(--scaled-height);
+  }
+
+  .embed--large iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200vw;
+    transform: scale(0.5);
+    transform-origin: 0 0;
   }
 
   .article-header__cover-image,
@@ -349,6 +393,10 @@ figure.code figcaption > a {
   .article-content > table,
   .article-content > figure,
   .article-content > .highlight,
+  .embed,
+  .embed iframe,
+  .embed--large,
+  .embed--large iframe,
   figure > img {
     border-radius: 0;
     border-left: none;
