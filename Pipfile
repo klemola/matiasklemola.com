@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pelican = "==4.1.2"
-Markdown = "==3.1.1"
-Pygments = "==2.4.2"
+pelican = "==4.2.0"
+Markdown = "==3.2.2"
+Pygments = "==2.6.1"
 markdown-captions = "==1"
 
 [dev-packages]

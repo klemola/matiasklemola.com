@@ -34,30 +34,41 @@ a:hover {
 }
 
 code {
-  background: var(--color-bg-box);
-  border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
   color: var(--color-text-code);
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-code);
   line-height: var(--line-height-code);
-  padding: 0 4px;
+}
+
+p > code,
+li > code {
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-text);
+  white-space: nowrap;
+  background: var(--color-bg-box);
+  border-radius: var(--border-radius);
+  padding: 1px 4px;
+}
+
+.admonition p > code,
+.admonition li > code {
+  background: var(--color-dark);
 }
 
 h1 {
-  margin-top: var(--spacing-m);
+  margin: var(--spacing-m) 0 var(--spacing-s);
   font-size: var(--font-size-h1);
   line-height: var(--line-height-h1);
 }
 
 h2 {
-  margin-top: var(--spacing-l);
+  margin: var(--spacing-l) 0 var(--spacing-s);
   font-size: var(--font-size-h2);
   line-height: var(--line-height-h2);
 }
 
 h3 {
-  margin-top: var(--spacing-m);
+  margin: var(--spacing-m) 0 var(--spacing-s);
   font-size: var(--font-size-h3);
   line-height: var(--line-height-h3);
 }
@@ -80,8 +91,42 @@ h2 + h3 {
   margin-top: 0;
 }
 
+p {
+  margin: var(--spacing-s) 0;
+}
+
+h1 + p,
+h2 + p,
+h3 + p {
+  margin-top: 0;
+}
+
 thead {
   text-transform: uppercase;
+}
+
+figure figcaption {
+  padding: var(--spacing-xs) var(--content-padding);
+  font-style: italic;
+  font-size: var(--font-size-text-small);
+}
+
+figure figcaption.code {
+  color: var(--color-text-muted);
+}
+
+figure > img {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  vertical-align: middle;
+}
+
+figure.code .highlight {
+  box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.3);
+}
+
+figure.code figcaption > a {
+  display: none;
 }
 
 pre {
