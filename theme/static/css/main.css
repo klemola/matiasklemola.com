@@ -1,4 +1,3 @@
-@import './normalize.css';
 @import './variables.css';
 @import './pygments.css';
 @import './base.css';
@@ -102,7 +101,7 @@
 }
 
 .content {
-  --figure-offset: var(--spacing-s);
+  --figure-offset: var(--content-padding);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -328,12 +327,6 @@
 }
 
 @media (max-width: 960px) {
-  .content {
-    --figure-offset: var(--content-padding);
-  }
-}
-
-@media (max-width: 720px) {
   .article-content__image,
   .article-content > table,
   .article-content > figure,
