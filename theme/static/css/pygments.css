@@ -1,19 +1,21 @@
 .highlight {
-  --p-numbers: #6897bb;
-  --p-strings: #6a8759;
-  --p-keyword: #cc7832;
-  --p-function: #ffc66d;
-  --p-attributes: #9876aa;
-  --p-operators: #a9b7c6;
-  --p-bg-selection: #214283;
-  --p-type: #fff;
-  --p-comments: #666;
-  --p-whitespace: #aaaaaa;
-  --p-diff-deleted: #aa0000;
-  --p-diff-inserted: #aaffaa;
+  --p-numbers: var(--color-secondary-active);
+  --p-strings: var(--color-code-string);
+  --p-keyword: var(--color-primary);
+  --p-function: var(--color-secondary);
+  --p-function-new: var(--color-secondary-active);
+  --p-attributes: var(--color-text-secondary);
+  --p-operators: var(--color-code);
+  --p-bg-selection: var(--color-text-inverse);
+  --p-type: var(--color-secondary);
+  --p-comments: var(--color-code-comment);
+  --p-whitespace: var(--color-light);
+  --p-diff-deleted: var(--color-code-deleted);
+  --p-diff-inserted: var(--color-code-inserted);
+  --p-subdued: var(--color-code);
 
   background: var(--bg-box);
-  color: var(--color-text-code);
+  color: var(--color-code);
 }
 
 .highlight .hll {
@@ -23,9 +25,11 @@
 .highlight .cp,
 .highlight .cs,
 .highlight .gs,
+.highlight .kt,
+.highlight .nb,
 .highlight .ne,
 .highlight .ow {
-  font-weight: bold;
+  font-weight: var(--font-weight-semibold);
 }
 
 .highlight .c,
@@ -39,7 +43,7 @@
 .highlight .cp,
 .highlight .n,
 .highlight .nx {
-  color: var(--color-text-code);
+  color: var(--color-code);
 }
 
 .highlight .k,
@@ -53,14 +57,18 @@
   color: var(--p-keyword);
 }
 
-.highlight .nf,
 .highlight .nb {
   color: var(--p-function);
 }
 
+.highlight .nf {
+  color: var(--p-function-new);
+}
+
 .highlight .kn,
-.highlight .o {
-  color: var(--p-very-light-grey);
+.highlight .o,
+.highlight .p {
+  color: var(--p-subdued);
 }
 
 .highlight .c,

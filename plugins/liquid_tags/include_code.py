@@ -1,8 +1,6 @@
 """
 Include Code Tag
 ----------------
-This implements a Liquid-style video tag for Pelican,
-based on the octopress video tag [1]_
 
 Syntax
 ------
@@ -140,7 +138,3 @@ def include_code(preprocessor, tag, markup):
                   + close_tag + '\n')
 
     return source
-
-
-# ----------------------------------------------------------------------
-# This import allows image tag to be a Pelican plugin
