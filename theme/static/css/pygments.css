@@ -1,32 +1,32 @@
 .highlight {
-  --p-numbers: var(--color-secondary-active);
-  --p-strings: var(--color-code-string);
   --p-keyword: var(--color-primary);
   --p-function: var(--color-secondary);
-  --p-function-new: var(--color-secondary-active);
-  --p-attributes: var(--color-text-secondary);
-  --p-operators: var(--color-code);
-  --p-bg-selection: var(--color-text-inverse);
+  --p-function-new: var(--color-secondary);
   --p-type: var(--color-secondary);
-  --p-comments: var(--color-code-comment);
+  --p-numbers: var(--color-secondary-active);
+  --p-attributes: var(--color-text-secondary);
+  --p-bg-selection: var(--color-text-inverse);
   --p-whitespace: var(--color-light);
+  --p-strings: var(--color-code-string);
+  --p-operators: var(--color-code);
+  --p-comments: var(--color-code-comment);
   --p-diff-deleted: var(--color-code-deleted);
   --p-diff-inserted: var(--color-code-inserted);
-  --p-subdued: var(--color-code);
+  --p-punctuation: var(--color-code);
 
   background: var(--bg-box);
   color: var(--color-code);
 }
 
 .highlight .hll {
-  background-color: var(--p-dark-blue);
+  background-color: var(--color-code);
+  color: var(--color-text-inverse);
+  border-radius: var(--border-radius);
 }
 
 .highlight .cp,
 .highlight .cs,
 .highlight .gs,
-.highlight .kt,
-.highlight .nb,
 .highlight .ne,
 .highlight .ow {
   font-weight: var(--font-weight-semibold);
@@ -68,7 +68,7 @@
 .highlight .kn,
 .highlight .o,
 .highlight .p {
-  color: var(--p-subdued);
+  color: var(--p-punctuation);
 }
 
 .highlight .c,
