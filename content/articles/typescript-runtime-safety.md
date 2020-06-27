@@ -17,10 +17,10 @@ In this article, we’ll explore how to use TypeScript type definitions to get b
 
 The TypeScript compiler is a powerful friend. It will help you understand what kind of data you are dealing with — function parameters, return types, constants, library definitions, and so on. You can avoid surprising values and find common mistakes with minimal configuration. The compiler will save you from having to validate everything with tests, or manually in a UI, which saves time. Libraries tend to have decent type definitions these days, and many are written in TypeScript. With additional flags, you can turn the (type) quality of the code up:
 
-- `strict` (recommended - includes `noImplicitThis`, `noImplicitAny`, enforces types)
-- `noEmitOnError` (all emitted code should be checked)
-- `noImplicitReturns`
-- `noFallthroughCasesInSwitch`
+-   `strict` (recommended - includes `noImplicitThis`, `noImplicitAny`, enforces types)
+-   `noEmitOnError` (all emitted code should be checked)
+-   `noImplicitReturns`
+-   `noFallthroughCasesInSwitch`
 
 With a strict config and extensive typing, can your app compile and still break? Yes it can!
 
@@ -135,9 +135,9 @@ Think about the proposition that if your app compiles, it works. If you can rely
 
 The [Elm programming language][elm] is known for promising zero runtime exceptions. It’s a big promise to make. Consider third-party libraries: how in the world can you be sure that code authored by someone else is completely safe, so to speak? That’s only possible if the programming language authors carefully choose a limited set of operations that everybody adheres to. Curious about how Elm makes this possible? All libraries are pure Elm, retrieved from a central package registry that enforces the following:
 
-- Semantic versioning — a library will not compile if the semantic version is wrong.
-- Safety — libraries are written in Elm, so everybody’s code is equally safe from exceptions.
-- Any ultimate `Result`s in a library function will be handled by you — a lib can’t cause mayhem. You can also disregard any errors in the library, if it pleases you.
+-   Semantic versioning — a library will not compile if the semantic version is wrong.
+-   Safety — libraries are written in Elm, so everybody’s code is equally safe from exceptions.
+-   Any ultimate `Result`s in a library function will be handled by you — a lib can’t cause mayhem. You can also disregard any errors in the library, if it pleases you.
 
 Elm has a runtime of its own that requires you to encode/decode (validate) all data that flows in an out of the application. Being a pure functional language, all functions in an app and libs deal only with values provided as their parameters and can only return descriptions of [side-effects], not trigger them. Every function has to have a meaningful return value.
 
@@ -201,6 +201,8 @@ Which one of these different flavors of runtime type checking should you use? It
     In addition to input and output, apps often have internal state of a UI. You can validate your app’s logic by using a state machine. State machines define controlled runtime state transitions and document your intention. They can also trigger side-effects. See: [XState][xstate], written in TypeScript.
 
 There. You've made it to the end of the article! Maybe it's time to [tweet about it][twitter-intent]?
+
+---
 
 Still craving for more? Check out ["Union types in TypeScript: modeling state"][ts-union-types].
 
