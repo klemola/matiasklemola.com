@@ -12,20 +12,18 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html {
-  -webkit-text-size-adjust: 100%;
-  line-height: var(--line-height-text);
 }
 
 body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
   background: var(--color-bg-content);
   color: var(--color-text);
-  font-family: var(--font-family-body);
 }
 
 a {
@@ -122,6 +120,7 @@ figure figcaption {
   padding: var(--spacing-xs) var(--content-padding);
   font-style: italic;
   font-size: var(--font-size-text-small);
+  box-shadow: inset 0 5px 5px -5px rgba(0, 0, 0, 0.3);
 }
 
 figure figcaption.code {
@@ -154,10 +153,21 @@ pre {
 }
 
 blockquote {
-  border-left: 2px solid var(--color-secondary);
+  position: relative;
   font-style: italic;
   margin-top: var(--spacing-m);
   padding: var(--spacing-xs) var(--spacing-s);
+}
+
+blockquote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-left: 2px solid var(--color-secondary);
+  border-right: 2px solid var(--color-secondary);
+  border-radius: var(--border-radius);
 }
 
 blockquote strong {
@@ -168,10 +178,11 @@ blockquote strong {
 }
 
 hr {
-  border: 1px solid var(--color-bg-box);
+  border: 2px solid var(--color-bg-box);
   border-radius: var(--border-radius);
   width: 100%;
   height: 0;
+  margin: var(--spacing-m) 0;
 }
 
 figure,

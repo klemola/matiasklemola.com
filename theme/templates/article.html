@@ -32,17 +32,16 @@
   {{ article.content }}
 </div>
 <footer id="af" class="article-footer">
+  {% if article.sourcecode %}
+  <p><a class="article-summary__sourcecode-link" href="{{ article.sourcecode }}" target="_blank">All source code from this article</a></p>
+  {% endif %}
+  {% if article.publication %}
+  <p class="article-summary__repost">Originally published in <a href="{{ article.origin }}"">{{ article.publication }}</a>.</p>
+  {% endif %}
   {% if article.modified %}
   <div class="article-footer__date-modified"><time datetime="{{ article.modified.isoformat() }}">
   The article was updated on {{ article.locale_modified }}.
   </time></div>
-  {% endif %}
-  {% if article.tags %}
-  <div class="tags">
-    Tagged as {% for tag in article.tags %}
-    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-    {% endfor %}
-  </div>
   {% endif %}
   <a
     href="{{ SITEURL }}/{{ article.slug }}"
