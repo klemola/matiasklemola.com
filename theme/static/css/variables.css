@@ -3,22 +3,24 @@
   --color-dark: #222;
   --color-dark-alternative: #111;
   --color-light: #f9f9f9;
-  --color-light-alternative: #a9b7c6;
+  --color-light-alternative: #a8c1db;
   --color-neutral: #666;
   --color-primary: #ffd800;
   --color-primary-active: #e6ca2e;
   --color-secondary: #009dff;
   --color-secondary-active: #2e9fe6;
-  --color-highlight: #ff9900;
-  --color-higlight-active: #e6712e;
 
   --color-text: var(--color-light);
-  --color-text-secondary: #5aacdf;
   --color-text-placeholder: var(--color-text);
   --color-text-inverse: var(--color-dark);
   --color-text-tooltip: var(--color-dark);
   --color-text-muted: var(--color-neutral);
-  --color-text-code: var(--color-light-alternative);
+
+  --color-code: var(--color-light-alternative);
+  --color-code-comment: #b3a36a;
+  --color-code-string: #e4e39d;
+  --color-code-deleted: #772819;
+  --color-code-inserted: #2b723d;
 
   --color-bg-content: var(--color-dark);
   --color-bg-box: #2b2b2b;

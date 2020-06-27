@@ -28,10 +28,10 @@ _Note: the fourth item uses the Unicode character for [Roman numeral four][2]._
 
 ### Unordered list
 
-- An item
-- Another item
-- Yet another item
-- And there's more...
+-   An item
+-   Another item
+-   Yet another item
+-   And there's more...
 
 ## Tables
 
@@ -73,46 +73,76 @@ def calculate_readtime(content_object):
 
 ```typescript
 type Config = {
-  onSuccess?: (registration: ServiceWorkerRegistration) => void;
-  onUpdate?: (registration: ServiceWorkerRegistration) => void;
-};
+    onSuccess?: (registration: ServiceWorkerRegistration) => void
+    onUpdate?: (registration: ServiceWorkerRegistration) => void
+}
 
 export function register(config?: Config) {
-  if (process.env.NODE_ENV === "production" && "serviceWorker" in navigator) {
-    // The URL constructor is available in all browsers that support SW.
-    const publicUrl = new URL(
-      (process as { env: { [key: string]: string } }).env.PUBLIC_URL,
-      window.location.href
-    );
-    if (publicUrl.origin !== window.location.origin) {
-      // Our service worker won't work if PUBLIC_URL is on a different origin
-      // from what our page is served on. This might happen if a CDN is used to
-      // serve assets; see https://github.com/facebook/create-react-app/issues/2374
-      return;
+    if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+        // The URL constructor is available in all browsers that support SW.
+        const publicUrl = new URL(
+            (process as { env: { [key: string]: string } }).env.PUBLIC_URL,
+            window.location.href
+        )
+        if (publicUrl.origin !== window.location.origin) {
+            // Our service worker won't work if PUBLIC_URL is on a different origin
+            // from what our page is served on. This might happen if a CDN is used to
+            // serve assets; see https://github.com/facebook/create-react-app/issues/2374
+            return
+        }
+
+        window.addEventListener('load', () => {
+            const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`
+
+            if (isLocalhost) {
+                // This is running on localhost. Let's check if a service worker still exists or not.
+                checkValidServiceWorker(swUrl, config)
+
+                // Add some additional logging to localhost, pointing developers to the
+                // service worker/PWA documentation.
+                navigator.serviceWorker.ready.then(() => {
+                    console.log(
+                        'This web app is being served cache-first by a service ' +
+                            'worker. To learn more, visit http://bit.ly/CRA-PWA'
+                    )
+                })
+            } else {
+                // Is not localhost. Just register service worker
+                registerValidSW(swUrl, config)
+            }
+        })
     }
-
-    window.addEventListener("load", () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
-
-      if (isLocalhost) {
-        // This is running on localhost. Let's check if a service worker still exists or not.
-        checkValidServiceWorker(swUrl, config);
-
-        // Add some additional logging to localhost, pointing developers to the
-        // service worker/PWA documentation.
-        navigator.serviceWorker.ready.then(() => {
-          console.log(
-            "This web app is being served cache-first by a service " +
-              "worker. To learn more, visit http://bit.ly/CRA-PWA"
-          );
-        });
-      } else {
-        // Is not localhost. Just register service worker
-        registerValidSW(swUrl, config);
-      }
-    });
-  }
 }
+```
+
+```elm
+updateEnvironment : Board -> Board
+updateEnvironment board =
+    -- Room for improvement: consider moving traffic light state from tiles to SharedState
+    -- in order to make Tiles passive
+    let
+        updateTrafficLight tl =
+            if tl.timeRemaining == 0 then
+                TrafficLight.new (TrafficLight.advanceLight tl.kind) tl.facing
+
+            else
+                TrafficLight.advanceTimer tl
+
+        updateTile tile =
+            case tile of
+                Intersection (Signal trafficLights) shape ->
+                    let
+                        next =
+                            trafficLights
+                                |> List.map updateTrafficLight
+                                |> Signal
+                    in
+                    Intersection next shape
+
+                _ ->
+                    tile
+    in
+    Dict.map (\_ tile -> updateTile tile) board
 ```
 
 ```rust
@@ -180,9 +210,9 @@ I don't recommend using more than three or four levels of headings here, because
 
 URLs can be made in a handful of ways:
 
-- A named link to [MarkItDown][3]. The easiest way to do these is to select what you want to make a link and hit `Ctrl+L`.
-- Another named link to [MarkItDown](http://www.markitdown.net/)
-- Sometimes you just want a URL like <http://www.markitdown.net/>.
+-   A named link to [MarkItDown][3]. The easiest way to do these is to select what you want to make a link and hit `Ctrl+L`.
+-   Another named link to [MarkItDown](http://www.markitdown.net/)
+-   Sometimes you just want a URL like <http://www.markitdown.net/>.
 
 ## Horizontal rule
 

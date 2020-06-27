@@ -36,7 +36,7 @@ a:hover {
 }
 
 code {
-  color: var(--color-text-code);
+  color: var(--color-code);
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-code);
   line-height: var(--line-height-code);
@@ -147,7 +147,7 @@ legend {
 
 pre {
   border: none;
-  color: var(--color-text-code);
+  color: var(--color-code);
   font-family: var(--font-family-monospace);
   font-size: var(--font-size-code);
 }
