@@ -7,8 +7,8 @@
   --color-neutral: #666;
   --color-primary: #ffd800;
   --color-primary-active: #e6ca2e;
-  --color-secondary: #009dff;
-  --color-secondary-active: #2e9fe6;
+  --color-secondary: #42b7ff;
+  --color-secondary-active: #66c4ff;
 
   --color-text: var(--color-light);
   --color-text-placeholder: var(--color-text);
