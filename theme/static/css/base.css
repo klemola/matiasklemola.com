@@ -33,6 +33,8 @@ a {
 
 a:hover {
   text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 2px;
 }
 
 code {
