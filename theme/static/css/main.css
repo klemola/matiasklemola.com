@@ -53,6 +53,8 @@
 
 .site-header__nav__links a.active {
   text-decoration: underline;
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 2px;
 }
 
 .site-header__nav__links li:last-child:after {
@@ -220,6 +222,10 @@
 
 .category-list__entry h2 {
   margin: var(--spacing-s) 0;
+}
+
+.article-list__entry {
+  margin-top: var(--spacing-s);
 }
 
 .article-list__entry__header h3 {
