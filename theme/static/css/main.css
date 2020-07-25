@@ -16,14 +16,9 @@
 }
 
 .site-header {
-  box-shadow: inset 0px -5px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px -5px 5px -3px #ccc;
   background: #f9f9f9;
   color: #222;
-}
-
-.site-header a {
-  color: #222;
-  text-transform: uppercase;
 }
 
 .site-header__content {
@@ -31,14 +26,28 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
+  margin: 3rem auto 0;
   max-width: var(--content-max-width);
   padding: var(--spacing-s);
 }
 
+.site-header__content__title {
+  color: #222;
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.site-header__content__title img {
+  margin-right: var(--spacing-xxs);
+}
+
+.site-header__content__title span {
+  vertical-align: super;
+}
+
 .site-header__nav {
   letter-spacing: 0.1rem;
-  margin-top: var(--spacing-s);
+  margin-top: var(--spacing-xs);
   font-style: italic;
   line-height: 1;
 }
@@ -51,6 +60,11 @@
   align-items: center;
 }
 
+.site-header__nav__links a {
+  color: #222;
+  text-transform: uppercase;
+}
+
 .site-header__nav__links a.active {
   text-decoration: underline;
   text-decoration-skip-ink: auto;
@@ -59,6 +73,7 @@
 
 .site-header__nav__links li:last-child:after {
   content: '';
+  margin: 0;
 }
 
 .site-header__nav__links li::after {
@@ -111,6 +126,10 @@
   max-width: var(--content-max-width);
   padding: var(--content-padding) var(--content-padding) var(--spacing-l);
   width: 100%;
+}
+
+.section-title {
+  margin-bottom: 0;
 }
 
 .article-content__image,
@@ -232,10 +251,6 @@
   margin: 0 0 var(--spacing-xs);
 }
 
-.article-header {
-  margin-bottom: var(--spacing-s);
-}
-
 .article-header__cover-image {
   width: calc(100% + 2 * var(--figure-offset));
   margin: 0 calc(0px - var(--figure-offset));
@@ -266,7 +281,7 @@
 }
 
 .article-summary__text {
-  margin-top: var(--spacing-xs);
+  margin-top: var(--spacing-xxs);
 }
 
 .article-summary__sourcecode-link,
@@ -423,6 +438,10 @@
 }
 
 @media (max-width: 420px) {
+  .site-header__content {
+    margin: 0 auto;
+  }
+
   .site-header__nav ul,
   .site-footer__content {
     flex-direction: column;
@@ -452,7 +471,6 @@
 
   .site-header__nav {
     font-style: normal;
-    margin-top: var(--spacing-s);
     margin-left: 0;
   }
 

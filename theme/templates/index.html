@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 <h1>Matias Klemola</h1>
 
 <div class="intro">
@@ -12,11 +13,14 @@
   <div class="intro__image"></div>
 </div>
 
-<h2>Recent content</h2>
+<h2 class="section-title">Recent content</h2>
 <ol class="article-list list--unstyled">
   {% for article in articles_page.object_list %}
   {% include 'article-list-entry.html' %}
   {% endfor %}
 </ol>
-{% if articles_page.has_other_pages() %} {% include 'pagination.html' %} {% endif %}
+
+{% if articles_page.has_other_pages() %} 
+{% include 'pagination.html' %}
+{% endif %}
 {% endblock content %}
