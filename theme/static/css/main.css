@@ -318,7 +318,9 @@
   margin-top: 0;
 }
 
-.admonition p:last-of-type {
+.admonition p:last-child,
+.admonition li:last-child,
+.admonition ol:last-child {
   margin-bottom: 0;
 }
 
