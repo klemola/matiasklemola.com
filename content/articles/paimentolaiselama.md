@@ -1,5 +1,5 @@
 ---
-Title: First EP by Paimentolais&shy;elämä released
+Title: Paimentolaiselämä EP
 Date: 2019-03-01 00:00
 Status: published
 Category: Journal

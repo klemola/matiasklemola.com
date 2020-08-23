@@ -1,5 +1,5 @@
 ---
-Title: Liikennematto dev blog #1: prototyping traffic simulation with Elm
+Title: Liikennematto devlog #1: prototyping traffic simulation with Elm
 Date: 2020-04-20 00:00
 Status: published
 Category: Journal
@@ -160,11 +160,11 @@ The hackiest part of the codebase right now is how I've built the UI layer. I in
 
 I reckon that I would have completely different results if I went down the path of realism - road network as a graph, cars not aligned to the grid but with more precise coordinates and velocity instead. A real game engine. That's probably gonna happen down the line. The playful board game approach should carry the development until I truly understand what kind of problem I'm dealing with. I've learned a lot so far.
 
-I hope to make progress during the summer and post another dev blog after. See you next time!
+I hope to make progress during the summer and post another devlog after. See you next time!
 
 ---
 
-[Follow me on Twitter] for updates in between dev blog entries!
+[Follow me on Twitter] for updates in between devlog entries!
 
 [Liikennematto Github repository][liikennematto]
 
