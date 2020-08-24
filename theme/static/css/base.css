@@ -118,7 +118,14 @@ abbr[title] {
   text-decoration: underline dotted;
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 figure figcaption {
+  width: 100%;
   padding: var(--spacing-xs) var(--content-padding);
   font-style: italic;
   font-size: var(--font-size-text-small);
@@ -129,7 +136,8 @@ figure figcaption.code {
   color: var(--color-text-muted);
 }
 
-figure > img {
+figure > img,
+figure > video {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   vertical-align: middle;
@@ -188,7 +196,8 @@ hr {
 }
 
 figure,
-img {
+img,
+video {
   width: 100%;
 }
 

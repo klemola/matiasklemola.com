@@ -324,6 +324,11 @@
   margin-bottom: 0;
 }
 
+.video--small {
+  max-width: 420px;
+  margin: var(--content-padding);
+}
+
 .intro {
   display: flex;
   flex-direction: row;
@@ -430,7 +435,8 @@
   .embed iframe,
   .embed--large,
   .embed--large iframe,
-  figure > img {
+  figure > img,
+  figure > video {
     border-radius: 0;
     border-left: none;
     border-right: none;
@@ -511,5 +517,9 @@
   .intro,
   .intro__image {
     border-radius: 0;
+  }
+
+  .video--small {
+    margin: 0;
   }
 }
