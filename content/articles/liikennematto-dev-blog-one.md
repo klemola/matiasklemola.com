@@ -3,11 +3,16 @@ Title: Liikennematto devlog #1: prototyping traffic simulation with Elm
 Date: 2020-04-20 00:00
 Status: published
 Category: Journal
-Tags: programming, games, gamedev, elm
+Tags: programming, gamedev, elm, liikennematto
 Slug: liikennematto-dev-blog-one
 Summary: I've been prototyping traffic simulation for a game in Elm. In this post I go through the development so far and demo the results.
 Cover: covers/liikennematto-dev-blog-one.png
 ---
+
+!!! note "Liikennematto devlog series"
+
+    1.  Prototyping traffic simulation with Elm _(this post)_
+    2.  [Build your own roundabout!][devlog-two]
 
 I've spent hundreds of hours playing Cities Skylines in the past few years. It's a superb city builder with a [rich community][cs subreddit]. You can rather easily design a 100k population city with decent traffic flow and variety of options for public transportation. Mods and custom assets improve the experience and provide even more ways to build your dream city.
 
@@ -182,3 +187,4 @@ I hope to make progress during the summer and post another devlog after. See you
 [follow me on twitter]: https://twitter.com/MatiasKlemola
 [game module]: https://github.com/klemola/liikennematto/blob/db958c6fe3876fe07b374307fe8545690669388e/src/Game.elm#L124
 [elm-ui]: https://github.com/mdgriffith/elm-ui
+[devlog-two]: /liikennematto-devlog-two
