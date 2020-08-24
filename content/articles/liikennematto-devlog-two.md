@@ -33,7 +33,9 @@ The existing UI components for debugging and simulation control were quickly rep
 The actual editing part was easy to implement. I simply laid out all possible tiles on the toolbar. The tiles can be selected and drawn on the 'matto canvas like a stamp. The rather obvious downside is that one often has to change the tile type while building a map. I also added a "bulldoze" tool that makes it easy to destroy tiles. The whole board can be wiped out with the "dynamite" tool to start over. You can toggle between different types of intersection control using the "intersection designer" tool. Behold the end result!
 
 <figure>
-    <video autoplay="true" loop="true" src="https://giant.gfycat.com/SkinnyJauntyBarasinga.webm"></video>
+    <video autoplay muted loop playsinline>
+        <source src="https://giant.gfycat.com/SkinnyJauntyBarasinga.mp4" type="video/mp4">
+    </video>
     <figcaption>The initial map editor</figcaption>
 </figure>
 
@@ -104,7 +106,9 @@ has coords board =
 I could then add a "smart construction" tool, which selects an ideal tile based on the surroundings. It works great!
 
 <figure>
-    <video autoplay="true" loop="true" src="https://giant.gfycat.com/FeistyFrequentLeafcutterant.webm"></video>
+    <video autoplay muted loop playsinline>
+        <source src="https://giant.gfycat.com/FeistyFrequentLeafcutterant.mp4" type="video/mp4">
+    </video>
     <figcaption>Smart construction and other tools in action</figcaption>
 </figure>
 
@@ -115,7 +119,9 @@ Tiles have more data than just their shape. Initially the bit mask destroyed thi
 Filling up a 2x2 grid with road tiles created a ridiculous layout. That's why the editor now cycles through the four corners of a 3x3 space around a tile in order to find such problems (and prevent them).
 
 <figure>
-    <video class="video--small" autoplay="true" loop="true" src="https://giant.gfycat.com/AntiqueGlaringKiskadee.webm"></video>
+    <video class="video--small" autoplay muted loop playsinline>
+        <source src="https://giant.gfycat.com/AntiqueGlaringKiskadee.mp4" type="video/mp4">
+    </video>
     <figcaption>Cars navigating an awkward road layout</figcaption>
 </figure>
 
@@ -134,7 +140,9 @@ Speaking of mobile/touch device support, it's far from ideal right now. iPad is 
 I received a feature request on Twitter for roundabouts when I initially tweeted about the project. Roundabouts don't really require any specific logic, just one-way traffic and T-intersections (in terms of 'matto). I implemented one-way traffic for non-intersection pieces by just removing one lane from a two-way road. Because I am lazy, I also restricted the traffic to just one direction (the "natural" driving direction used in roundabouts).
 
 <figure>
-    <video autoplay="true" loop="true" src="https://giant.gfycat.com/HatefulVengefulGermanspitz.webm"></video>
+    <video autoplay muted loop playsinline>
+        <source src="https://giant.gfycat.com/HatefulVengefulGermanspitz.mp4" type="video/mp4">
+    </video>
     <figcaption>Bye bye old map, hello roundabout!</figcaption>
 </figure>
 
