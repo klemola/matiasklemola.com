@@ -8,7 +8,8 @@ AUTHOR = 'Matias Klemola'
 SITENAME = 'matiasklemola.com'
 SITEURL = 'https://matiasklemola.com'
 TIMEZONE = 'Europe/Helsinki'
-DEFAULT_LANG = 'English'
+LOCALE = 'en_US'
+DEFAULT_LANG = 'en'
 DEFAULT_DATE_FORMAT = '%B %-d, %Y'
 
 DEFAULT_PAGINATION = False
@@ -20,7 +21,7 @@ PATH = 'content'
 
 STATIC_PATHS = ['code', 'images', 'embed']
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['readtime', 'liquid_tags.include_code']
+PLUGINS = ['readtime']
 IGNORE_FILES = ['__pycache__', 'node_modules']
 ARTICLE_EXCLUDES = ['embed']
 PAGE_EXCLUDES = ['embed']

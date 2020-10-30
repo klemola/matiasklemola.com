@@ -36,7 +36,29 @@ I’ll show how to deal with unexpected data during runtime with three distinct 
 
 I’ve concluded that no existing static site generator will do, so I decided to build my own. After a lot of hard work, I came up with this:
 
-{% include_code typescript-runtime-safety/site-generator/site_generator.ts lang:typescript %}
+```ts
+import fs from 'fs'
+
+interface Config {
+    siteName: string
+    siteUrl: string
+    contentPath: string
+}
+
+try {
+    const configFile = fs.readFileSync('./config.json', 'utf-8')
+    const config: Config = JSON.parse(configFile)
+
+    console.info(`🚧 Generating "${config.siteName}"`)
+
+    const pages = fs.readdirSync(config.contentPath)
+    // do something with the pages ...
+
+    console.info('✅ Done')
+} catch (e) {
+    console.error('Something went wrong!', e)
+}
+```
 
 Being a seasoned developer, I am wary of exceptions thrown by `fs` and `JSON.parse` . My app compiles. But when I run it, I see this:
 
@@ -49,7 +71,36 @@ $ node site_generator.js
 
 Looks like I have a typo in my config file. It spells “sitename” instead of “siteName.” This is a simple example of how essentially all data that comes into your app is technically unknown. Luckily, there’s a way to deal with unknown data at runtime. I introduced the [runtypes] library to my app.
 
-{% include_code typescript-runtime-safety/site-generator/site_generator_safe.ts lang:typescript %}
+```ts
+import fs from 'fs'
+import { String, Record, Static } from 'runtypes'
+
+const Config = Record({
+    siteName: String,
+    siteUrl: String,
+    contentPath: String,
+})
+
+// this is equivalent to the "Config" interface from before
+type Config = Static<typeof Config>
+
+try {
+    const configFile = fs.readFileSync('./config.json', 'utf-8')
+    const config: Config = JSON.parse(configFile)
+
+    // The important bit
+    Config.check(config)
+
+    console.info(`🚧 Generating "${config.siteName}"`)
+
+    const pages = fs.readdirSync(config.contentPath)
+    // do something with the pages ...
+
+    console.info('✅ Done')
+} catch (e) {
+    console.error('Something went wrong!', e)
+}
+```
 
 The app looks almost the same. The difference is that I’ve declared `Config` using the types provided by `runtypes`. The term [record] and the related term “field” are similar to what people refer to as “objects” and “attributes,” but since objects in JavaScript can be just about anything, (`window`, `Array`, etc.), the distinction is useful. Think of records as rows in a spreadsheet — they’re “just” data. The runtime object that `runtypes` builds from the record has methods such as `check` and `guard` that validate that some data is compatible with the actual type definition that I declared (line 11).
 
@@ -89,11 +140,37 @@ I’ll show you how this works in practice.
 
 The static site generator proved to be too big an undertaking, so I’m going to build a to-do app instead. Let’s start by retrieving data from the API using [fetch]. We’ll see that having `runtypes` validate incoming data brings other benefits too.
 
-{% include_code typescript-runtime-safety/fetch/fetch_safe.ts lang:typescript lines:2-20 %}
+```ts
+import { String, Number, Boolean, Record, Static, Result } from 'runtypes'
+
+const Todo = Record({
+    userId: Number,
+    id: Number,
+    title: String,
+    completed: Boolean,
+})
+
+type Todo = Static<typeof Todo>
+
+function getTodo(id: number) {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then((response) => response.json())
+        .then((todo) => Todo.check(todo))
+        // todo is now verified to be a Todo and you can safely access the attributes
+        .then((todo) => console.log(`Todo: #${todo.id}: ${todo.title}`))
+        .catch((e) => console.error(e))
+}
+```
 
 The `getTodo` function fetches some data, parses the JSON response, and then type checks the result in separate steps. Any errors in type checking will be caught, along with connection and JSON parsing-related errors, in the `.catch` handler. After the type is checked, you can work with the contents of a `Todo` without an explicit type annotation. This will clean up the code in cases where TypeScript can’t infer the type of essentially unknown data.
 
-If I add a new field called “priority” with type `Number` to the Todo record (not present in the API), a call to `getTodo` results in `ValidationError: Expected number, but was undefined`. I can specify less fields than the API provides if I don’t need all of them in the app.
+If I add a new field called “priority” with type `Number` to the Todo record (not present in the API), a call to `getTodo` results in
+
+```
+ValidationError: Expected number, but was undefined
+```
+
+I can specify less fields than the API provides if I don’t need all of them in the app.
 
 !!! note "On nullable values"
 
@@ -101,7 +178,19 @@ If I add a new field called “priority” with type `Number` to the Todo record
 
 The to-do app is using a Promise-based flow. Had I used `async / await`, `getTodo` would look like this:
 
-{% include_code typescript-runtime-safety/fetch/fetch_safe.ts lang:typescript lines:22-34 %}
+```ts
+async function getTodo_await(id: number) {
+    try {
+        const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        const data = await response.json()
+        const todo = Todo.check(data)
+
+        console.log(`Todo: #${todo.id}: ${todo.title}`)
+    } catch (e) {
+        console.error(e)
+    }
+}
+```
 
 It’s up to you to decide which format works better for your use case. `runtimes` doesn’t limit the options for the application design. In fact, now is a good time to discuss how we can avoid type checking-related exceptions altogether.
 
@@ -115,11 +204,42 @@ const [err, data] = myFunction('foo', 'bar')
 
 This format can prevent exceptions, but it is still cumbersome. You have to check for the presence of `err` or `data` (the idea is that one of them is always `null`, not guaranteed). This design can be thought to have boolean logic — an action results in err or data. A more sophisticated approach is to use a union type.
 
-{% include_code typescript-runtime-safety/fetch/Result.ts lang:typescript %}
+```ts
+type Success<T> = {
+    success: true
+    value: T
+}
+
+type Failure = {
+    success: false
+    message: string
+    key?: string
+}
+
+type Result<T> = Success<T> | Failure
+```
 
 The snippet above is from `runtypes` source code (I’ve removed export statements and comments). A successful operation is presented as a record with an associated `value`. A failure (error) describes the error with a `message`. This idea is not unique to `runtypes`; it’s found in many programming languages, such as Rust, Elm, Haskell and Swift. It’s also similar to Option/Maybe in its duality. Let’s see how using this idea changes the `getTodo` function.
 
-{% include_code typescript-runtime-safety/fetch/fetch_safe.ts lang:typescript lines:53-69 %}
+```ts
+function getTodo_result(id: number): Promise<Result<Todo>> {
+    return fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then((response) => response.json())
+        .then(Todo.validate)
+}
+
+getTodo_result(1)
+    .then((result) => {
+        if (result.success) {
+            console.log(`Todo: #${result.value.id}: ${result.value.title}`)
+        } else {
+            // result is Failure
+            console.error(result.message)
+        }
+    })
+    // the request or JSON parsing can still fail
+    .catch((e) => console.error(e))
+```
 
 For those familiar with generics in TypeScript, the function return type makes sense. If it looks weird for others, don’t be alarmed! It’s just a specific kind of data inside a different kind of data. You can work with the `result` in the function’s promise chain if you want to, but I have chosen to move the logic out of the function. This way, `Todo`s can be fetched and validated, and you can do whatever you want with the results.
 
@@ -147,7 +267,37 @@ I am a big fan of Elm. Whenever I choose to use TypeScript (or can’t use Elm),
 
 Take a look at another version of the fetch example.
 
-{% include_code typescript-runtime-safety/fetch/fetch_safe_io-ts.ts lang:typescript lines:2-30 %}
+```ts
+import * as t from 'io-ts'
+import { Either, isRight } from 'fp-ts/lib/Either'
+
+const Todo = t.type({
+    userId: t.number,
+    id: t.number,
+    title: t.string,
+    completed: t.boolean,
+})
+
+type Todo = t.TypeOf<typeof Todo>
+
+function getTodo(id: number): Promise<Either<t.Errors, Todo>> {
+    return fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then((response) => response.json())
+        .then(Todo.decode)
+}
+
+getTodo(1)
+    .then((result) => {
+        if (isRight(result)) {
+            // Success
+            console.log(`Todo: #${result.right.id}: ${result.right.title}`)
+        } else {
+            // Failure
+            console.error(result.left)
+        }
+    })
+    .catch((e) => console.error(e))
+```
 
 At a glance, the structure of this example resembles the `Result` version of the `runtypes` example. Same guarantees, no type-related exceptions. Even the way I defined the Todo record is very similar to previous work.
 
@@ -155,7 +305,19 @@ Notice the `fp-ts` import? It’s a collection of common data types from the wor
 
 The `Result`-like `Either` type is split into the left and right sides. By convention, the left side denotes an error, and the right side denotes a valid value. If this naming convention seems hard to remember, I don’t blame you; I prefer the naming in `Result` myself. You can remind yourself by saying to yourself, “Seems like I have the `Right` data.” The type definition is as follows.
 
-{% include_code typescript-runtime-safety/receipt/Either.ts lang:typescript %}
+```ts
+interface Left<E> {
+    readonly _tag: 'Left'
+    readonly left: E
+}
+
+interface Right<A> {
+    readonly _tag: 'Right'
+    readonly right: A
+}
+
+type Either<E, A> = Left<E> | Right<A>
+```
 
 There are some benefits of `runtypes`' `Result`. The `E` value on left side allows other representations for errors than just strings — remember `message`s? Having strings instead of booleans as tags makes it more compatible with other [tagged unions] (strings allow more than two possible values in a union).
 
@@ -173,7 +335,80 @@ Tax: 3.07€
 
 Once I am comfortable with the data types of `fp-ts` and their operations, the app comes naturally.
 
-{% include_code typescript-runtime-safety/receipt/receipt.ts lang:typescript %}
+```ts
+import * as t from 'io-ts'
+import { map, fold } from 'fp-ts/lib/Either'
+import { fold as foldMonoid, monoidSum } from 'fp-ts/lib/Monoid'
+import { map as mapArray } from 'fp-ts/lib/Array'
+import { pipe } from 'fp-ts/lib/pipeable'
+
+const Purchase = t.type({
+    vat: t.number,
+    items: t.array(
+        t.type({
+            name: t.string,
+            amount: t.number,
+            priceEur: t.number,
+        })
+    ),
+})
+
+const Receipt = t.type({
+    date: t.string,
+    totalEur: t.number,
+    taxEur: t.number,
+})
+
+type Purchase = t.TypeOf<typeof Purchase>
+type Receipt = t.TypeOf<typeof Receipt>
+
+const data: unknown = {
+    vat: 24,
+    items: [
+        { name: 'banana', amount: 3, priceEur: 0.7 },
+        { name: 'coffee', amount: 1, priceEur: 3.5 },
+        { name: 'beer', amount: 6, priceEur: 1.2 },
+    ],
+}
+
+function purchaseToReceipt(purchase: Purchase): Receipt {
+    const total = pipe(
+        purchase.items,
+        mapArray((item) => item.amount * item.priceEur),
+        foldMonoid(monoidSum)
+    )
+
+    return {
+        date: new Date().toISOString(),
+        totalEur: total,
+        taxEur: (purchase.vat / 100) * total,
+    }
+}
+
+function formatReceipt(receipt: Receipt): string {
+    return `
+Receipt
+========
+Date: ${receipt.date}
+Total: ${receipt.totalEur.toFixed(2)}€
+Tax: ${receipt.taxEur.toFixed(2)}€
+          `
+}
+
+function formatErrors(errors: t.Errors): string {
+    return `Invalid data: ${JSON.stringify(errors)}`
+}
+
+const summary: string = pipe(
+    Purchase.decode(data),
+    // "map" only changes the "Right" value and keeps Left intact
+    map(purchaseToReceipt),
+    // Apply a certain function to left and right values (if present)
+    fold(formatErrors, formatReceipt)
+)
+
+console.log(summary)
+```
 
 What’s so great about using a functional approach? See the `pipe`lines I’ve built? As long as the return value of an operation is a valid parameter to the next, the operations compose. Since values with types like `Either` are structurally the same, they can be transformed using common functions. There are two transformation pipelines:
 
