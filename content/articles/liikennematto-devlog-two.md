@@ -13,10 +13,11 @@ Cover: covers/liikennematto-devlog-two.png
 
     1.  [Prototyping traffic simulation with Elm][devlog-one]
     2.  Build your own roundabout! _(this post)_
+    3.  [Lots to do][devlog-three]
 
 Welcome back to the Liikennematto devlog!
 
-A quick recap of the previous post: Liikennematto is a traffic simulation prototype. I've implemented basic traffic rules with board game -like logic using the Elm programming language and SVG output.
+_A quick recap of the previous post:_ Liikennematto is a traffic simulation prototype. I've implemented basic traffic rules with board game -like logic using the Elm programming language and SVG output.
 
 This post sums up the development progress of the last four months. These four months have been eventful to say the least: I became a father and got married 🥰 Though these changes have made me super busy (and happy), I found some time to work on Liikennematto. Major life changes can also be a great source of inspiration. I've certainly spent a lot of time _thinking_ about the roadmap for this project e.g. while comforting my baby boy!
 
@@ -250,12 +251,13 @@ Many of these are related to/depend on each other. I'll think about the ideal or
 
 [Liikennematto Github repository][liikennematto]
 
+[follow me on twitter]: https://twitter.com/MatiasKlemola
+[liikennematto]: https://github.com/klemola/liikennematto
 [devlog-one]: /liikennematto-dev-blog-one
+[devlog-three]: /liikennematto-devlog-three
 [elm-ui]: https://github.com/mdgriffith/elm-ui/tree/master
 [gamedevscreens]: https://old.reddit.com/r/gamedevscreens/
 [bitmask-article]: https://gamedevelopment.tutsplus.com/tutorials/how-to-use-tile-bitmasking-to-auto-tile-your-level-layouts--cms-25673
 [townscaper]: https://store.steampowered.com/app/1291340/Townscaper/
 [round module]: https://github.com/klemola/liikennematto/blob/31660c24c7b1f4f080505e763fa7e3f7b2989844/src/Round.elm
-[follow me on twitter]: https://twitter.com/MatiasKlemola
-[liikennematto]: https://github.com/klemola/liikennematto
 [demo]: http://apps.butsku.com/liikennematto/
