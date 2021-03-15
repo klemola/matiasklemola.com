@@ -1,6 +1,6 @@
 ---
 Title: Liikennematto devlog #3: lots to do
-Date: 2020-03-16 00:00
+Date: 2021-03-16 00:00
 Status: published
 Category: Journal
 Tags: programming, gamedev, elm, liikennematto
