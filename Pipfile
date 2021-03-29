@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 pelican = "==4.5.0"
 Markdown = "==3.3.2"
-Pygments = "==2.7.1"
+Pygments = "==2.7.4"
 markdown-captions = "==1"
 
 [requires]
