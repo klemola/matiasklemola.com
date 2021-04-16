@@ -5,26 +5,28 @@
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website of {{ AUTHOR }}" />
   <meta name="apple-mobile-web-app-title" content="{{ SITENAME }}" />
   <meta name="msapplication-TileColor" content="#ffd800">
   <meta name="theme-color" content="#ffd800">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
 
   <meta property="og:site_name" content="{{ SITENAME }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@MatiasKlemola" />
 
   {% if article is defined %}
+  <meta name="description" content="{{ article.summary | striptags }}" />
+  <meta property="og:description" content="{{ article.summary | striptags }}" />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="{{ SITEURL }}/{{ article.slug }}" />
   <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
-  <meta property="og:description" content="{{ article.summary | striptags }}" />
   <meta property="og:image" content="{{ SITEURL }}{% if article.cover is defined %}/images/{{ article.cover }}{% else %}/og_image.png{% endif %}" />
   {% else %}
+  <meta name="description" content="Personal website of {{ AUTHOR }}" />
+  <meta property="og:description" content="Personal website of {{ AUTHOR }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}" />
   <meta property="og:title" content="{{ SITENAME }}" />
-  <meta property="og:description" content="Personal website of {{ AUTHOR }}" />
   <meta property="og:image" content="{{ SITEURL }}/og_image.png" />
   {% endif %}
 
