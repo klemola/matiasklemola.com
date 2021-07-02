@@ -14,6 +14,7 @@ Cover: covers/liikennematto-devlog-two.png
     1.  [Prototyping traffic simulation with Elm][devlog-one]
     2.  Build your own roundabout! _(this post)_
     3.  [Lots to do][devlog-three]
+    4.  [Hello real-time traffic simulation][devlog-four]
 
 Welcome back to the Liikennematto devlog!
 
@@ -255,6 +256,7 @@ Many of these are related to/depend on each other. I'll think about the ideal or
 [liikennematto]: https://github.com/klemola/liikennematto
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-three]: /liikennematto-devlog-three
+[devlog-four]: /liikennematto-devlog-four
 [elm-ui]: https://github.com/mdgriffith/elm-ui/tree/master
 [gamedevscreens]: https://old.reddit.com/r/gamedevscreens/
 [bitmask-article]: https://gamedevelopment.tutsplus.com/tutorials/how-to-use-tile-bitmasking-to-auto-tile-your-level-layouts--cms-25673
