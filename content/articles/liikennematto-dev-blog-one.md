@@ -169,6 +169,8 @@ I reckon that I would have completely different results if I went down the path 
 
 I hope to make progress during the summer and post another devlog after. See you next time!
 
+[Continue to part #2][devlog-two]
+
 ---
 
 [Follow me on Twitter] for updates in between devlog entries!
