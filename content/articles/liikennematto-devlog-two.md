@@ -5,7 +5,7 @@ Status: published
 Category: Journal
 Tags: programming, gamedev, elm, liikennematto
 Slug: liikennematto-devlog-two
-Summary: The traffic simulator has gained new features. Learn all about the new map editor and how it came to be.
+Summary: Learn all about the new map editor and how it came to be.
 Cover: covers/liikennematto-devlog-two.png
 ---
 
@@ -14,6 +14,7 @@ Cover: covers/liikennematto-devlog-two.png
     1.  [Prototyping traffic simulation with Elm][devlog-one]
     2.  Build your own roundabout! _(this post)_
     3.  [Lots to do][devlog-three]
+    4.  [Hello real-time traffic simulation][devlog-four]
 
 Welcome back to the Liikennematto devlog!
 
@@ -34,7 +35,7 @@ The existing UI components for debugging and simulation control were quickly rep
 The actual editing part was easy to implement. I simply laid out all possible tiles on the toolbar. The tiles can be selected and drawn on the 'matto canvas like a stamp. The rather obvious downside is that one often has to change the tile type while building a map. I also added a "bulldoze" tool that makes it easy to destroy tiles. The whole board can be wiped out with the "dynamite" tool to start over. You can toggle between different types of intersection control using the "intersection designer" tool. Behold the end result!
 
 <figure>
-    <video autoplay muted loop playsinline>
+    <video controls autoplay muted loop playsinline>
         <source src="https://giant.gfycat.com/SkinnyJauntyBarasinga.mp4" type="video/mp4">
     </video>
     <figcaption>The initial map editor</figcaption>
@@ -107,7 +108,7 @@ has coords board =
 I could then add a "smart construction" tool, which selects an ideal tile based on the surroundings. It works great!
 
 <figure>
-    <video autoplay muted loop playsinline>
+    <video controls autoplay muted loop playsinline>
         <source src="https://giant.gfycat.com/FeistyFrequentLeafcutterant.mp4" type="video/mp4">
     </video>
     <figcaption>Smart construction and other tools in action</figcaption>
@@ -141,7 +142,7 @@ Speaking of mobile/touch device support, it's far from ideal right now. iPad is 
 I received a feature request on Twitter for roundabouts when I initially tweeted about the project. Roundabouts don't really require any specific logic, just one-way traffic and T-intersections (in terms of 'matto). I implemented one-way traffic for non-intersection pieces by just removing one lane from a two-way road. Because I am lazy, I also restricted the traffic to just one direction (the "natural" driving direction used in roundabouts).
 
 <figure>
-    <video autoplay muted loop playsinline>
+    <video controls autoplay muted loop playsinline>
         <source src="https://giant.gfycat.com/HatefulVengefulGermanspitz.mp4" type="video/mp4">
     </video>
     <figcaption>Bye bye old map, hello roundabout!</figcaption>
@@ -245,6 +246,8 @@ I'm brimming over with ideas as the result of summer's worth of pondering. I'm i
 
 Many of these are related to/depend on each other. I'll think about the ideal order and get to work. See you next time! 🚧
 
+[Continue to part #3][devlog-three]
+
 ---
 
 [Follow me on Twitter] for updates in between devlog entries.
@@ -255,6 +258,7 @@ Many of these are related to/depend on each other. I'll think about the ideal or
 [liikennematto]: https://github.com/klemola/liikennematto
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-three]: /liikennematto-devlog-three
+[devlog-four]: /liikennematto-devlog-four
 [elm-ui]: https://github.com/mdgriffith/elm-ui/tree/master
 [gamedevscreens]: https://old.reddit.com/r/gamedevscreens/
 [bitmask-article]: https://gamedevelopment.tutsplus.com/tutorials/how-to-use-tile-bitmasking-to-auto-tile-your-level-layouts--cms-25673
