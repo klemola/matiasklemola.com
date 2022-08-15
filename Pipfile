@@ -4,10 +4,10 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pelican = "==4.5.0"
-Markdown = "==3.3.2"
-Pygments = "==2.7.1"
-markdown-captions = "==1"
+pelican = "==4.8.0"
+Markdown = "==3.4.1"
+Pygments = "==2.12.0"
+markdown-captions = "2.1.2"
 
 [requires]
-python_version = "3.8"
+python_version = "3.10"
