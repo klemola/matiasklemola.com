@@ -36,7 +36,7 @@ The actual editing part was easy to implement. I simply laid out all possible ti
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/SkinnyJauntyBarasinga.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/dumb_editor.mp4" type="video/mp4">
     </video>
     <figcaption>The initial map editor</figcaption>
 </figure>
@@ -109,7 +109,7 @@ I could then add a "smart construction" tool, which selects an ideal tile based 
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/FeistyFrequentLeafcutterant.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/smart_editor.mp4" type="video/mp4">
     </video>
     <figcaption>Smart construction and other tools in action</figcaption>
 </figure>
@@ -122,7 +122,7 @@ Filling up a 2x2 grid with road tiles created a ridiculous layout. That's why th
 
 <figure>
     <video class="video--small" autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/AntiqueGlaringKiskadee.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/road_complexity.mp4" type="video/mp4">
     </video>
     <figcaption>Cars navigating an awkward road layout</figcaption>
 </figure>
@@ -143,7 +143,7 @@ I received a feature request on Twitter for roundabouts when I initially tweeted
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/HatefulVengefulGermanspitz.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/roundabout.mp4" type="video/mp4">
     </video>
     <figcaption>Bye bye old map, hello roundabout!</figcaption>
 </figure>

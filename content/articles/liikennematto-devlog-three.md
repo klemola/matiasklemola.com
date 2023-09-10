@@ -68,7 +68,7 @@ Putting all of this together, here's the procedural generation in action:
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/AdmiredHarmlessArrowcrab.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/lot_generation.mp4" type="video/mp4">
     </video>
     <figcaption>Lots popping up all around the map</figcaption>
 </figure>
@@ -87,7 +87,7 @@ Work on lots was interrupted by the effort to make cars move around gradually. T
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/EvergreenFrequentFirecrest.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/realtime_teaser.mp4" type="video/mp4">
     </video>
     <figcaption>Can you spot the difference?</figcaption>
 </figure>

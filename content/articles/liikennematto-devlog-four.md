@@ -21,8 +21,8 @@ Liikennematto started it's life as a rough traffic simulation that works like a 
 I vastly underestimated how much work that would take. So here I am, eight months later, ready to write about the journey.
 
 <figure>
-    <video controls muted playsinline>
-        <source src="https://giant.gfycat.com/UnequaledLinedAlligatorgar.mp4" type="video/mp4">
+    <video controls autoplay loop muted playsinline>
+        <source src="{static}/videos/liikennematto/realtime_crossfade.mp4" type="video/mp4">
     </video>
     <figcaption>Old vs. new</figcaption>
 </figure>
@@ -43,7 +43,7 @@ Cars normally enter the road network from the parking area of their lots. From t
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/LankyHealthyButterfly.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/mvp_realtime.mp4" type="video/mp4">
     </video>
     <figcaption>Minimum viable "real-time traffic simulation"?</figcaption>
 </figure>
@@ -54,7 +54,7 @@ I solved the unrealistic rotation by introducing "local paths" for cars. When a 
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/AnnualVigilantAtlasmoth.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/realtime_curve.mp4" type="video/mp4">
     </video>
     <figcaption>With bézier curves the rotation is alright</figcaption>
 </figure>
@@ -63,7 +63,7 @@ Cars now have a velocity that is affected by changes in acceleration. If there's
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/TerribleDaringFly.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/realtime_acceleration.mp4" type="video/mp4">
     </video>
     <figcaption>Acceleration and deceleration</figcaption>
 </figure>
@@ -90,7 +90,7 @@ Collisions can be _prevented_ quite easily. Cars can simply compare their boundi
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/CompletePartialAmmonite.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/realtime_collision_avoidance.mp4" type="video/mp4">
     </video>
     <figcaption>Collision avoidance and car debug visuals in action</figcaption>
 </figure>
@@ -117,7 +117,7 @@ With the traffic signal system in place, here's Liikennematto in its current sta
 
 <figure>
     <video controls autoplay muted loop playsinline>
-        <source src="https://giant.gfycat.com/AptDefinitiveAngwantibo.mp4" type="video/mp4">
+        <source src="{static}/videos/liikennematto/realtime_busy_intersection.mp4" type="video/mp4">
     </video>
     <figcaption>A busy intersection. It was only after I posted this video to Twitter that I noticed a bug where collision detection may override traffic light checks (cars ignoring red lights). American folks may just have assumed that right turn on red was implemented!</figcaption>
 </figure>

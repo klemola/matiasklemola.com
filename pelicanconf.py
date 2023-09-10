@@ -19,7 +19,7 @@ AUTHOR_SAVE_AS = ''
 TYPOGRIFY = False
 PATH = 'content'
 
-STATIC_PATHS = ['code', 'images', 'embed']
+STATIC_PATHS = ['code', 'images', 'videos', 'embed']
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['readtime']
 IGNORE_FILES = ['__pycache__', 'node_modules']
