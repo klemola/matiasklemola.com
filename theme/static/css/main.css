@@ -340,10 +340,12 @@
 .intro__content {
   padding: 0 var(--content-padding);
   flex: 1;
+  font-size: var(--font-size-text-page-content);
+  line-height: var(--line-height-text-page-content);
 }
 
 .intro__image {
-  width: 200px;
+  flex: 0.5;
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   background-image: url('../images/matias.jpg');
@@ -351,7 +353,7 @@
   background-position: left center;
 }
 
-.intro h4 {
+.intro h2 {
   margin: var(--spacing-s) 0;
 }
 
@@ -457,6 +459,12 @@
     flex-direction: column-reverse;
     margin-left: calc(0px - var(--content-padding));
     margin-right: calc(0px - var(--content-padding));
+    width: min(100vw, var(--content-max-width));
+  }
+
+  .intro__content {
+    width: 100%;
+    padding: 0.5rem var(--content-padding);
   }
 
   .intro__content p:first-child {
@@ -464,10 +472,18 @@
   }
 
   .intro__image {
+    flex: none;
     width: 100%;
     height: 275px;
-    margin: 0 auto;
+    margin: 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
+  }
+}
+
+@media (max-width: 48em) {
+  .intro,
+  .intro__image {
+    border-radius: 0;
   }
 }
 
@@ -512,11 +528,6 @@
 
   .article--with-cover {
     padding-top: 0;
-  }
-
-  .intro,
-  .intro__image {
-    border-radius: 0;
   }
 
   .video--small {

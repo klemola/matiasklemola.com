@@ -103,10 +103,10 @@
         </nav>
       </div>
     </header>
-    <section class="content {% if article is defined and article.cover %}article--with-cover{% else %}article{% endif %}">
+    <main class="content {% if article is defined and article.cover %}article--with-cover{% else %}article{% endif %}">
     {% block content %}
     {% endblock %}
-    </section>
+    </main>
     <footer class="site-footer">
       <div class="site-footer__content">
         <div class="site-footer__content__col">

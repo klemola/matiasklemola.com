@@ -1,38 +1,27 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 
 <div class="intro">
   <div class="intro__content">
-    <h4>Greetings! My name's Matias.</h4>
-
-    <p>
-      Creating things is my thing. I've built software professionally for roughly a decade. I've
-      been working at
-      <a href="https://www.valuemotive.com" target="_blank">Valuemotive</a> for the majority of that
-      time. Besides tech, I love music. I used to make shoegaze and experimental loop-based music as
-      <a href="https://soundcloud.com/butsku" target="_blank">Butsku</a> &mdash; these days I play
-      bass in
-      <a href="https://paimentolaiselama.bandcamp.com" target="_blank">Paimentolaiselämä</a>. Above
-      all, I am a father to a wonderful baby boy!
-    </p>
-
-    <p>
-      I write in-depth <a href="/articles">articles</a> about tech, travel and other interests of
-      mine. For lighter content, there's the <a href="/journal">journal</a>.
-    </p>
-
-    <p>
-      You can reach me at <a href="mailto:hello@matiasklemola.com">hello@matiasklemola.com</a>, or
-      on <a href="https://twitter.com/matiasklemola" target="_blank">Twitter</a>.
-    </p>
+    {% for p in hidden_pages %}
+    {% if p.title == 'home' %}
+    {{p.content}}
+    {% endif %}
+    {% endfor %}
   </div>
   <div class="intro__image"></div>
 </div>
 
+
 <h2 class="section-title">Recent content</h2>
 <ol class="article-list list--unstyled">
-  {% for article in articles_page.object_list[:3] %} {% include 'article-list-entry.html' %} {%
-  endfor %}
+  {% for article in articles_page.object_list[:3] %}
+  {% include 'article-list-entry.html' %}
+  {% endfor %}
 </ol>
 
-{% if articles_page.has_other_pages() %} {% include 'pagination.html' %} {% endif %} {% endblock
-content %}
+{% if articles_page.has_other_pages() %}
+{% include 'pagination.html' %}
+{% endif %}
+
+{% endblock content %}
