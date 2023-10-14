@@ -1,10 +1,5 @@
-<svg height="250" version="1.1" viewBox="-210 -210 420 420" width="250" xmlns="http://www.w3.org/2000/svg">
-    <g>
-        <circle cx="0" cy="0" fill="none" r="200" stroke="#222" stroke-width="20">
-        </circle>
-        <polyline points="-200,0 200,0" stroke="#222" stroke-width="20">
-        </polyline>
-        <polyline fill="none" points="-141.42135623730948,141.4213562373095 -141.42135623730948,-141.42135623730948 0,0 141.4213562373095,-141.42135623730948 141.4213562373095,141.42135623730954" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="20">
-        </polyline>
-    </g>
+<svg width="280" height="280" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M200 135L280 -2.38419e-06H200V135Z" fill="#FFFCEB"/>
+<path d="M120 0L280 280H120V0Z" fill="#FFFCEB"/>
+<path d="M118 206.5L0 0V280H118L118 206.5Z" fill="#FFFCEB"/>
 </svg>

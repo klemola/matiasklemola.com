@@ -39,6 +39,9 @@
   <link rel="preload" href="/css/main.css" as="style">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/print.css" media="print" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -72,18 +75,14 @@
   <div class="wrapper">
     <header class="site-header">
       <div class="site-header__content">
-        <a href="{{ SITEURL }}/" title="Navigate to home" class="site-header__content__title">
-          <img
-              class="logo"
-              src="/graphics/monogram.png"
-              alt="Matias Klemola monogram"
-          />
-          <img
-              class="mk-title"
-              src="/graphics/mktitle.png"
-              alt="Matias Klemola"
-          />
-        </a>
+        <div class="site-header__content__title">
+          <a href="{{ SITEURL }}/" class="site-header__content_home-link" title="Navigate to home">
+            <img class="logo" src="/graphics/monogram.svg" alt="Matias Klemola monogram" />
+          </a>
+          <div class="site-header__content__title__text">
+            <p>matias klemola</p>
+          </div>
+        </div>
         <nav class="site-header__nav">
           <ul class="site-header__nav__links list--unstyled">
           {% for title, link, p_name in MENUITEMS %}

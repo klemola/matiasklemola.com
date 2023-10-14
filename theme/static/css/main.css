@@ -24,13 +24,14 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  padding: 0 var(--content-padding);
   max-width: var(--content-max-width);
 }
 
 .site-header__content__title {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: end;
   margin-top: var(--spacing-m);
 }
 
@@ -39,30 +40,41 @@
   filter: grayscale(100%);
 }
 
-.site-header__content__title img {
-  width: auto;
+.site-header__content_home-link {
+  width: var(--logo-size);
+  height: var(--logo-size);
 }
 
 .logo {
   width: var(--logo-size);
   height: var(--logo-size);
-  border: 3px solid var(--color-light);
 }
 
-.mk-title {
-  height: var(--logo-size);
-  padding: 3px 0;
+.site-header__content__title__text {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex: 1;
+  margin: 0 var(--logo-size) 0 0;
+  padding: 0;
 }
 
-.site-header__content__title img:first-of-type {
-  margin-right: calc(var(--spacing-s) * 1.5);
+.site-header__content__title__text p {
+  margin: 0;
+  font-size: var(--font-size-h1);
+  font-family: var(--font-family-heading);
+  line-height: var(--font-size-h1);
+  /* The title text has no descenders, so align it exactly to the bottom of the container by hand */
+  position: relative;
+  top: 3px;
 }
 
 .site-header__nav {
   letter-spacing: 0.1rem;
   font-style: italic;
   line-height: 1;
-  margin: var(--spacing-s) var(--content-padding);
+  margin: var(--spacing-s) 0;
   padding: var(--spacing-xs) 0;
   border-top: 1px solid var(--color-bg-box);
   border-bottom: 1px solid var(--color-bg-box);
@@ -392,6 +404,10 @@
 }
 
 @media (max-width: 960px) {
+  :root {
+    --logo-size: 4rem;
+  }
+
   .site-header__nav {
     margin: var(--spacing-s) 0;
   }
@@ -488,12 +504,29 @@
 }
 
 @media (max-width: 420px) {
-  :root {
-    --logo-size: 5rem;
-  }
-
   .site-header__content {
     margin: 0 auto;
+  }
+
+  .site-header__content__title {
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: var(--spacing-m);
+  }
+
+  .site-header__content__title__text {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-h2);
+    text-align: initial;
+    flex: none;
+  }
+
+  .site-header__content__title__text p {
+    font-size: var(--font-size-h2);
+    line-height: var(--font-size-h2);
+    /* The title text has no descenders, so align it exactly to the bottom of the container by hand */
+    top: 2px;
   }
 
   .site-footer__content {
