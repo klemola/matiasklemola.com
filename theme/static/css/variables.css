@@ -29,22 +29,22 @@
   /* Text */
   --default-font: 'HelveticaNeue', 'Helvetica Neue', 'Helvetica', 'TeXGyreHerosRegular', 'Tahoma',
     'Geneva', 'Arial', sans-serif;
-  --font-family-heading: 'Quicksand', 'sans-serif';
+  --font-family-heading: 'Quicksand', sans-serif;
   --font-family-body: var(--default-font);
   --font-family-monospace: 'Consolas', 'Monaco', monospace;
-  --font-size-text-small: 0.8125rem;
+  --font-size-text-small: 1rem;
   --line-height-text-small: 1;
-  --font-size-text: 1rem;
+  --font-size-text: 1.25rem;
   --line-height-text: 1.5;
-  --font-size-text-page-content: 1.15rem;
+  --font-size-text-page-content: 1.25rem;
   --line-height-text-page-content: 1.1;
-  --font-size-h4: 1rem;
+  --font-size-h4: 1.25rem;
   --line-height-h4: 1.5;
-  --font-size-h3: 1.306rem;
+  --font-size-h3: 1.6rem;
   --line-height-h3: 1;
-  --font-size-h2: 1.618rem;
+  --font-size-h2: 2rem;
   --line-height-h2: 1;
-  --font-size-h1: 2.118rem;
+  --font-size-h1: 2.65rem;
   --line-height-h1: 1;
   --font-size-code: var(--font-size-text-small);
   --line-height-code: var(--line-height-text-small);
@@ -61,6 +61,15 @@
   --spacing-l: 3rem;
   --border-radius: 4px;
   --logo-size: 5rem;
-  --content-max-width: 48em;
+  --content-max-width: 60rem;
   --content-padding: var(--spacing-s);
+}
+
+@media screen and (max-width: 960px) {
+  :root {
+    --font-size-h4: 1rem;
+    --font-size-h3: 1.306rem;
+    --font-size-h2: 1.618rem;
+    --font-size-h1: 2.118rem;
+  }
 }
