@@ -67,12 +67,11 @@
   line-height: var(--font-size-h1);
   /* The title text has no descenders, so align it exactly to the bottom of the container by hand */
   position: relative;
-  top: 3px;
+  top: 4px;
 }
 
 .site-header__nav {
   letter-spacing: 0.1rem;
-  font-style: italic;
   line-height: 1;
   margin: var(--spacing-s) 0;
   padding: var(--spacing-xs) 0;
@@ -96,7 +95,7 @@
 .site-header__nav__links a.active {
   text-decoration: underline;
   text-decoration-skip-ink: auto;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 
 .site-header__nav__links li:last-child:after {
@@ -489,10 +488,12 @@
 
   .intro__image {
     flex: none;
-    width: 100%;
-    height: 275px;
+    width: 100vw;
+    height: 75vw;
     margin: 0;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
+    background-image: url('../images/matias_square.jpg');
+    background-position: center 40%;
   }
 }
 
