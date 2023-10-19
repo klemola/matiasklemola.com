@@ -98,11 +98,11 @@ Until the next time!
 
 ---
 
-[Check out my tweets] to see what's coming next.
+Find what I'm up to on [Mastodon]!
 
 [Liikennematto Github repository][liikennematto]
 
-[check out my tweets]: https://twitter.com/MatiasKlemola
+[Mastodon]: https://mastodon.gamedev.place/@yourmagicisworking
 [liikennematto]: https://github.com/klemola/liikennematto
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-two]: /liikennematto-devlog-two

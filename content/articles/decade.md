@@ -15,7 +15,7 @@ Earlier this year I wrote about my career progression in ["Five Years at Valuemo
 
 It was difficult enough to pick 10 of anything, so the lists are not necessarily in a best-to-worst order, and come with some runner-ups.
 
-What did your decade look like? Let me know on [Twitter][tw]!
+What did your decade look like? Let me know on [Mastodon]!
 
 ## 10s ✕ LPs
 
@@ -154,5 +154,5 @@ That's it. To the next decade! 🥂
 [ts]: /typescript-union-types
 [pe]: /paimentolaiselama
 [butsku]: https://butsku.bandcamp.com/
-[tw]: https://twitter.com/MatiasKlemola
+[Mastodon]: https://mastodon.gamedev.place/@yourmagicisworking
 [vm]: /five-years-at-valuemotive

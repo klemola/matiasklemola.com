@@ -250,11 +250,11 @@ Many of these are related to/depend on each other. I'll think about the ideal or
 
 ---
 
-[Follow me on Twitter] for updates in between devlog entries.
+[Follow me on Mastodon][Mastodon] for updates in between devlog entries.
 
 [Liikennematto Github repository][liikennematto]
 
-[follow me on twitter]: https://twitter.com/MatiasKlemola
+[Mastodon]: https://mastodon.gamedev.place/@yourmagicisworking
 [liikennematto]: https://github.com/klemola/liikennematto
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-three]: /liikennematto-devlog-three

@@ -142,7 +142,7 @@ In any case, you won't be disappointed. I certainly have enjoyed both of my trip
 
 All photos in the article were shot by me. If you want to use them in another context, please credit me (or link them to this article).
 
-If you have any questions, feel free to contact me at [hello@matiasklemola.com](mailto:hello@matiasklemola.com) or on [Twitter](https://twitter.com/matiasklemola)!
+If you have any questions, feel free to contact me at [hello@matiasklemola.com](mailto:hello@matiasklemola.com) or on [Mastodon]!
 
 ![Sunset in Gjirokastër]({static}/images/albania/gjirokaster_sunset.jpg)
 
@@ -169,3 +169,4 @@ If you have any questions, feel free to contact me at [hello@matiasklemola.com](
 [gjirokastercastle]: http://www.gjirokastra.org/sub_links/visiting_sub/visiting_castle.html
 [skendulihouse]: https://www.tripadvisor.com/Attraction_Review-g318867-d7264242-Reviews-Skenduli_House-Gjirokaster_Gjirokaster_County.html
 [zekatehouse]: https://www.tripadvisor.com/Attraction_Review-g318867-d2341285-Reviews-Zekate_House-Gjirokaster_Gjirokaster_County.html
+[Mastodon]: https://mastodon.gamedev.place/@yourmagicisworking

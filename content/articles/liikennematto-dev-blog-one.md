@@ -173,7 +173,7 @@ I hope to make progress during the summer and post another devlog after. See you
 
 ---
 
-[Follow me on Twitter] for updates in between devlog entries!
+[Follow me on Mastodon][Mastodon] for updates in between devlog entries!
 
 [Liikennematto Github repository][liikennematto]
 
@@ -191,6 +191,6 @@ I hope to make progress during the summer and post another devlog after. See you
 [etola online store]: https://www.etola.net/Tuote/lasten_maailma/ajoneuvo__ja_rakennuslelut/liikennematto
 [tutorial videos]: https://www.youtube.com/watch?v=GMSXYnMH1gg
 [the elm architecture]: https://guide.elm-lang.org/architecture/
-[follow me on twitter]: https://twitter.com/MatiasKlemola
+[Mastodon]: https://mastodon.gamedev.place/@yourmagicisworking
 [game module]: https://github.com/klemola/liikennematto/blob/db958c6fe3876fe07b374307fe8545690669388e/src/Game.elm#L124
 [elm-ui]: https://github.com/mdgriffith/elm-ui

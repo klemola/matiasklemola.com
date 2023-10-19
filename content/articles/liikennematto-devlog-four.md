@@ -138,11 +138,11 @@ Thanks for reading. May your summer be as pleasant as it is here in Helsinki!
 
 As always, you can play with Liikennematto [right in the browser][demo]
 
-Find what I'm up to on [Twitter]!
+Find what I'm up to on [Mastodon]!
 
 [Liikennematto Github repository][liikennematto]
 
-[twitter]: https://twitter.com/MatiasKlemola
+[Mastodon]: https://mastodon.gamedev.place/@yourmagicisworking
 [liikennematto]: https://github.com/klemola/liikennematto
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-two]: /liikennematto-devlog-two
