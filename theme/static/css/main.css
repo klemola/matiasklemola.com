@@ -12,7 +12,7 @@
   align-items: stretch;
   align-content: stretch;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .site-header {
@@ -60,11 +60,12 @@
   padding: 0;
 }
 
-.site-header__content__title__text p {
+.site-header__content__title__text a {
   margin: 0;
-  font-size: var(--font-size-h1);
+  color: var(--color-text);
+  font-size: var(--font-size-header-title);
+  line-height: var(--line-height-header-title);
   font-family: var(--font-family-heading);
-  line-height: var(--font-size-h1);
   /* The title text has no descenders, so align it exactly to the bottom of the container by hand */
   position: relative;
   top: 4px;
@@ -88,6 +89,8 @@
 }
 
 .site-header__nav__links a {
+  font-size: var(--font-size-navigation);
+  line-height: var(--line-height-navigation);
   color: var(--color-primary);
   text-transform: uppercase;
 }
@@ -471,14 +474,16 @@
   }
 
   .intro {
-    flex-direction: column-reverse;
     margin-left: calc(0px - var(--content-padding));
     margin-right: calc(0px - var(--content-padding));
-    width: min(100vw, var(--content-max-width));
+  }
+
+  .intro,
+  .intro__image {
+    border-radius: 0;
   }
 
   .intro__content {
-    width: 100%;
     padding: 0.5rem var(--content-padding);
   }
 
@@ -487,47 +492,56 @@
   }
 
   .intro__image {
+    background-position: 60% top;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column-reverse;
+    width: min(100vw, var(--content-max-width));
+  }
+
+  .intro__image {
     flex: none;
     width: 100vw;
     height: 75vw;
     margin: 0;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
     background-image: url('../images/matias_square.jpg');
-    background-position: center 40%;
+    background-position: center 35%;
+  }
+
+  .intro__content {
+    width: 100%;
   }
 }
 
-@media (max-width: 48em) {
-  .intro,
-  .intro__image {
-    border-radius: 0;
+@media (max-width: 576px) {
+  :root {
+    --logo-size: 3rem;
   }
-}
 
-@media (max-width: 420px) {
   .site-header__content {
     margin: 0 auto;
   }
 
   .site-header__content__title {
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: center;
+    gap: 0.75rem;
     margin-top: var(--spacing-m);
   }
 
   .site-header__content__title__text {
     margin: 0;
     padding: 0;
-    font-size: var(--font-size-h2);
     text-align: initial;
     flex: none;
   }
 
   .site-header__content__title__text p {
-    font-size: var(--font-size-h2);
-    line-height: var(--font-size-h2);
+    line-height: 1;
     /* The title text has no descenders, so align it exactly to the bottom of the container by hand */
-    top: 2px;
+    top: 4px;
   }
 
   .site-footer__content {
