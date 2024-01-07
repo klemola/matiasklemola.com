@@ -1,19 +1,33 @@
-{% extends "base.html" %} {% block html_lang %}{{ page.lang }}{% endblock %} {% block title %}{{
-  SITENAME
-}}
-- {{ page.title }}{%endblock%} {% block head %}
+{% extends "base.html" %} 
+{% block html_lang %}
+{{ page.lang }}
+{% endblock %}
+{% block title %}
+{{ SITENAME }} - {{ page.title }}
+{%endblock%}
+{% block head %}
 {{ super() }}
-
-{% import 'translations.html' as translations with context %} {% if
-translations.entry_hreflang(page) %}
+  <meta name="description" content="{{ page.summary | striptags }}" />
+  <meta property="og:description" content="{{ page.summary | striptags }}" />
+  <meta property="og:type" content="page" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ page.slug }}" />
+  <meta property="og:title" content="{{ page.title | replace("\"", "&quot;") }}" />
+  <meta property="og:image" content="{{ SITEURL }}{% if page.cover is defined %}/images/{{ page.cover }}{% else %}/og_image.png{% endif %}" />
+{% import 'translations.html' as translations with context %}
+{% if translations.entry_hreflang(page) %}
 {{ translations.entry_hreflang(page) }}
-{% endif %} {% endblock %} {% block content %}
-<h1>{{ page.title }}</h1>
+{% endif %} 
+
+{% endblock %} 
+{% block content %}
+  <h1>{{ page.title }}</h1>
 {% import 'translations.html' as translations with context %}
 {{ translations.translations_for(page) }}
-
 {{ page.content }}
-
 {% if page.modified %}
-<p>Last updated: {{ page.locale_modified }}</p>
-{% endif %} {% endblock %}
+  <p>Last updated: {{ page.locale_modified }}</p>
+{% endif %}
+{% if page.mainscript %}
+  <script src="/pages/{{page.slug}}/{{ page.mainscript }}.js"></script>
+{% endif %}
+{% endblock %}

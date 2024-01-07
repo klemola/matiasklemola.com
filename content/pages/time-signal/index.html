@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Greenwich Time Signal, web edition</title>
+    <meta name="slug" content="time-signal" />
+    <meta name="mainscript" content="time-signal" />
+    <meta name="status" content="published" <meta name="date" content="2024-01-07 13:00" />
+    <meta
+      name="summary"
+      content="Play the Greenwich Time Signal on top of any minute, on demand, instead of waiting for the evening news broadcast."
+    />
+  </head>
+  <body>
+    <section style="padding-bottom: 0.5rem">
+      <time id="clock" style="font-family: monospace; font-size: 1.5em"></time>
+    </section>
+    <section>
+      <button id="toggle-scheduled-time-signal" class="button">Begin scheduled time signal</button>
+      <p style="font-size: 0.875em">
+        Once scheduled, the signal will play automatically every 5 seconds to the full minute.
+      </p>
+    </section>
+    <section>
+      <h2>About</h2>
+      <p>
+        This tiny tool plays the Greenwich Time Signal on demand. Instead of waiting for the evening
+        news, you can syncronize the time at the top of any minute!
+      </p>
+      <details>
+        <summary>Motivation</summary>
+        <p>
+          I received a
+          <a href="https://en.wikipedia.org/wiki/Casio_F-91W" target="_blank">Casio F-91W watch</a>
+          for my birthday. The manual mentioned the possibility of syncronizing the seconds using a
+          time signal. However, I couldn't find a simple online GTS tool like this.
+        </p>
+      </details>
+      <blockquote>
+        <p>
+          The Greenwich Time Signal (GTS), popularly known as the pips, is a series of six short
+          tones (or "pips") broadcast at one-second intervals by many BBC Radio stations.
+        </p>
+        <p>
+          There are six pips (short beeps) in total, which occur on each of the 5 seconds leading up
+          to the hour and on the hour itself. Each pip is a 1 kHz tone (about a fifth of a semitone
+          above musical B5) the first five of which last a tenth of a second each, while the final
+          pip lasts half a second. The actual moment when the hour changes – the "on-time marker" –
+          is at the very beginning of the last pip.
+        </p>
+        <footer>
+          <cite
+            ><a
+              href="https://en.wikipedia.org/wiki/Greenwich_Time_Signal"
+              target="_blank"
+              alt="Greenwich Time Signal page in Wikipedia"
+              >Wikipedia</a
+            ></cite
+          >, retrieved 12/2023
+        </footer>
+      </blockquote>
+      <p>
+        The tone played is a re-packaged version of the
+        <a
+          href="https://en.wikipedia.org/wiki/File:Gts_(bbc)_pips.ogg"
+          target="_blank"
+          alt="GTS tone in Wikipedia"
+          >Gts (bbc) pips.ogg</a
+        >
+        file. Public domain.
+      </p>
+      <button id="play-time-signal" class="button--secondary">Play time signal</button>
+    </section>
+  </body>
+</html>

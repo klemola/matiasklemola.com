@@ -9,19 +9,10 @@
   <meta name="msapplication-TileColor" content="#ffd800">
   <meta name="theme-color" content="#ffd800">
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
-
   <meta property="og:site_name" content="{{ SITENAME }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@MatiasKlemola" />
-
-  {% if article is defined %}
-  <meta name="description" content="{{ article.summary | striptags }}" />
-  <meta property="og:description" content="{{ article.summary | striptags }}" />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="{{ SITEURL }}/{{ article.slug }}" />
-  <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
-  <meta property="og:image" content="{{ SITEURL }}{% if article.cover is defined %}/images/{{ article.cover }}{% else %}/og_image.png{% endif %}" />
-  {% else %}
+  {% if not (article is defined) and not (page is defined) %}
   <meta name="description" content="Personal website of {{ AUTHOR }}" />
   <meta property="og:description" content="Personal website of {{ AUTHOR }}" />
   <meta property="og:type" content="website" />
@@ -29,7 +20,6 @@
   <meta property="og:title" content="{{ SITENAME }}" />
   <meta property="og:image" content="{{ SITEURL }}/og_image.png" />
   {% endif %}
-
   <link rel="canonical" href="https://matiasklemola.com" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -42,7 +32,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
   {% endif %}
@@ -70,7 +59,6 @@
   {% endblock head %}
   <script src="/scripts/mk.js"></script>
 </head>
-
 <body>
   <div class="wrapper">
     <header class="site-header">
@@ -102,7 +90,7 @@
         </nav>
       </div>
     </header>
-    <main class="content {% if article is defined and article.cover %}article--with-cover{% else %}article{% endif %}">
+    <main class="content {% if article is defined %}{% if article.cover %}article--with-cover{% else %}article{% endif %}{% endif %}">
     {% block content %}
     {% endblock %}
     </main>
