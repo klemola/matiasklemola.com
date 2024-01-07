@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffd800",
+  "theme_color": "#fffceb",
   "background_color": "#222",
   "start_url": "https://matiasklemola.com",
   "display": "standalone"
