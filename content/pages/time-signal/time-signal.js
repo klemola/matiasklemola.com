@@ -15,7 +15,9 @@ let dateTimeFormat = new Intl.DateTimeFormat(locale, {
 
 let state_ready = false
 let state_isTimeSignalScheduled = false
+let state_autoplay_enabled = false
 let pips = new Audio('/pages/time-signal/pips.flac')
+let DEFAULT_PIPS_VOLUME = 0.75
 
 window.addEventListener('DOMContentLoaded', () => {
   pips.addEventListener('canplaythrough', main)
@@ -47,13 +49,34 @@ function onPipsStart() {
 function onPipsEnded() {
   el_playTimeSignal.removeAttribute('disabled')
   pips.currentTime = 0
+  pips.volume = DEFAULT_PIPS_VOLUME
 }
 
 function onToggleScheduledTimeSignal() {
   state_isTimeSignalScheduled = !state_isTimeSignalScheduled
+
   el_toggleScheduledTimeSignal.innerHTML = state_isTimeSignalScheduled
     ? textContent.stopScheduledTimeSignal
     : textContent.startScheduledTimeSignal
+
+  if (state_isTimeSignalScheduled && !state_autoplay_enabled) {
+    pips.volume = 0.0
+
+    // attempt to play the tone to recognize blocked autoplay
+    pips
+      .play()
+      .then(() => {
+        pips.pause()
+        onPipsEnded()
+        state_autoplay_enabled = true
+        console.log('Audio autoplay enabled')
+      })
+      .catch((error) => {
+        if (error.name === 'NotAllowedError') {
+          console.log('Audio autoplay not allowed')
+        }
+      })
+  }
 }
 
 function onTick() {
