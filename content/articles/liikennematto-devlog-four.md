@@ -15,6 +15,7 @@ Cover: covers/liikennematto-devlog-four.png
     2.  [Build your own roundabout!][devlog-two]
     3.  [Lots to do][devlog-three]
     4.  Hello real-time traffic simulation _(this post)_
+    5.  [Renovation and release][devlog-five]
 
 Liikennematto started it's life as a rough traffic simulation that works like a board game. Cars took turns to roam around a tile based "board", and could move one tile at a time. This allowed rapid prototyping of basic traffic rules, yet the movement was blocky. In October of 2020 I set out to change the feel of Liikennematto. The goal was to have the cars move gradually at 60 frames per second. The speed of a car should control how much movement happens on each frame.
 
@@ -147,6 +148,7 @@ Find what I'm up to on [Mastodon]!
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-two]: /liikennematto-devlog-two
 [devlog-three]: /liikennematto-devlog-three
+[devlog-five]: /liikennematto-devlog-five
 [demo]: https://yourmagicisworking.itch.io/liikennematto
 [community graph library]: https://package.elm-lang.org/packages/elm-community/graph/latest/
 [elm-units]: https://package.elm-lang.org/packages/ianmackenzie/elm-units/latest/

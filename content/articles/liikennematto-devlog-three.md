@@ -15,6 +15,7 @@ Cover: covers/liikennematto-devlog-three.png
     2.  [Build your own roundabout!][devlog-two]
     3.  Lots to do _(this post)_
     4.  [Hello real-time traffic simulation][devlog-four]
+    5.  [Renovation and release][devlog-five]
 
 Howdy! Welcome to the third Liikennematto devlog. It's been more than six months since the last one. I went back to work from paternity leave right after posting it, and life's been busy ever since. Between work and family life, I've had a couple of hours per week to work on Liikennematto.
 
@@ -107,4 +108,5 @@ Find what I'm up to on [Mastodon]!
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-two]: /liikennematto-devlog-two
 [devlog-four]: /liikennematto-devlog-four
+[devlog-five]: /liikennematto-devlog-five
 [demo]: https://yourmagicisworking.itch.io/liikennematto
