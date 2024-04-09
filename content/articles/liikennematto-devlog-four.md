@@ -147,7 +147,7 @@ Find what I'm up to on [Mastodon]!
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-two]: /liikennematto-devlog-two
 [devlog-three]: /liikennematto-devlog-three
-[demo]: http://apps.butsku.com/liikennematto/
+[demo]: https://yourmagicisworking.itch.io/liikennematto
 [community graph library]: https://package.elm-lang.org/packages/elm-community/graph/latest/
 [elm-units]: https://package.elm-lang.org/packages/ianmackenzie/elm-units/latest/
 [elm-geometry]: https://package.elm-lang.org/packages/ianmackenzie/elm-geometry/latest/

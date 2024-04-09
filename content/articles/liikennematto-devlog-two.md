@@ -264,4 +264,4 @@ Many of these are related to/depend on each other. I'll think about the ideal or
 [bitmask-article]: https://gamedevelopment.tutsplus.com/tutorials/how-to-use-tile-bitmasking-to-auto-tile-your-level-layouts--cms-25673
 [townscaper]: https://store.steampowered.com/app/1291340/Townscaper/
 [round module]: https://github.com/klemola/liikennematto/blob/31660c24c7b1f4f080505e763fa7e3f7b2989844/src/Round.elm
-[demo]: http://apps.butsku.com/liikennematto/
+[demo]: https://yourmagicisworking.itch.io/liikennematto

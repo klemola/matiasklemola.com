@@ -107,4 +107,4 @@ Find what I'm up to on [Mastodon]!
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-two]: /liikennematto-devlog-two
 [devlog-four]: /liikennematto-devlog-four
-[demo]: http://apps.butsku.com/liikennematto/
+[demo]: https://yourmagicisworking.itch.io/liikennematto
