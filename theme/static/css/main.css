@@ -343,8 +343,9 @@
 }
 
 .video--small {
-  max-width: 420px;
+  max-width: 640px;
   margin: var(--content-padding);
+  border-radius: var(--border-radius);
 }
 
 .intro {
@@ -518,6 +519,14 @@
   .intro__content {
     width: 100%;
   }
+
+  .video--small {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -580,9 +589,5 @@
 
   .article--with-cover {
     padding-top: 0;
-  }
-
-  .video--small {
-    margin: 0;
   }
 }

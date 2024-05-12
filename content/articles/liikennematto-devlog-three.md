@@ -68,7 +68,7 @@ Why not just use `Random.generate` to get a random `Int`, you say? Sadly it's a 
 Putting all of this together, here's the procedural generation in action:
 
 <figure>
-    <video controls autoplay muted loop playsinline>
+    <video class="video--small" controls autoplay muted loop playsinline>
         <source src="{static}/videos/liikennematto/lot_generation.mp4" type="video/mp4">
     </video>
     <figcaption>Lots popping up all around the map</figcaption>
@@ -87,7 +87,7 @@ It's early to say whether procedural generation of lots is a better choice than 
 Work on lots was interrupted by the effort to make cars move around gradually. The change breaks the core idea of everything happening on the scale of cells. I'll tell you all about it on the next devlog. Got a little teaser for ya!
 
 <figure>
-    <video controls autoplay muted loop playsinline>
+    <video class="video--small" controls autoplay muted loop playsinline>
         <source src="{static}/videos/liikennematto/realtime_teaser.mp4" type="video/mp4">
     </video>
     <figcaption>Can you spot the difference?</figcaption>
