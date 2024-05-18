@@ -15,6 +15,7 @@ Cover: covers/liikennematto-dev-blog-one.png
     2.  [Build your own roundabout!][devlog-two]
     3.  [Lots to do][devlog-three]
     4.  [Hello real-time traffic simulation][devlog-four]
+    5.  [Renovation and release][devlog-five]
 
 I've spent hundreds of hours playing Cities Skylines in the past few years. It's a superb city builder with a [rich community][cs subreddit]. You can rather easily design a 100k population city with decent traffic flow and variety of options for public transportation. Mods and custom assets improve the experience and provide even more ways to build your dream city.
 
@@ -182,6 +183,7 @@ I hope to make progress during the summer and post another devlog after. See you
 [devlog-two]: /liikennematto-devlog-two
 [devlog-three]: /liikennematto-devlog-three
 [devlog-four]: /liikennematto-devlog-four
+[devlog-five]: /liikennematto-devlog-five
 [liikennematto]: https://github.com/klemola/liikennematto
 [elm]: https://elm-lang.org/
 [cs subreddit]: https://www.reddit.com/r/CitiesSkylines/

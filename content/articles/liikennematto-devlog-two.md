@@ -15,6 +15,7 @@ Cover: covers/liikennematto-devlog-two.png
     2.  Build your own roundabout! _(this post)_
     3.  [Lots to do][devlog-three]
     4.  [Hello real-time traffic simulation][devlog-four]
+    5.  [Renovation and release][devlog-five]
 
 Welcome back to the Liikennematto devlog!
 
@@ -259,9 +260,10 @@ Many of these are related to/depend on each other. I'll think about the ideal or
 [devlog-one]: /liikennematto-dev-blog-one
 [devlog-three]: /liikennematto-devlog-three
 [devlog-four]: /liikennematto-devlog-four
+[devlog-five]: /liikennematto-devlog-five
 [elm-ui]: https://github.com/mdgriffith/elm-ui/tree/master
 [gamedevscreens]: https://old.reddit.com/r/gamedevscreens/
 [bitmask-article]: https://gamedevelopment.tutsplus.com/tutorials/how-to-use-tile-bitmasking-to-auto-tile-your-level-layouts--cms-25673
 [townscaper]: https://store.steampowered.com/app/1291340/Townscaper/
 [round module]: https://github.com/klemola/liikennematto/blob/31660c24c7b1f4f080505e763fa7e3f7b2989844/src/Round.elm
-[demo]: http://apps.butsku.com/liikennematto/
+[demo]: https://yourmagicisworking.itch.io/liikennematto
