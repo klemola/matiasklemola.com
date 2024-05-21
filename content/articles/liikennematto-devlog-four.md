@@ -133,7 +133,9 @@ I feel good about how real-time Liikennematto turned out to be. I learned a lot 
 
 When I eventually resume, I'll take another look at the missing features and maybe work on new features, too. I'm definitely going to play with pathfinding and steering behaviors. I'm working my way through the "[AI for Games, Third Edition][ai-for-games]" book, which has lots of concepts that can be used in Liikennematto.
 
-Thanks for reading. May your summer be as pleasant as it is here in Helsinki!
+Thanks for reading.
+
+[Continue to part #5][devlog-five]
 
 ---
 
