@@ -7,9 +7,10 @@ MENUITEMS = (('Home', '/', 'index'),
              ('Journal', '/journal', 'journal'),
              )
 
-SOCIAL_LINKS = (('GitHub', 'http://github.com/klemola'),
-                ('Soundcloud', 'https://soundcloud.com/butsku'),
-                ('Mastodon', 'https://mastodon.gamedev.place/@yourmagicisworking'))
+SOCIAL_LINKS = (('Mastodon', 'https://mastodon.gamedev.place/@yourmagicisworking'),
+                ('Bluesky', 'https://bsky.app/profile/matiasklemola.com'),
+                ('GitHub', 'http://github.com/klemola'),
+                ('Soundcloud', 'https://soundcloud.com/butsku'))
 
 EXTERNAL_ARTICLES = [('“I want to host a meetup”',
                       'https://www.valuemotive.com/post/i-want-to-host-a-meetup'),
