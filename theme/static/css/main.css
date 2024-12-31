@@ -359,8 +359,6 @@
 .intro__content {
   padding: 0 var(--content-padding);
   flex: 1;
-  font-size: var(--font-size-text-page-content);
-  line-height: var(--line-height-text-page-content);
 }
 
 .intro__image {
@@ -369,7 +367,7 @@
   border-bottom-right-radius: var(--border-radius);
   background-image: url('../images/matias.jpg');
   background-size: cover;
-  background-position: left center;
+  background-position: 40% center;
 }
 
 .intro h2 {
