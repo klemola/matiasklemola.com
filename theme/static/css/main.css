@@ -375,40 +375,6 @@
   margin: var(--spacing-s) 0;
 }
 
-.cookie-consent {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  padding: var(--spacing-xs);
-  background: var(--color-dark-alternative);
-  color: var(--color-neutral);
-  border-top: 1px solid var(--color-border);
-}
-
-.cookie-consent--hidden {
-  display: none;
-}
-
-.cookie-consent__body,
-.cookie-consent__body__button-row {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
-.cookie-consent__body {
-  max-width: var(--content-max-width);
-  font-size: var(--font-size-text-small);
-}
-
-.cookie-consent__body__button-row button {
-  margin: var(--spacing-xxs);
-}
-
 @media (max-width: 960px) {
   :root {
     --logo-size: 4rem;
