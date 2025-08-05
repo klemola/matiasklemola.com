@@ -8,6 +8,7 @@ Markdown = "==3.8.0"
 Pygments = "==2.18.0"
 markdown-captions = "2.1.2"
 pelican = "==4.11.0"
+pelican-simple-footnotes = "==1.0.3"
 
 [requires]
 python_version = "3.13"
